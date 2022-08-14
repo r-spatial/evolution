@@ -3,28 +3,24 @@ title: "functions and packages affected by deprecating rgdal, rgeos and maptools
 format: html
 ---
 
-## By deprecating package
+## By deprecating function
 
 ```{r}
 r = read.csv("pkgapi_no_sp_220713.csv", header = FALSE)
-r$n_pkg = lengths(strsplit(r[[3]], " "))
+r$packages = lengths(strsplit(r[[3]], " "))
 r$`function` = paste(r[[1]], r[[2]], sep = ":")
-r$packages = r[["V3"]]
-# r$packages[r$n_pkg > 9] = ""
+r$`packages involved` = r[["V3"]]
 r[["V1"]] = r[["V2"]] = r[["V3"]] = NULL
-r_o = r[order(r$n_pkg, decreasing = TRUE),]
-```
-
-```{r echo=FALSE, as.is=TRUE}
+r_o = r[order(r$packages, decreasing = TRUE),]
 library(knitr)
-kable(r_o)
+kable(r_o, row.names = FALSE)
 ```
 
 ## By depending package
 
 ```{r}
 r = read.csv("pkgapi_no_sp_by_pkg_220713.csv", header = FALSE)
-names(r) = c("package", "deps")
-r$n_pkg = lengths(strsplit(r$deps, " ")) - 1 # leading space
-kable(r[order(r$n_pkg, decreasing = TRUE),c(3,1,2)])
+names(r) = c("package", "functions involved")
+r$functions = lengths(strsplit(r$`functions involved`, " ")) - 1 # leading space
+kable(r[order(r$functions, decreasing = TRUE),c(3,1,2)], row.names = FALSE)
 ```
