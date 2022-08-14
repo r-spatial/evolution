@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.165">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>functions and packages affected by deprecating rgdal, rgeos and maptools</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="report_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="report_files/libs/quarto-html/quarto.js"></script>
+  <script src="report_files/libs/quarto-html/popper.min.js"></script>
+  <script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="report_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title display-7">functions and packages affected by deprecating rgdal, rgeos and maptools</h1></div></header>
+<section id="by-deprecating-package" class="level2">
+<h2 class="anchored" data-anchor-id="by-deprecating-package">By deprecating package</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"pkgapi_no_sp_220713.csv"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>r<span class="sc">$</span>n_pkg <span class="ot">=</span> <span class="fu">lengths</span>(<span class="fu">strsplit</span>(r[[<span class="dv">3</span>]], <span class="st">" "</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>r<span class="sc">$</span><span class="st">`</span><span class="at">function</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">paste</span>(r[[<span class="dv">1</span>]], r[[<span class="dv">2</span>]], <span class="at">sep =</span> <span class="st">":"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r<span class="sc">$</span>packages <span class="ot">=</span> r[[<span class="st">"V3"</span>]]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># r$packages[r$n_pkg &gt; 9] = ""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>r[[<span class="st">"V1"</span>]] <span class="ot">=</span> r[[<span class="st">"V2"</span>]] <span class="ot">=</span> r[[<span class="st">"V3"</span>]] <span class="ot">=</span> <span class="cn">NULL</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>r_o <span class="ot">=</span> r[<span class="fu">order</span>(r<span class="sc">$</span>n_pkg, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-as.is="true">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 0%">
+<col style="width: 1%">
+<col style="width: 8%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">n_pkg</th>
+<th style="text-align: left;">function</th>
+<th style="text-align: left;">packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">77</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: left;">rgdal:readOGR</td>
+<td style="text-align: left;">actel agriwater APfun ASIP BARIS bdvis bfsMaps biosurvey briskaR chronosphere cropDemand cropZoning disdat eechidna FedData FIESTAutils HurreconR hyfo iconr importinegi intamap ipumsr LabourMarketAreas letsR malariaAtlas mapmisc mapReasy MazamaSpatialUtils modchart naijR OasisR onemapsgapi openSTARS plotKML pRecipe PReMiuM raster rcanvec rdhs ref.ICAR rgplates rgrass7 riverdist rmapzen rnaturalearth rnoaa RSAGA RSIP RSurvey RTL secrlinear SegEnvIneq ShapePattern SSN tigris TUFLOWR ursa wux</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">110</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: left;">rgeos:gIntersection</td>
+<td style="text-align: left;">animalEKF AQuadtree birdring bRacatus cleangeo DivE DSsim eechidna expp FedData FRK gDefrag ggOceanMaps inlmisc LabourMarketAreas lakemorpho leastcostpath lgcp mapmisc mapsRinteractive maptools Momocs OasisR osmplotr psda rangeBuilder rangemap raster recurse red rtop secrlinear shadow sp SpatialGraph spatsoc stampr SubgrPlots SurfaceTortoise surveillance ursa voluModel waver wildlifeDI wux</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">94</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: left;">rgeos:gBuffer</td>
+<td style="text-align: left;">amt bcmaps BiodiversityR biosurvey bRacatus briskaR cleangeo ConR CoordinateCleaner DSsim dynatopGIS envi expp FLightR FRK geoviz GmAMisc hero hypervolume inlmisc itcSegment lakemorpho leastcostpath lingtypology mapmisc MazamaSpatialUtils NetLogoR phyloregion rangeBuilder rangemap raster secrlinear shadow ShapePattern sharpshootR spatialEco spatsoc spatsurv stampr uavRmp ursa Watersheds</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">88</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">rgdal:writeOGR</td>
+<td style="text-align: left;">animaltracker APfun AQuadtree BIEN chronosphere ConR ctmm dssd FedData foster GADMTools gDefrag GmAMisc grainscape iSDM LabourMarketAreas movecost OCNet openSTARS paleofire plotKML prevR PWFSLSmoke rangemap raster rcanvec rgplates rgrass7 RSAGA Rsagacmd RSurvey ShapePattern SSN uavRmp ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">91</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">rgeos:gArea</td>
+<td style="text-align: left;">bivariatemaps eechidna ForestTools gDefrag geocmeans GmAMisc itcSegment LabourMarketAreas lakemorpho leastcostpath letsR MBNMAdose MBNMAtime movecost psda quickmapr quickPlot rcage redlistr RSurvey rTLS ShapePattern spatialEco spatsoc stampr surveillance uavRmp wildlifeDI wux</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">111</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">rgeos:gIntersects</td>
+<td style="text-align: left;">amt birdring cartograflow dsims DSsim eechidna gfcanalysis inlmisc lakemorpho lgcp lingtypology MazamaSpatialUtils quickPlot rangeBuilder raster rcage shadow spatialEco spatsoc stampr TileManager Watersheds waver wildlifeDI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">124</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">rgeos:gUnaryUnion</td>
+<td style="text-align: left;">amt dismo ENMTools excursions ForestTools gDefrag HDSpatialScan hypergate inlmisc leastcostpath lgcp lingtypology maptools rangemap raster shadow sp stampr surveillance TileManager uavRmp ursa waver</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">103</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">rgeos:gDistance</td>
+<td style="text-align: left;">antaresViz contact fieldRS FLightR gDefrag ggOceanMaps GmAMisc inlabru inlmisc maptools OasisR quickmapr rangeBuilder raster SegEnvIneq shadow spatialEco SpatialGraph stampr Watersheds waver</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">101</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">rgeos:gDifference</td>
+<td style="text-align: left;">birdring briskaR cleangeo excursions FRK gDefrag inlmisc lakemorpho leastcostpath mapmisc rangeBuilder raster rTLS Rtrack spatialEco stampr SurfaceTortoise ursa voluModel wildlifeDI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">95</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">rgeos:gCentroid</td>
+<td style="text-align: left;">atakrig biosurvey ForestTools geogrid gfcanalysis hierarchicalDS hypergate letsR MazamaSpatialUtils MetaLandSim OasisR rangemap rcage SegEnvIneq shadow stampr SurfaceTortoise TileManager Watersheds</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">36</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">maptools:unionSpatialPolygons</td>
+<td style="text-align: left;">animint2 bamlss BayesX bfsMaps broom disaggregation GADMTools LabourMarketAreas micromap R2BayesX RchivalTag rmapzen stampr surveillance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">72</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">rgdal:project</td>
+<td style="text-align: left;">ConR ctmm envirem eseis FIESTAutils geometr HDSpatialScan hyperbrick kernelPhil lingtypology paleofire red tripEstimation ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">114</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">rgeos:gLength</td>
+<td style="text-align: left;">bfsMaps geocmeans lakemorpho leastcostpath movecost OasisR quickmapr raster recurse shadow ShapePattern stampr streamDepletr ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">120</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">rgeos:gSimplify</td>
+<td style="text-align: left;">eechidna FLightR GADMTools ggOceanMaps inlmisc mapmisc maptools oceanic rangemap red SeuratObject stampr trajectories ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">96</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">rgeos:gContains</td>
+<td style="text-align: left;">animalEKF eechidna GmAMisc lakemorpho letsR maptools rangeBuilder rcage SpaDES.tools spatialEco voluModel wildlifeDI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">46</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">rgdal:CRSargs</td>
+<td style="text-align: left;">geonetwork inlabru inlmisc intamap plotKML rosm RSurvey rtop TOC tripEstimation ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">98</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">rgeos:gConvexHull</td>
+<td style="text-align: left;">amt GeoFIS gfcanalysis GmAMisc ipdw itcSegment mapmisc rangeBuilder rcage shadow stampr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">134</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">rgeos:readWKT</td>
+<td style="text-align: left;">bfsMaps BIEN ConR crestr expp MBNMAdose MBNMAtime postGIStools rgbif rpostgis ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">113</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">rgeos:gIsValid</td>
+<td style="text-align: left;">bcmaps cleangeo GeoFIS ggOceanMaps inlmisc leastcostpath maptools raster sharpshootR ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">51</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">rgdal:GDALinfo</td>
+<td style="text-align: left;">APfun bnspatial FIESTA FIESTAutils raster rgrass7 sen2r ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">125</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">rgeos:gUnion</td>
+<td style="text-align: left;">FLightR gDefrag inlmisc RSurvey rTLS shadow ursa voluModel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">70</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">rgdal:ogrListLayers</td>
+<td style="text-align: left;">eechidna FedData mapReasy nhdR rmapzen rnoaa ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">122</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">rgeos:gTouches</td>
+<td style="text-align: left;">expp gDefrag gfcanalysis HCV lgcp rcage spatialEco</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">126</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">rgeos:gUnionCascaded</td>
+<td style="text-align: left;">adehabitatHR birdring briskaR cleangeo expp maptools raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">76</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">rgdal:readGDAL</td>
+<td style="text-align: left;">inlabru openSTARS plotKML pRecipe rdwd rgrass7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">maptools:spRbind</td>
+<td style="text-align: left;">APfun ecospat iSDM track2KBA uavRmp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">86</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">rgdal:showWKT</td>
+<td style="text-align: left;">dismo geotopbricks quickmapr rpostgis ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">139</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">rgeos:writeWKT</td>
+<td style="text-align: left;">BIEN mregions postGIStools rpostgis sharpshootR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">maptools:readShapePoly</td>
+<td style="text-align: left;">bamlss hydroTSM MetaLandSim plotKML</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">34</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">maptools:sunriset</td>
+<td style="text-align: left;">amt FLightR overlap PWFSLSmoke</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">74</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">rgdal:putRasterData</td>
+<td style="text-align: left;">atakrig FIESTAutils raster ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">89</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">rgeos:createPolygonsComment</td>
+<td style="text-align: left;">leaflet maptools rangeBuilder sp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">97</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">rgeos:gContainsProperly</td>
+<td style="text-align: left;">amt maptools rangeBuilder sharpshootR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">128</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">rgeos:gWithinDistance</td>
+<td style="text-align: left;">FLightR quickmapr spatialEco SpatialGraph</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">maptools:gpclibPermit</td>
+<td style="text-align: left;">bamlss R2BayesX surveillance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">21</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">maptools:pointLabel</td>
+<td style="text-align: left;">car rayshader rioja</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">maptools:SpatialLines2PolySet</td>
+<td style="text-align: left;">DRHotNet MapGAM RchivalTag</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">47</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:GDAL.close</td>
+<td style="text-align: left;">FIESTAutils raster ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">49</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:GDALcall</td>
+<td style="text-align: left;">FIESTAutils raster ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">65</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:getRasterData</td>
+<td style="text-align: left;">FIESTAutils raster ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">67</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:new_proj_and_gdal</td>
+<td style="text-align: left;">inlabru raster sp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">69</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:ogrInfo</td>
+<td style="text-align: left;">bnspatial nhdR ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">73</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:projInfo</td>
+<td style="text-align: left;">crestr FIESTAutils raster</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">79</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:saveDataset</td>
+<td style="text-align: left;">FIESTAutils raster ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">87</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgdal:writeGDAL</td>
+<td style="text-align: left;">ParallelDSM plotKML sperich</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">90</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:createSPComment</td>
+<td style="text-align: left;">ggOceanMaps inlmisc rgdal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">93</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:gBoundary</td>
+<td style="text-align: left;">leastcostpath Watersheds wildlifeDI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">99</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:gCovers</td>
+<td style="text-align: left;">rcage spatialEco wildlifeDI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">100</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:gCrosses</td>
+<td style="text-align: left;">cleangeo lakemorpho Watersheds</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">115</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:gLineMerge</td>
+<td style="text-align: left;">gDefrag shadow sp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">123</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rgeos:gUnarySTRtreeQuery</td>
+<td style="text-align: left;">maptools prioritizr rangeBuilder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:crepuscule</td>
+<td style="text-align: left;">amt incR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:map2SpatialPolygons</td>
+<td style="text-align: left;">ausplotsR rangemap</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">22</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:PolySet2SpatialPolygons</td>
+<td style="text-align: left;">DRHotNet RchivalTag</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:readShapeSpatial</td>
+<td style="text-align: left;">inlabru openadds</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">28</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:solarpos</td>
+<td style="text-align: left;">EMbC shadow</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">37</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:writeLinesShape</td>
+<td style="text-align: left;">plotKML uavRmp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">38</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:writePointsShape</td>
+<td style="text-align: left;">biogeo plotKML</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">39</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">maptools:writePolyShape</td>
+<td style="text-align: left;">monographaR plotKML</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">41</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:checkCRSArgs</td>
+<td style="text-align: left;">RSurvey sp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">43</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:closeDataset</td>
+<td style="text-align: left;">raster ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">48</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:GDAL.open</td>
+<td style="text-align: left;">FIESTAutils raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">50</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:gdalDrivers</td>
+<td style="text-align: left;">raster rgrass7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">56</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:getDescription</td>
+<td style="text-align: left;">FIESTAutils raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">57</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:getDriver</td>
+<td style="text-align: left;">raster ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">58</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:getDriverName</td>
+<td style="text-align: left;">raster ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">63</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:getRasterBand</td>
+<td style="text-align: left;">FIESTAutils raster</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">75</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:rawTransform</td>
+<td style="text-align: left;">mapmisc raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">81</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:set_thin_PROJ6_warnings</td>
+<td style="text-align: left;">inlabru reproducible</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">82</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:setCPLConfigOption</td>
+<td style="text-align: left;">HurreconR ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">83</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:showEPSG</td>
+<td style="text-align: left;">postGIStools rpostgis</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">84</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgdal:showP4</td>
+<td style="text-align: left;">RSurvey ursa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">105</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gEquals</td>
+<td style="text-align: left;">maptools rangeBuilder</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">108</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:getScale</td>
+<td style="text-align: left;">cleangeo plotdap</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">112</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gIsEmpty</td>
+<td style="text-align: left;">animalEKF ShapePattern</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">116</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gNode</td>
+<td style="text-align: left;">hypergate leastcostpath</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">117</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gOverlaps</td>
+<td style="text-align: left;">lakemorpho letsR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">118</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gPointOnSurface</td>
+<td style="text-align: left;">gDefrag MazamaSpatialUtils</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">119</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gPolygonize</td>
+<td style="text-align: left;">hypergate leastcostpath</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">127</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:gWithin</td>
+<td style="text-align: left;">lakemorpho quickmapr</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">137</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgeos:version_GEOS0</td>
+<td style="text-align: left;">maptools raster</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">package:function</td>
+<td style="text-align: left;">used_by</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:as.linnet.SpatialLines</td>
+<td style="text-align: left;">SpNetPrep</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:as.owin.SpatialPolygons</td>
+<td style="text-align: left;">GmAMisc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:as.SpatialLines.psp</td>
+<td style="text-align: left;">DRHotNet</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:checkPolygonsHoles</td>
+<td style="text-align: left;">inlmisc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:elide</td>
+<td style="text-align: left;">usmap</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:gcDestination</td>
+<td style="text-align: left;">ggsn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:getinfo.shape</td>
+<td style="text-align: left;">SSN</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:getKMLcoordinates</td>
+<td style="text-align: left;">animaltracker</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:gzAzimuth</td>
+<td style="text-align: left;">FLightR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:kmlLine</td>
+<td style="text-align: left;">BPEC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:kmlOverlay</td>
+<td style="text-align: left;">RgoogleMaps</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:kmlPoints</td>
+<td style="text-align: left;">BPEC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:kmlPolygon</td>
+<td style="text-align: left;">red</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:kmlPolygons</td>
+<td style="text-align: left;">red</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:leglabs</td>
+<td style="text-align: left;">SpatialEpi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">19</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:map2SpatialLines</td>
+<td style="text-align: left;">MapGAM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">23</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:readAsciiGrid</td>
+<td style="text-align: left;">rworldmap</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">26</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:Sobj_SpatialGrid</td>
+<td style="text-align: left;">surveillance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">27</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:solarnoon</td>
+<td style="text-align: left;">PWFSLSmoke</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:SpatialLinesMidPoints</td>
+<td style="text-align: left;">gDefrag</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">31</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:SpatialPolygons2PolySet</td>
+<td style="text-align: left;">MapGAM</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">32</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:spCbind</td>
+<td style="text-align: left;">eeptools</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:trackAzimuth</td>
+<td style="text-align: left;">move</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">maptools:writeSpatialShape</td>
+<td style="text-align: left;">monographaR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">42</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:checkCRSArgs_ng</td>
+<td style="text-align: left;">sp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">44</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:compare_CRS</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">45</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:copyDataset</td>
+<td style="text-align: left;">FIESTAutils</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">52</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:GDALis3ormore</td>
+<td style="text-align: left;">sdmpredictors</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">53</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:get_rgdal_show_exportToProj4_warnings</td>
+<td style="text-align: left;">inlabru</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">54</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:get_thin_PROJ6_warnings</td>
+<td style="text-align: left;">inlabru</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getColorTable</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">59</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getGDALCheckVersion</td>
+<td style="text-align: left;">geoviz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">60</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getGDALVersionInfo</td>
+<td style="text-align: left;">reproducible</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">61</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getPROJ4VersionInfo</td>
+<td style="text-align: left;">elevatr</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">62</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getProjectionRef</td>
+<td style="text-align: left;">FIESTAutils</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">64</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:getRasterBlockSize</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">66</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:make_EPSG</td>
+<td style="text-align: left;">FIESTAutils</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">68</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:ogrDrivers</td>
+<td style="text-align: left;">rgrass7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">71</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:OSRIsProjected</td>
+<td style="text-align: left;">sp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">78</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:rgdal_extSoftVersion</td>
+<td style="text-align: left;">ConR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">80</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:set_rgdal_show_exportToProj4_warnings</td>
+<td style="text-align: left;">inlabru</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">85</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal:showSRID</td>
+<td style="text-align: left;">inlabru</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">92</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:gBinarySTRtreeQuery</td>
+<td style="text-align: left;">waver</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">102</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:gDisjoint</td>
+<td style="text-align: left;">lgcp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">104</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:gEnvelope</td>
+<td style="text-align: left;">stampr</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">106</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:get_RGEOS_CheckValidity</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">107</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:get.pts</td>
+<td style="text-align: left;">RSurvey</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">109</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:gInterpolate</td>
+<td style="text-align: left;">mapmisc</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">121</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:gSymdifference</td>
+<td style="text-align: left;">ursa</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">129</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:intersect</td>
+<td style="text-align: left;">muHVT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">130</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:overGeomGeom</td>
+<td style="text-align: left;">sp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">131</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:overGeomGeomDF</td>
+<td style="text-align: left;">sp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">132</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:plot</td>
+<td style="text-align: left;">SubgrPlots</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">133</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:read.polyfile</td>
+<td style="text-align: left;">RSurvey</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">135</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:set_RGEOS_CheckValidity</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">136</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:version_GEOS</td>
+<td style="text-align: left;">raster</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">138</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgeos:write.polyfile</td>
+<td style="text-align: left;">RSurvey</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="by-depending-package" class="level2">
+<h2 class="anchored" data-anchor-id="by-depending-package">By depending package</h2>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"pkgapi_no_sp_by_pkg_220713.csv"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(r) <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"package"</span>, <span class="st">"deps"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>r<span class="sc">$</span>n_pkg <span class="ot">=</span> <span class="fu">lengths</span>(<span class="fu">strsplit</span>(r<span class="sc">$</span>deps, <span class="st">" "</span>)) <span class="sc">-</span> <span class="dv">1</span> <span class="co"># leading space</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(r[<span class="fu">order</span>(r<span class="sc">$</span>n_pkg, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 0%">
+<col style="width: 0%">
+<col style="width: 2%">
+<col style="width: 95%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">n_pkg</th>
+<th style="text-align: left;">package</th>
+<th style="text-align: left;">deps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">158</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">raster</td>
+<td style="text-align: left;">rgdal::closeDataset rgdal::compare_CRS rgdal::GDAL.close rgdal::GDAL.open rgdal::GDALcall rgdal::gdalDrivers rgdal::GDALinfo rgdal::getColorTable rgdal::getDescription rgdal::getDriver rgdal::getDriverName rgdal::getRasterBand rgdal::getRasterBlockSize rgdal::getRasterData rgdal::new_proj_and_gdal rgdal::projInfo rgdal::putRasterData rgdal::rawTransform rgdal::readOGR rgdal::saveDataset rgdal::writeOGR rgeos::gBuffer rgeos::gDifference rgeos::gDistance rgeos::get_RGEOS_CheckValidity rgeos::gIntersection rgeos::gIntersects rgeos::gIsValid rgeos::gLength rgeos::gUnaryUnion rgeos::gUnionCascaded rgeos::set_RGEOS_CheckValidity rgeos::version_GEOS rgeos::version_GEOS0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">222</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">ursa</td>
+<td style="text-align: left;">rgdal::closeDataset rgdal::CRSargs rgdal::GDAL.close rgdal::GDALcall rgdal::GDALinfo rgdal::getDriver rgdal::getDriverName rgdal::getRasterData rgdal::ogrInfo rgdal::ogrListLayers rgdal::project rgdal::putRasterData rgdal::readOGR rgdal::saveDataset rgdal::setCPLConfigOption rgdal::showP4 rgdal::showWKT rgdal::writeOGR rgeos::gBuffer rgeos::gDifference rgeos::gIntersection rgeos::gIsValid rgeos::gLength rgeos::gSimplify rgeos::gSymdifference rgeos::gUnaryUnion rgeos::gUnion rgeos::readWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">65</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">FIESTAutils</td>
+<td style="text-align: left;">rgdal::copyDataset rgdal::GDAL.close rgdal::GDAL.open rgdal::GDALcall rgdal::GDALinfo rgdal::getDescription rgdal::getProjectionRef rgdal::getRasterBand rgdal::getRasterData rgdal::make_EPSG rgdal::project rgdal::projInfo rgdal::putRasterData rgdal::readOGR rgdal::saveDataset</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">209</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">stampr</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons rgeos::gArea rgeos::gBuffer rgeos::gCentroid rgeos::gConvexHull rgeos::gDifference rgeos::gDistance rgeos::gEnvelope rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gSimplify rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">98</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">inlmisc</td>
+<td style="text-align: left;">maptools::checkPolygonsHoles rgdal::CRSargs rgeos::createSPComment rgeos::gBuffer rgeos::gDifference rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gIsValid rgeos::gSimplify rgeos::gUnaryUnion rgeos::gUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">117</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">maptools</td>
+<td style="text-align: left;">rgeos::createPolygonsComment rgeos::gContains rgeos::gContainsProperly rgeos::gDistance rgeos::gEquals rgeos::gIntersection rgeos::gIsValid rgeos::gSimplify rgeos::gUnarySTRtreeQuery rgeos::gUnaryUnion rgeos::gUnionCascaded rgeos::version_GEOS0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">71</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">gDefrag</td>
+<td style="text-align: left;">maptools::SpatialLinesMidPoints rgdal::writeOGR rgeos::gArea rgeos::gDifference rgeos::gDistance rgeos::gIntersection rgeos::gLineMerge rgeos::gPointOnSurface rgeos::gTouches rgeos::gUnaryUnion rgeos::gUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">156</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">rangeBuilder</td>
+<td style="text-align: left;">rgeos::createPolygonsComment rgeos::gBuffer rgeos::gContains rgeos::gContainsProperly rgeos::gConvexHull rgeos::gDifference rgeos::gDistance rgeos::gEquals rgeos::gIntersection rgeos::gIntersects rgeos::gUnarySTRtreeQuery</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">196</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">shadow</td>
+<td style="text-align: left;">maptools::solarpos rgeos::gBuffer rgeos::gCentroid rgeos::gConvexHull rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gLineMerge rgeos::gUnaryUnion rgeos::gUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">97</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">inlabru</td>
+<td style="text-align: left;">maptools::readShapeSpatial rgdal::CRSargs rgdal::get_rgdal_show_exportToProj4_warnings rgdal::get_thin_PROJ6_warnings rgdal::new_proj_and_gdal rgdal::readGDAL rgdal::set_rgdal_show_exportToProj4_warnings rgdal::set_thin_PROJ6_warnings rgdal::showSRID rgeos::gDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">106</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">lakemorpho</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gCrosses rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gOverlaps rgeos::gWithin</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">108</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">leastcostpath</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBoundary rgeos::gBuffer rgeos::gDifference rgeos::gIntersection rgeos::gIsValid rgeos::gLength rgeos::gNode rgeos::gPolygonize rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">185</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">RSurvey</td>
+<td style="text-align: left;">rgdal::checkCRSArgs rgdal::CRSargs rgdal::readOGR rgdal::showP4 rgdal::writeOGR rgeos::gArea rgeos::get.pts rgeos::gUnion rgeos::read.polyfile rgeos::write.polyfile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">207</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">sp</td>
+<td style="text-align: left;">rgdal::checkCRSArgs rgdal::checkCRSArgs_ng rgdal::new_proj_and_gdal rgdal::OSRIsProjected rgeos::createPolygonsComment rgeos::gIntersection rgeos::gLineMerge rgeos::gUnaryUnion rgeos::overGeomGeom rgeos::overGeomGeomDF</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">145</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">plotKML</td>
+<td style="text-align: left;">maptools::readShapePoly maptools::writeLinesShape maptools::writePointsShape maptools::writePolyShape rgdal::CRSargs rgdal::readGDAL rgdal::readOGR rgdal::writeGDAL rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">200</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">spatialEco</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gCovers rgeos::gDifference rgeos::gDistance rgeos::gIntersects rgeos::gTouches rgeos::gWithinDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">114</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">mapmisc</td>
+<td style="text-align: left;">rgdal::rawTransform rgdal::readOGR rgeos::gBuffer rgeos::gConvexHull rgeos::gDifference rgeos::gInterpolate rgeos::gIntersection rgeos::gSimplify</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">amt</td>
+<td style="text-align: left;">maptools::crepuscule maptools::sunriset rgeos::gBuffer rgeos::gContainsProperly rgeos::gConvexHull rgeos::gIntersects rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">34</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">cleangeo</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gCrosses rgeos::gDifference rgeos::getScale rgeos::gIntersection rgeos::gIsValid rgeos::gUnionCascaded</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">52</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">eechidna</td>
+<td style="text-align: left;">rgdal::ogrListLayers rgdal::readOGR rgeos::gArea rgeos::gContains rgeos::gIntersection rgeos::gIntersects rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">66</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">FLightR</td>
+<td style="text-align: left;">maptools::gzAzimuth maptools::sunriset rgeos::gBuffer rgeos::gDistance rgeos::gSimplify rgeos::gUnion rgeos::gWithinDistance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">82</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">GmAMisc</td>
+<td style="text-align: left;">maptools::as.owin.SpatialPolygons rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gConvexHull rgeos::gDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">157</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">rangemap</td>
+<td style="text-align: left;">maptools::map2SpatialPolygons rgdal::writeOGR rgeos::gBuffer rgeos::gCentroid rgeos::gIntersection rgeos::gSimplify rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">160</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">rcage</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gCentroid rgeos::gContains rgeos::gConvexHull rgeos::gCovers rgeos::gIntersects rgeos::gTouches</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">227</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">wildlifeDI</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBoundary rgeos::gContains rgeos::gCovers rgeos::gDifference rgeos::gIntersection rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">153</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">quickmapr</td>
+<td style="text-align: left;">rgdal::showWKT rgeos::gArea rgeos::gDistance rgeos::gLength rgeos::gWithin rgeos::gWithinDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">174</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">rgrass7</td>
+<td style="text-align: left;">rgdal::gdalDrivers rgdal::GDALinfo rgdal::ogrDrivers rgdal::readGDAL rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">197</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">ShapePattern</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gIsEmpty rgeos::gLength</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">213</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">surveillance</td>
+<td style="text-align: left;">maptools::gpclibPermit maptools::Sobj_SpatialGrid maptools::unionSpatialPolygons rgeos::gArea rgeos::gIntersection rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">221</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">uavRmp</td>
+<td style="text-align: left;">maptools::spRbind maptools::writeLinesShape rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">225</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Watersheds</td>
+<td style="text-align: left;">rgeos::gBoundary rgeos::gBuffer rgeos::gCentroid rgeos::gCrosses rgeos::gDistance rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">35</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">ConR</td>
+<td style="text-align: left;">rgdal::project rgdal::rgdal_extSoftVersion rgdal::writeOGR rgeos::gBuffer rgeos::readWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">61</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">expp</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gIntersection rgeos::gTouches rgeos::gUnionCascaded rgeos::readWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">80</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">ggOceanMaps</td>
+<td style="text-align: left;">rgeos::createSPComment rgeos::gDistance rgeos::gIntersection rgeos::gIsValid rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">105</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">LabourMarketAreas</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons rgdal::readOGR rgdal::writeOGR rgeos::gArea rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">109</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">letsR</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gArea rgeos::gCentroid rgeos::gContains rgeos::gOverlaps</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">110</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">lgcp</td>
+<td style="text-align: left;">rgeos::gDisjoint rgeos::gIntersection rgeos::gIntersects rgeos::gTouches rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">118</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">MazamaSpatialUtils</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gBuffer rgeos::gCentroid rgeos::gIntersects rgeos::gPointOnSurface</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">133</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">OasisR</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gCentroid rgeos::gDistance rgeos::gIntersection rgeos::gLength</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">167</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">red</td>
+<td style="text-align: left;">maptools::kmlPolygon maptools::kmlPolygons rgdal::project rgeos::gIntersection rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">226</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">waver</td>
+<td style="text-align: left;">rgeos::gBinarySTRtreeQuery rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">APfun</td>
+<td style="text-align: left;">maptools::spRbind rgdal::GDALinfo rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">19</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">bfsMaps</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons rgdal::readOGR rgeos::gLength rgeos::readWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">24</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">birdring</td>
+<td style="text-align: left;">rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gUnionCascaded</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">briskaR</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gBuffer rgeos::gDifference rgeos::gUnionCascaded</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">62</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">FedData</td>
+<td style="text-align: left;">rgdal::ogrListLayers rgdal::readOGR rgdal::writeOGR rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">79</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">gfcanalysis</td>
+<td style="text-align: left;">rgeos::gCentroid rgeos::gConvexHull rgeos::gIntersects rgeos::gTouches</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">92</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">hypergate</td>
+<td style="text-align: left;">rgeos::gCentroid rgeos::gNode rgeos::gPolygonize rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">111</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">lingtypology</td>
+<td style="text-align: left;">rgdal::project rgeos::gBuffer rgeos::gIntersects rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">181</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">rpostgis</td>
+<td style="text-align: left;">rgdal::showEPSG rgdal::showWKT rgeos::readWKT rgeos::writeWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">198</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">sharpshootR</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gContainsProperly rgeos::gIsValid rgeos::writeWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">203</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">spatsoc</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBuffer rgeos::gIntersection rgeos::gIntersects</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">224</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">voluModel</td>
+<td style="text-align: left;">rgeos::gContains rgeos::gDifference rgeos::gIntersection rgeos::gUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">animalEKF</td>
+<td style="text-align: left;">rgeos::gContains rgeos::gIntersection rgeos::gIsEmpty</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">bamlss</td>
+<td style="text-align: left;">maptools::gpclibPermit maptools::readShapePoly maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">BIEN</td>
+<td style="text-align: left;">rgdal::writeOGR rgeos::readWKT rgeos::writeWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">23</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">biosurvey</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gBuffer rgeos::gCentroid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">46</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">DRHotNet</td>
+<td style="text-align: left;">maptools::as.SpatialLines.psp maptools::PolySet2SpatialPolygons maptools::SpatialLines2PolySet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">49</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">DSsim</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gIntersection rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">67</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">ForestTools</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gCentroid rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">69</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">FRK</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gDifference rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">70</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">GADMTools</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons rgdal::writeOGR rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">103</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">itcSegment</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gBuffer rgeos::gConvexHull</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">113</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">MapGAM</td>
+<td style="text-align: left;">maptools::map2SpatialLines maptools::SpatialLines2PolySet maptools::SpatialPolygons2PolySet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">126</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">movecost</td>
+<td style="text-align: left;">rgdal::writeOGR rgeos::gArea rgeos::gLength</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">138</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">openSTARS</td>
+<td style="text-align: left;">rgdal::readGDAL rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">146</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">postGIStools</td>
+<td style="text-align: left;">rgdal::showEPSG rgeos::readWKT rgeos::writeWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">152</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">PWFSLSmoke</td>
+<td style="text-align: left;">maptools::solarnoon maptools::sunriset rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">162</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">RchivalTag</td>
+<td style="text-align: left;">maptools::PolySet2SpatialPolygons maptools::SpatialLines2PolySet maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">177</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rmapzen</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons rgdal::ogrListLayers rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">187</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">rTLS</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gDifference rgeos::gUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">192</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">secrlinear</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gBuffer rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">193</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">SegEnvIneq</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gCentroid rgeos::gDistance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">202</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">SpatialGraph</td>
+<td style="text-align: left;">rgeos::gDistance rgeos::gIntersection rgeos::gWithinDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">208</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">SSN</td>
+<td style="text-align: left;">maptools::getinfo.shape rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">212</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">SurfaceTortoise</td>
+<td style="text-align: left;">rgeos::gCentroid rgeos::gDifference rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">215</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">TileManager</td>
+<td style="text-align: left;">rgeos::gCentroid rgeos::gIntersects rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">228</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">wux</td>
+<td style="text-align: left;">rgdal::readOGR rgeos::gArea rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">animaltracker</td>
+<td style="text-align: left;">maptools::getKMLcoordinates rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">AQuadtree</td>
+<td style="text-align: left;">rgdal::writeOGR rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">atakrig</td>
+<td style="text-align: left;">rgdal::putRasterData rgeos::gCentroid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">bcmaps</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gIsValid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">bnspatial</td>
+<td style="text-align: left;">rgdal::GDALinfo rgdal::ogrInfo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">27</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">BPEC</td>
+<td style="text-align: left;">maptools::kmlLine maptools::kmlPoints</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">28</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">bRacatus</td>
+<td style="text-align: left;">rgeos::gBuffer rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">chronosphere</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">38</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">crestr</td>
+<td style="text-align: left;">rgdal::projInfo rgeos::readWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">41</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">ctmm</td>
+<td style="text-align: left;">rgdal::project rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">44</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">dismo</td>
+<td style="text-align: left;">rgdal::showWKT rgeos::gUnaryUnion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">60</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">excursions</td>
+<td style="text-align: left;">rgeos::gDifference rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">72</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">geocmeans</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gLength</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">73</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">GeoFIS</td>
+<td style="text-align: left;">rgeos::gConvexHull rgeos::gIsValid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">78</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">geoviz</td>
+<td style="text-align: left;">rgdal::getGDALCheckVersion rgeos::gBuffer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">85</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">HDSpatialScan</td>
+<td style="text-align: left;">rgdal::project rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">88</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">HurreconR</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::setCPLConfigOption</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">99</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">intamap</td>
+<td style="text-align: left;">rgdal::CRSargs rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">102</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">iSDM</td>
+<td style="text-align: left;">maptools::spRbind rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">115</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">mapReasy</td>
+<td style="text-align: left;">rgdal::ogrListLayers rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">119</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">MBNMAdose</td>
+<td style="text-align: left;">rgeos::gArea rgeos::readWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">120</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">MBNMAtime</td>
+<td style="text-align: left;">rgeos::gArea rgeos::readWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">121</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">MetaLandSim</td>
+<td style="text-align: left;">maptools::readShapePoly rgeos::gCentroid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">125</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">monographaR</td>
+<td style="text-align: left;">maptools::writePolyShape maptools::writeSpatialShape</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">132</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">nhdR</td>
+<td style="text-align: left;">rgdal::ogrInfo rgdal::ogrListLayers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">141</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">paleofire</td>
+<td style="text-align: left;">rgdal::project rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">147</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">pRecipe</td>
+<td style="text-align: left;">rgdal::readGDAL rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">151</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">psda</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">154</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">quickPlot</td>
+<td style="text-align: left;">rgeos::gArea rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">155</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">R2BayesX</td>
+<td style="text-align: left;">maptools::gpclibPermit maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">161</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rcanvec</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">165</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">recurse</td>
+<td style="text-align: left;">rgeos::gIntersection rgeos::gLength</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">169</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">reproducible</td>
+<td style="text-align: left;">rgdal::getGDALVersionInfo rgdal::set_thin_PROJ6_warnings</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">173</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rgplates</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">179</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rnoaa</td>
+<td style="text-align: left;">rgdal::ogrListLayers rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">183</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">RSAGA</td>
+<td style="text-align: left;">rgdal::readOGR rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">188</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">rtop</td>
+<td style="text-align: left;">rgdal::CRSargs rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">211</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">SubgrPlots</td>
+<td style="text-align: left;">rgeos::gIntersection rgeos::plot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">219</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">tripEstimation</td>
+<td style="text-align: left;">rgdal::CRSargs rgdal::project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">actel</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">adehabitatHR</td>
+<td style="text-align: left;">rgeos::gUnionCascaded</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">agriwater</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">animint2</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">antaresViz</td>
+<td style="text-align: left;">rgeos::gDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ASIP</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ausplotsR</td>
+<td style="text-align: left;">maptools::map2SpatialPolygons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">BARIS</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">BayesX</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">bdvis</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">21</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">BiodiversityR</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">22</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">biogeo</td>
+<td style="text-align: left;">maptools::writePointsShape</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">bivariatemaps</td>
+<td style="text-align: left;">rgeos::gArea</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">broom</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">31</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">car</td>
+<td style="text-align: left;">maptools::pointLabel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">32</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">cartograflow</td>
+<td style="text-align: left;">rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">36</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">contact</td>
+<td style="text-align: left;">rgeos::gDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">37</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">CoordinateCleaner</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">39</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">cropDemand</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">40</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">cropZoning</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">42</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">disaggregation</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">43</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">disdat</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">DivE</td>
+<td style="text-align: left;">rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">47</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">dsims</td>
+<td style="text-align: left;">rgeos::gIntersects</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">48</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">dssd</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">50</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">dynatopGIS</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">51</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ecospat</td>
+<td style="text-align: left;">maptools::spRbind</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">53</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">eeptools</td>
+<td style="text-align: left;">maptools::spCbind</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">54</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">elevatr</td>
+<td style="text-align: left;">rgdal::getPROJ4VersionInfo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">EMbC</td>
+<td style="text-align: left;">maptools::solarpos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">56</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ENMTools</td>
+<td style="text-align: left;">rgeos::gUnaryUnion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">57</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">envirem</td>
+<td style="text-align: left;">rgdal::project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">58</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">envi</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">59</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">eseis</td>
+<td style="text-align: left;">rgdal::project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">63</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">fieldRS</td>
+<td style="text-align: left;">rgeos::gDistance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">64</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FIESTA</td>
+<td style="text-align: left;">rgdal::GDALinfo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">68</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">foster</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">74</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">geogrid</td>
+<td style="text-align: left;">rgeos::gCentroid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">75</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">geometr</td>
+<td style="text-align: left;">rgdal::project</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">76</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">geonetwork</td>
+<td style="text-align: left;">rgdal::CRSargs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">77</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">geotopbricks</td>
+<td style="text-align: left;">rgdal::showWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">81</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ggsn</td>
+<td style="text-align: left;">maptools::gcDestination</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">83</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">grainscape</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">84</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">HCV</td>
+<td style="text-align: left;">rgeos::gTouches</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">86</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hero</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">87</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hierarchicalDS</td>
+<td style="text-align: left;">rgeos::gCentroid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">89</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hydroTSM</td>
+<td style="text-align: left;">maptools::readShapePoly</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">90</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hyfo</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">91</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hyperbrick</td>
+<td style="text-align: left;">rgdal::project</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">93</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hypervolume</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">94</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">iconr</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">95</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">importinegi</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">96</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">incR</td>
+<td style="text-align: left;">maptools::crepuscule</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">100</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ipdw</td>
+<td style="text-align: left;">rgeos::gConvexHull</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">101</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ipumsr</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">104</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">kernelPhil</td>
+<td style="text-align: left;">rgdal::project</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">107</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">leaflet</td>
+<td style="text-align: left;">rgeos::createPolygonsComment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">112</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">malariaAtlas</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">116</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">mapsRinteractive</td>
+<td style="text-align: left;">rgeos::gIntersection</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">122</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">micromap</td>
+<td style="text-align: left;">maptools::unionSpatialPolygons</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">123</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">modchart</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">124</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Momocs</td>
+<td style="text-align: left;">rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">127</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">move</td>
+<td style="text-align: left;">maptools::trackAzimuth</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">128</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">mregions</td>
+<td style="text-align: left;">rgeos::writeWKT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">129</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">muHVT</td>
+<td style="text-align: left;">rgeos::intersect</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">130</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">naijR</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">131</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">NetLogoR</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">134</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">oceanic</td>
+<td style="text-align: left;">rgeos::gSimplify</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">135</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">OCNet</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">136</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">onemapsgapi</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">137</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">openadds</td>
+<td style="text-align: left;">maptools::readShapeSpatial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">139</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">osmplotr</td>
+<td style="text-align: left;">rgeos::gIntersection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">140</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">overlap</td>
+<td style="text-align: left;">maptools::sunriset</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">142</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ParallelDSM</td>
+<td style="text-align: left;">rgdal::writeGDAL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">143</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">phyloregion</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">144</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">plotdap</td>
+<td style="text-align: left;">rgeos::getScale</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">148</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">PReMiuM</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">149</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">prevR</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">150</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">prioritizr</td>
+<td style="text-align: left;">rgeos::gUnarySTRtreeQuery</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">159</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rayshader</td>
+<td style="text-align: left;">maptools::pointLabel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">163</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rdhs</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">164</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rdwd</td>
+<td style="text-align: left;">rgdal::readGDAL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">166</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">redlistr</td>
+<td style="text-align: left;">rgeos::gArea</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">168</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ref.ICAR</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">170</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgbif</td>
+<td style="text-align: left;">rgeos::readWKT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">171</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rgdal</td>
+<td style="text-align: left;">rgeos::createSPComment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">172</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">RgoogleMaps</td>
+<td style="text-align: left;">maptools::kmlOverlay</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">175</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rioja</td>
+<td style="text-align: left;">maptools::pointLabel</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">176</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">riverdist</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">178</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rnaturalearth</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">180</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rosm</td>
+<td style="text-align: left;">rgdal::CRSargs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">182</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Rsagacmd</td>
+<td style="text-align: left;">rgdal::writeOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">184</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">RSIP</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">186</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">RTL</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">189</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Rtrack</td>
+<td style="text-align: left;">rgeos::gDifference</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">190</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">rworldmap</td>
+<td style="text-align: left;">maptools::readAsciiGrid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">191</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">sdmpredictors</td>
+<td style="text-align: left;">rgdal::GDALis3ormore</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">194</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">sen2r</td>
+<td style="text-align: left;">rgdal::GDALinfo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">195</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">SeuratObject</td>
+<td style="text-align: left;">rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">199</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">SpaDES.tools</td>
+<td style="text-align: left;">rgeos::gContains</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">201</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">SpatialEpi</td>
+<td style="text-align: left;">maptools::leglabs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">204</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">spatsurv</td>
+<td style="text-align: left;">rgeos::gBuffer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">205</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">sperich</td>
+<td style="text-align: left;">rgdal::writeGDAL</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">206</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">SpNetPrep</td>
+<td style="text-align: left;">maptools::as.linnet.SpatialLines</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">210</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">streamDepletr</td>
+<td style="text-align: left;">rgeos::gLength</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">214</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">tigris</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">216</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">TOC</td>
+<td style="text-align: left;">rgdal::CRSargs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">217</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">track2KBA</td>
+<td style="text-align: left;">maptools::spRbind</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">218</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">trajectories</td>
+<td style="text-align: left;">rgeos::gSimplify</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">220</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">TUFLOWR</td>
+<td style="text-align: left;">rgdal::readOGR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">223</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">usmap</td>
+<td style="text-align: left;">maptools::elide</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</section>
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>

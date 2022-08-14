@@ -1,0 +1,30 @@
+---
+title: "functions and packages affected by deprecating rgdal, rgeos and maptools"
+format: html
+---
+
+## By deprecating package
+
+```{r}
+r = read.csv("pkgapi_no_sp_220713.csv", header = FALSE)
+r$n_pkg = lengths(strsplit(r[[3]], " "))
+r$`function` = paste(r[[1]], r[[2]], sep = ":")
+r$packages = r[["V3"]]
+# r$packages[r$n_pkg > 9] = ""
+r[["V1"]] = r[["V2"]] = r[["V3"]] = NULL
+r_o = r[order(r$n_pkg, decreasing = TRUE),]
+```
+
+```{r echo=FALSE, as.is=TRUE}
+library(knitr)
+kable(r_o)
+```
+
+## By depending package
+
+```{r}
+r = read.csv("pkgapi_no_sp_by_pkg_220713.csv", header = FALSE)
+names(r) = c("package", "deps")
+r$n_pkg = lengths(strsplit(r$deps, " ")) - 1 # leading space
+kable(r[order(r$n_pkg, decreasing = TRUE),c(3,1,2)])
+```
