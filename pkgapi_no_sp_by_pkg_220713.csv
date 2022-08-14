@@ -1,0 +1,228 @@
+actel, rgdal::readOGR
+adehabitatHR, rgeos::gUnionCascaded
+agriwater, rgdal::readOGR
+amt, maptools::crepuscule maptools::sunriset rgeos::gBuffer rgeos::gContainsProperly rgeos::gConvexHull rgeos::gIntersects rgeos::gUnaryUnion
+animalEKF, rgeos::gContains rgeos::gIntersection rgeos::gIsEmpty
+animaltracker, maptools::getKMLcoordinates rgdal::writeOGR
+animint2, maptools::unionSpatialPolygons
+antaresViz, rgeos::gDistance
+APfun, maptools::spRbind rgdal::GDALinfo rgdal::readOGR rgdal::writeOGR
+AQuadtree, rgdal::writeOGR rgeos::gIntersection
+ASIP, rgdal::readOGR
+atakrig, rgdal::putRasterData rgeos::gCentroid
+ausplotsR, maptools::map2SpatialPolygons
+bamlss, maptools::gpclibPermit maptools::readShapePoly maptools::unionSpatialPolygons
+BARIS, rgdal::readOGR
+BayesX, maptools::unionSpatialPolygons
+bcmaps, rgeos::gBuffer rgeos::gIsValid
+bdvis, rgdal::readOGR
+bfsMaps, maptools::unionSpatialPolygons rgdal::readOGR rgeos::gLength rgeos::readWKT
+BIEN, rgdal::writeOGR rgeos::readWKT rgeos::writeWKT
+BiodiversityR, rgeos::gBuffer
+biogeo, maptools::writePointsShape
+biosurvey, rgdal::readOGR rgeos::gBuffer rgeos::gCentroid
+birdring, rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gUnionCascaded
+bivariatemaps, rgeos::gArea
+bnspatial, rgdal::GDALinfo rgdal::ogrInfo
+BPEC, maptools::kmlLine maptools::kmlPoints
+bRacatus, rgeos::gBuffer rgeos::gIntersection
+briskaR, rgdal::readOGR rgeos::gBuffer rgeos::gDifference rgeos::gUnionCascaded
+broom, maptools::unionSpatialPolygons
+car, maptools::pointLabel
+cartograflow, rgeos::gIntersects
+chronosphere, rgdal::readOGR rgdal::writeOGR
+cleangeo, rgeos::gBuffer rgeos::gCrosses rgeos::gDifference rgeos::getScale rgeos::gIntersection rgeos::gIsValid rgeos::gUnionCascaded
+ConR, rgdal::project rgdal::rgdal_extSoftVersion rgdal::writeOGR rgeos::gBuffer rgeos::readWKT
+contact, rgeos::gDistance
+CoordinateCleaner, rgeos::gBuffer
+crestr, rgdal::projInfo rgeos::readWKT
+cropDemand, rgdal::readOGR
+cropZoning, rgdal::readOGR
+ctmm, rgdal::project rgdal::writeOGR
+disaggregation, maptools::unionSpatialPolygons
+disdat, rgdal::readOGR
+dismo, rgdal::showWKT rgeos::gUnaryUnion
+DivE, rgeos::gIntersection
+DRHotNet, maptools::as.SpatialLines.psp maptools::PolySet2SpatialPolygons maptools::SpatialLines2PolySet
+dsims, rgeos::gIntersects
+dssd, rgdal::writeOGR
+DSsim, rgeos::gBuffer rgeos::gIntersection rgeos::gIntersects
+dynatopGIS, rgeos::gBuffer
+ecospat, maptools::spRbind
+eechidna, rgdal::ogrListLayers rgdal::readOGR rgeos::gArea rgeos::gContains rgeos::gIntersection rgeos::gIntersects rgeos::gSimplify
+eeptools, maptools::spCbind
+elevatr, rgdal::getPROJ4VersionInfo
+EMbC, maptools::solarpos
+ENMTools, rgeos::gUnaryUnion
+envirem, rgdal::project
+envi, rgeos::gBuffer
+eseis, rgdal::project
+excursions, rgeos::gDifference rgeos::gUnaryUnion
+expp, rgeos::gBuffer rgeos::gIntersection rgeos::gTouches rgeos::gUnionCascaded rgeos::readWKT
+FedData, rgdal::ogrListLayers rgdal::readOGR rgdal::writeOGR rgeos::gIntersection
+fieldRS, rgeos::gDistance
+FIESTA, rgdal::GDALinfo
+FIESTAutils, rgdal::copyDataset rgdal::GDAL.close rgdal::GDAL.open rgdal::GDALcall rgdal::GDALinfo rgdal::getDescription rgdal::getProjectionRef rgdal::getRasterBand rgdal::getRasterData rgdal::make_EPSG rgdal::project rgdal::projInfo rgdal::putRasterData rgdal::readOGR rgdal::saveDataset
+FLightR, maptools::gzAzimuth maptools::sunriset rgeos::gBuffer rgeos::gDistance rgeos::gSimplify rgeos::gUnion rgeos::gWithinDistance
+ForestTools, rgeos::gArea rgeos::gCentroid rgeos::gUnaryUnion
+foster, rgdal::writeOGR
+FRK, rgeos::gBuffer rgeos::gDifference rgeos::gIntersection
+GADMTools, maptools::unionSpatialPolygons rgdal::writeOGR rgeos::gSimplify
+gDefrag, maptools::SpatialLinesMidPoints rgdal::writeOGR rgeos::gArea rgeos::gDifference rgeos::gDistance rgeos::gIntersection rgeos::gLineMerge rgeos::gPointOnSurface rgeos::gTouches rgeos::gUnaryUnion rgeos::gUnion
+geocmeans, rgeos::gArea rgeos::gLength
+GeoFIS, rgeos::gConvexHull rgeos::gIsValid
+geogrid, rgeos::gCentroid
+geometr, rgdal::project
+geonetwork, rgdal::CRSargs
+geotopbricks, rgdal::showWKT
+geoviz, rgdal::getGDALCheckVersion rgeos::gBuffer
+gfcanalysis, rgeos::gCentroid rgeos::gConvexHull rgeos::gIntersects rgeos::gTouches
+ggOceanMaps, rgeos::createSPComment rgeos::gDistance rgeos::gIntersection rgeos::gIsValid rgeos::gSimplify
+ggsn, maptools::gcDestination
+GmAMisc, maptools::as.owin.SpatialPolygons rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gConvexHull rgeos::gDistance
+grainscape, rgdal::writeOGR
+HCV, rgeos::gTouches
+HDSpatialScan, rgdal::project rgeos::gUnaryUnion
+hero, rgeos::gBuffer
+hierarchicalDS, rgeos::gCentroid
+HurreconR, rgdal::readOGR rgdal::setCPLConfigOption
+hydroTSM, maptools::readShapePoly
+hyfo, rgdal::readOGR
+hyperbrick, rgdal::project
+hypergate, rgeos::gCentroid rgeos::gNode rgeos::gPolygonize rgeos::gUnaryUnion
+hypervolume, rgeos::gBuffer
+iconr, rgdal::readOGR
+importinegi, rgdal::readOGR
+incR, maptools::crepuscule
+inlabru, maptools::readShapeSpatial rgdal::CRSargs rgdal::get_rgdal_show_exportToProj4_warnings rgdal::get_thin_PROJ6_warnings rgdal::new_proj_and_gdal rgdal::readGDAL rgdal::set_rgdal_show_exportToProj4_warnings rgdal::set_thin_PROJ6_warnings rgdal::showSRID rgeos::gDistance
+inlmisc, maptools::checkPolygonsHoles rgdal::CRSargs rgeos::createSPComment rgeos::gBuffer rgeos::gDifference rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gIsValid rgeos::gSimplify rgeos::gUnaryUnion rgeos::gUnion
+intamap, rgdal::CRSargs rgdal::readOGR
+ipdw, rgeos::gConvexHull
+ipumsr, rgdal::readOGR
+iSDM, maptools::spRbind rgdal::writeOGR
+itcSegment, rgeos::gArea rgeos::gBuffer rgeos::gConvexHull
+kernelPhil, rgdal::project
+LabourMarketAreas, maptools::unionSpatialPolygons rgdal::readOGR rgdal::writeOGR rgeos::gArea rgeos::gIntersection
+lakemorpho, rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gCrosses rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gOverlaps rgeos::gWithin
+leaflet, rgeos::createPolygonsComment
+leastcostpath, rgeos::gArea rgeos::gBoundary rgeos::gBuffer rgeos::gDifference rgeos::gIntersection rgeos::gIsValid rgeos::gLength rgeos::gNode rgeos::gPolygonize rgeos::gUnaryUnion
+letsR, rgdal::readOGR rgeos::gArea rgeos::gCentroid rgeos::gContains rgeos::gOverlaps
+lgcp, rgeos::gDisjoint rgeos::gIntersection rgeos::gIntersects rgeos::gTouches rgeos::gUnaryUnion
+lingtypology, rgdal::project rgeos::gBuffer rgeos::gIntersects rgeos::gUnaryUnion
+malariaAtlas, rgdal::readOGR
+MapGAM, maptools::map2SpatialLines maptools::SpatialLines2PolySet maptools::SpatialPolygons2PolySet
+mapmisc, rgdal::rawTransform rgdal::readOGR rgeos::gBuffer rgeos::gConvexHull rgeos::gDifference rgeos::gInterpolate rgeos::gIntersection rgeos::gSimplify
+mapReasy, rgdal::ogrListLayers rgdal::readOGR
+mapsRinteractive, rgeos::gIntersection
+maptools, rgeos::createPolygonsComment rgeos::gContains rgeos::gContainsProperly rgeos::gDistance rgeos::gEquals rgeos::gIntersection rgeos::gIsValid rgeos::gSimplify rgeos::gUnarySTRtreeQuery rgeos::gUnaryUnion rgeos::gUnionCascaded rgeos::version_GEOS0
+MazamaSpatialUtils, rgdal::readOGR rgeos::gBuffer rgeos::gCentroid rgeos::gIntersects rgeos::gPointOnSurface
+MBNMAdose, rgeos::gArea rgeos::readWKT
+MBNMAtime, rgeos::gArea rgeos::readWKT
+MetaLandSim, maptools::readShapePoly rgeos::gCentroid
+micromap, maptools::unionSpatialPolygons
+modchart, rgdal::readOGR
+Momocs, rgeos::gIntersection
+monographaR, maptools::writePolyShape maptools::writeSpatialShape
+movecost, rgdal::writeOGR rgeos::gArea rgeos::gLength
+move, maptools::trackAzimuth
+mregions, rgeos::writeWKT
+muHVT, rgeos::intersect
+naijR, rgdal::readOGR
+NetLogoR, rgeos::gBuffer
+nhdR, rgdal::ogrInfo rgdal::ogrListLayers
+OasisR, rgdal::readOGR rgeos::gCentroid rgeos::gDistance rgeos::gIntersection rgeos::gLength
+oceanic, rgeos::gSimplify
+OCNet, rgdal::writeOGR
+onemapsgapi, rgdal::readOGR
+openadds, maptools::readShapeSpatial
+openSTARS, rgdal::readGDAL rgdal::readOGR rgdal::writeOGR
+osmplotr, rgeos::gIntersection
+overlap, maptools::sunriset
+paleofire, rgdal::project rgdal::writeOGR
+ParallelDSM, rgdal::writeGDAL
+phyloregion, rgeos::gBuffer
+plotdap, rgeos::getScale
+plotKML, maptools::readShapePoly maptools::writeLinesShape maptools::writePointsShape maptools::writePolyShape rgdal::CRSargs rgdal::readGDAL rgdal::readOGR rgdal::writeGDAL rgdal::writeOGR
+postGIStools, rgdal::showEPSG rgeos::readWKT rgeos::writeWKT
+pRecipe, rgdal::readGDAL rgdal::readOGR
+PReMiuM, rgdal::readOGR
+prevR, rgdal::writeOGR
+prioritizr, rgeos::gUnarySTRtreeQuery
+psda, rgeos::gArea rgeos::gIntersection
+PWFSLSmoke, maptools::solarnoon maptools::sunriset rgdal::writeOGR
+quickmapr, rgdal::showWKT rgeos::gArea rgeos::gDistance rgeos::gLength rgeos::gWithin rgeos::gWithinDistance
+quickPlot, rgeos::gArea rgeos::gIntersects
+R2BayesX, maptools::gpclibPermit maptools::unionSpatialPolygons
+rangeBuilder, rgeos::createPolygonsComment rgeos::gBuffer rgeos::gContains rgeos::gContainsProperly rgeos::gConvexHull rgeos::gDifference rgeos::gDistance rgeos::gEquals rgeos::gIntersection rgeos::gIntersects rgeos::gUnarySTRtreeQuery
+rangemap, maptools::map2SpatialPolygons rgdal::writeOGR rgeos::gBuffer rgeos::gCentroid rgeos::gIntersection rgeos::gSimplify rgeos::gUnaryUnion
+raster, rgdal::closeDataset rgdal::compare_CRS rgdal::GDAL.close rgdal::GDAL.open rgdal::GDALcall rgdal::gdalDrivers rgdal::GDALinfo rgdal::getColorTable rgdal::getDescription rgdal::getDriver rgdal::getDriverName rgdal::getRasterBand rgdal::getRasterBlockSize rgdal::getRasterData rgdal::new_proj_and_gdal rgdal::projInfo rgdal::putRasterData rgdal::rawTransform rgdal::readOGR rgdal::saveDataset rgdal::writeOGR rgeos::gBuffer rgeos::gDifference rgeos::gDistance rgeos::get_RGEOS_CheckValidity rgeos::gIntersection rgeos::gIntersects rgeos::gIsValid rgeos::gLength rgeos::gUnaryUnion rgeos::gUnionCascaded rgeos::set_RGEOS_CheckValidity rgeos::version_GEOS rgeos::version_GEOS0
+rayshader, maptools::pointLabel
+rcage, rgeos::gArea rgeos::gCentroid rgeos::gContains rgeos::gConvexHull rgeos::gCovers rgeos::gIntersects rgeos::gTouches
+rcanvec, rgdal::readOGR rgdal::writeOGR
+RchivalTag, maptools::PolySet2SpatialPolygons maptools::SpatialLines2PolySet maptools::unionSpatialPolygons
+rdhs, rgdal::readOGR
+rdwd, rgdal::readGDAL
+recurse, rgeos::gIntersection rgeos::gLength
+redlistr, rgeos::gArea
+red, maptools::kmlPolygon maptools::kmlPolygons rgdal::project rgeos::gIntersection rgeos::gSimplify
+ref.ICAR, rgdal::readOGR
+reproducible, rgdal::getGDALVersionInfo rgdal::set_thin_PROJ6_warnings
+rgbif, rgeos::readWKT
+rgdal, rgeos::createSPComment
+RgoogleMaps, maptools::kmlOverlay
+rgplates, rgdal::readOGR rgdal::writeOGR
+rgrass7, rgdal::gdalDrivers rgdal::GDALinfo rgdal::ogrDrivers rgdal::readGDAL rgdal::readOGR rgdal::writeOGR
+rioja, maptools::pointLabel
+riverdist, rgdal::readOGR
+rmapzen, maptools::unionSpatialPolygons rgdal::ogrListLayers rgdal::readOGR
+rnaturalearth, rgdal::readOGR
+rnoaa, rgdal::ogrListLayers rgdal::readOGR
+rosm, rgdal::CRSargs
+rpostgis, rgdal::showEPSG rgdal::showWKT rgeos::readWKT rgeos::writeWKT
+Rsagacmd, rgdal::writeOGR
+RSAGA, rgdal::readOGR rgdal::writeOGR
+RSIP, rgdal::readOGR
+RSurvey, rgdal::checkCRSArgs rgdal::CRSargs rgdal::readOGR rgdal::showP4 rgdal::writeOGR rgeos::gArea rgeos::get.pts rgeos::gUnion rgeos::read.polyfile rgeos::write.polyfile
+RTL, rgdal::readOGR
+rTLS, rgeos::gArea rgeos::gDifference rgeos::gUnion
+rtop, rgdal::CRSargs rgeos::gIntersection
+Rtrack, rgeos::gDifference
+rworldmap, maptools::readAsciiGrid
+sdmpredictors, rgdal::GDALis3ormore
+secrlinear, rgdal::readOGR rgeos::gBuffer rgeos::gIntersection
+SegEnvIneq, rgdal::readOGR rgeos::gCentroid rgeos::gDistance
+sen2r, rgdal::GDALinfo
+SeuratObject, rgeos::gSimplify
+shadow, maptools::solarpos rgeos::gBuffer rgeos::gCentroid rgeos::gConvexHull rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gLineMerge rgeos::gUnaryUnion rgeos::gUnion
+ShapePattern, rgdal::readOGR rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gIsEmpty rgeos::gLength
+sharpshootR, rgeos::gBuffer rgeos::gContainsProperly rgeos::gIsValid rgeos::writeWKT
+SpaDES.tools, rgeos::gContains
+spatialEco, rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gCovers rgeos::gDifference rgeos::gDistance rgeos::gIntersects rgeos::gTouches rgeos::gWithinDistance
+SpatialEpi, maptools::leglabs
+SpatialGraph, rgeos::gDistance rgeos::gIntersection rgeos::gWithinDistance
+spatsoc, rgeos::gArea rgeos::gBuffer rgeos::gIntersection rgeos::gIntersects
+spatsurv, rgeos::gBuffer
+sperich, rgdal::writeGDAL
+SpNetPrep, maptools::as.linnet.SpatialLines
+sp, rgdal::checkCRSArgs rgdal::checkCRSArgs_ng rgdal::new_proj_and_gdal rgdal::OSRIsProjected rgeos::createPolygonsComment rgeos::gIntersection rgeos::gLineMerge rgeos::gUnaryUnion rgeos::overGeomGeom rgeos::overGeomGeomDF
+SSN, maptools::getinfo.shape rgdal::readOGR rgdal::writeOGR
+stampr, maptools::unionSpatialPolygons rgeos::gArea rgeos::gBuffer rgeos::gCentroid rgeos::gConvexHull rgeos::gDifference rgeos::gDistance rgeos::gEnvelope rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gSimplify rgeos::gUnaryUnion
+streamDepletr, rgeos::gLength
+SubgrPlots, rgeos::gIntersection rgeos::plot
+SurfaceTortoise, rgeos::gCentroid rgeos::gDifference rgeos::gIntersection
+surveillance, maptools::gpclibPermit maptools::Sobj_SpatialGrid maptools::unionSpatialPolygons rgeos::gArea rgeos::gIntersection rgeos::gUnaryUnion
+tigris, rgdal::readOGR
+TileManager, rgeos::gCentroid rgeos::gIntersects rgeos::gUnaryUnion
+TOC, rgdal::CRSargs
+track2KBA, maptools::spRbind
+trajectories, rgeos::gSimplify
+tripEstimation, rgdal::CRSargs rgdal::project
+TUFLOWR, rgdal::readOGR
+uavRmp, maptools::spRbind maptools::writeLinesShape rgdal::writeOGR rgeos::gArea rgeos::gBuffer rgeos::gUnaryUnion
+ursa, rgdal::closeDataset rgdal::CRSargs rgdal::GDAL.close rgdal::GDALcall rgdal::GDALinfo rgdal::getDriver rgdal::getDriverName rgdal::getRasterData rgdal::ogrInfo rgdal::ogrListLayers rgdal::project rgdal::putRasterData rgdal::readOGR rgdal::saveDataset rgdal::setCPLConfigOption rgdal::showP4 rgdal::showWKT rgdal::writeOGR rgeos::gBuffer rgeos::gDifference rgeos::gIntersection rgeos::gIsValid rgeos::gLength rgeos::gSimplify rgeos::gSymdifference rgeos::gUnaryUnion rgeos::gUnion rgeos::readWKT
+usmap, maptools::elide
+voluModel, rgeos::gContains rgeos::gDifference rgeos::gIntersection rgeos::gUnion
+Watersheds, rgeos::gBoundary rgeos::gBuffer rgeos::gCentroid rgeos::gCrosses rgeos::gDistance rgeos::gIntersects
+waver, rgeos::gBinarySTRtreeQuery rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gUnaryUnion
+wildlifeDI, rgeos::gArea rgeos::gBoundary rgeos::gContains rgeos::gCovers rgeos::gDifference rgeos::gIntersection rgeos::gIntersects
+wux, rgdal::readOGR rgeos::gArea rgeos::gIntersection
