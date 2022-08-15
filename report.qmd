@@ -3,6 +3,15 @@ title: "functions and packages affected by deprecating rgdal, rgeos and maptools
 format: html
 ---
 
+The tables below list 
+
+* which functions in packages `maptools`, `rgeos` and `rgdal` are used by which packages, orderd by the number of packages affected, and 
+* the functions in `maptools`, `rgeos` and `rgeos` that are called by each package involved, orderd by the number of functions involved
+
+Note that this only concerns _exported functions_, not S3 or S4 methods, and so gives an under estimation of the amount of dependency on the three packages.
+
+The reason for listing this is to find and anticipate what will happen when [rgdal, rgeos and maptools will retire](https://r-spatial.org/r/2022/04/12/evolution.html). Possibilities to migrate to more modern functions in package `sf` are given [here](https://github.com/r-spatial/sf/wiki/Migrating)
+
 ## By deprecating function
 
 ```{r}

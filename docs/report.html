@@ -117,6 +117,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<p>The tables below list</p>
+<ul>
+<li>which functions in packages <code>maptools</code>, <code>rgeos</code> and <code>rgdal</code> are used by which packages, orderd by the number of packages affected, and</li>
+<li>the functions in <code>maptools</code>, <code>rgeos</code> and <code>rgeos</code> that are called by each package involved, orderd by the number of functions involved</li>
+</ul>
+<p>Note that this only concerns <em>exported functions</em>, not S3 or S4 methods, and so gives an under estimation of the amount of dependency on the three packages.</p>
+<p>The reason for listing this is to find and anticipate what will happen when <a href="https://r-spatial.org/r/2022/04/12/evolution.html">rgdal, rgeos and maptools will retire</a>. Possibilities to migrate to more modern functions in package <code>sf</code> are given <a href="https://github.com/r-spatial/sf/wiki/Migrating">here</a></p>
 <section id="by-deprecating-function" class="level2">
 <h2 class="anchored" data-anchor-id="by-deprecating-function">By deprecating function</h2>
 <div class="cell">
