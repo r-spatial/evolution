@@ -37,6 +37,20 @@ r$functions = lengths(strsplit(r$`functions involved`, " ")) # - 1 # leading spa
 kable(r[order(r$functions, decreasing = TRUE),c(3,1,2)], row.names = FALSE)
 ```
 
+### Impending changes in `raster`
+
+Many packages using `raster` declare `rgeos` and/or `rgdal` as required in some form, but very recent changes in `raster`, removing both these packages entirely from `DESCRIPTION`, will in time propagate, so that declarations of these packages in packages really only needing `raster` can be deleted soon.
+
+A run of `pkgapi::map_package("raster")` on the development source of the package shows that calls to the retiring packages have gone:
+
+```
+> unique(sapply(pkgapi::map_package("raster")$calls$to, function(x) strsplit(x, "::")[[1]][1]))
+ [1] "methods"       "base"          "sp"            ""             
+ [5] "raster"        "grDevices"     "NA"            "stats"        
+ [9] "utils"         "parallel"      "graphics"      "igraph"       
+[13] "ncdf4"         "sf"            "exactextractr" "terra"        
+[17] "pkgload"       "MASS"          "tcltk"         "Rcpp"         
+```
 
 ## Reverse dependency checks
 
@@ -58,7 +72,6 @@ r = read.csv("revdep_error_types_220827.csv")
 kable(table(r$type))
 ```
 
-Many packages using `raster` declare `rgeos` and/or `rgdal` as required in some form, but very recent changes in `raster`, removing both these packages entirely from `DESCRIPTION`, will in time propagate, so that declarations of these packages in packages really only needing `raster` can be deleted soon.
 
 The final table lists all the 360 chosen check error packages by type of failure, and for `required` and `no_pkg`, which of the retiring packages were the cause(s) of the failure (boolean except for `no_pkg` where a count of cases is shown). Without further detailed analysis, `req_by_req_pkg` is not assigned the retiring package or the intermediate failing package.
 

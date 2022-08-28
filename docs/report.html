@@ -2086,6 +2086,17 @@ kable(r[order(r$functions, decreasing = TRUE),c(3,1,2)], row.names = FALSE)</cod
 </tbody>
 </table>
 </div>
+<div id="impending-changes-in-raster" class="section level3">
+<h3>Impending changes in <code>raster</code></h3>
+<p>Many packages using <code>raster</code> declare <code>rgeos</code> and/or <code>rgdal</code> as required in some form, but very recent changes in <code>raster</code>, removing both these packages entirely from <code>DESCRIPTION</code>, will in time propagate, so that declarations of these packages in packages really only needing <code>raster</code> can be deleted soon.</p>
+<p>A run of <code>pkgapi::map_package(&quot;raster&quot;)</code> on the development source of the package shows that calls to the retiring packages have gone:</p>
+<pre><code>&gt; unique(sapply(pkgapi::map_package(&quot;raster&quot;)$calls$to, function(x) strsplit(x, &quot;::&quot;)[[1]][1]))
+ [1] &quot;methods&quot;       &quot;base&quot;          &quot;sp&quot;            &quot;&quot;             
+ [5] &quot;raster&quot;        &quot;grDevices&quot;     &quot;NA&quot;            &quot;stats&quot;        
+ [9] &quot;utils&quot;         &quot;parallel&quot;      &quot;graphics&quot;      &quot;igraph&quot;       
+[13] &quot;ncdf4&quot;         &quot;sf&quot;            &quot;exactextractr&quot; &quot;terra&quot;        
+[17] &quot;pkgload&quot;       &quot;MASS&quot;          &quot;tcltk&quot;         &quot;Rcpp&quot;         </code></pre>
+</div>
 </div>
 <div id="reverse-dependency-checks" class="section level2">
 <h2>Reverse dependency checks</h2>
@@ -3989,7 +4000,6 @@ kable(table(r$type))</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Many packages using <code>raster</code> declare <code>rgeos</code> and/or <code>rgdal</code> as required in some form, but very recent changes in <code>raster</code>, removing both these packages entirely from <code>DESCRIPTION</code>, will in time propagate, so that declarations of these packages in packages really only needing <code>raster</code> can be deleted soon.</p>
 <p>The final table lists all the 360 chosen check error packages by type of failure, and for <code>required</code> and <code>no_pkg</code>, which of the retiring packages were the cause(s) of the failure (boolean except for <code>no_pkg</code> where a count of cases is shown). Without further detailed analysis, <code>req_by_req_pkg</code> is not assigned the retiring package or the intermediate failing package.</p>
 <pre class="r"><code>kable(r)</code></pre>
 <table>
