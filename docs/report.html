@@ -10,6 +10,7 @@
 
 
 
+<meta name="date" content="2022-08-11" />
 
 <title>functions and packages affected by deprecating rgdal, rgeos and maptools</title>
 
@@ -104,8 +105,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -113,16 +114,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -168,6 +162,7 @@ pre code {
 
 
 <h1 class="title toc-ignore">functions and packages affected by deprecating rgdal, rgeos and maptools</h1>
+<h4 class="date">11 August 2022</h4>
 
 </div>
 

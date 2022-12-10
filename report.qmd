@@ -1,5 +1,6 @@
 ---
 title: "functions and packages affected by deprecating rgdal, rgeos and maptools"
+date: "11 August 2022"
 format: html
 ---
 
