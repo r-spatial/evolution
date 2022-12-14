@@ -1,0 +1,43 @@
+---
+title: "functions and packages affected by deprecating rgdal, rgeos and maptools"
+date: "7 December 2022"
+format: html
+---
+
+The reason for these listings this is to find and anticipate what will happen when [rgdal, rgeos and maptools will retire](https://r-spatial.org/r/2022/04/12/evolution.html). Possibilities to migrate to more modern functions in package `sf` are given [here](https://github.com/r-spatial/sf/wiki/Migrating).
+
+## `pkgapi` analysis
+
+The tables below, created from analysing and filtering the output from running `pkgapi::map_package()` on all packages meeting `tools::package_dependencies(packages = <pkg>, tools::available.packages(), which = "most", recursive = FALSE, reverse = TRUE)`, where `<pkg>` are `maptools`, `rgeos` and `rgdal` each run separately, list:
+
+* which functions in packages `maptools`, `rgeos` and `rgdal` are used by which packages, ordered by the number of packages affected, and 
+* the functions in `maptools`, `rgeos` and `rgeos` that are called by each package involved, ordered by the number of functions involved
+
+Note that this only concerns _exported functions_, not necessarily S3 or S4 methods, and so gives an under estimation of the amount of dependency on the three packages.
+
+
+### By deprecating function
+
+```{r}
+r = read.csv("pkgapi_221206.csv", header = FALSE)
+names(r) = c("function", "packages")
+r$packages = lengths(strsplit(r[[2]], " "))
+r_o = r[order(r$packages, decreasing = TRUE),]
+library(knitr)
+kable(r_o, row.names = FALSE)
+```
+
+### By depending package
+
+```{r}
+r = read.csv("pkgapi_by_pkg_221206.csv", header = FALSE)
+names(r) = c("package", "functions involved")
+r$functions = lengths(strsplit(r$`functions involved`, " ")) # - 1 # leading space
+kable(r[order(r$functions, decreasing = TRUE),c(3,1,2)], row.names = FALSE)
+```
+
+### Impending changes in `raster`
+
+Many packages using `raster` declare `rgeos` and/or `rgdal` as required in some form, but very recent changes in `raster`, removing both these packages entirely from `DESCRIPTION`, will in time propagate, so that declarations of these packages in packages really only needing `raster` can be deleted soon.
+
+
