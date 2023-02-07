@@ -1,0 +1,103 @@
+maptools::as.SpatialLines.psp,DRHotNet
+maptools::crepuscule,incR
+maptools::gcDestination,ggsn
+maptools::getinfo.shape,SSN
+maptools::getKMLcoordinates,animaltracker
+maptools::gzAzimuth,FLightR
+maptools::kmlPolygon,red
+maptools::kmlPolygons,red
+maptools::leglabs,SpatialEpi
+maptools::map2SpatialLines,MapGAM
+maptools::map2SpatialPolygons,ausplotsR intSDM rangemap
+maptools::PolySet2SpatialPolygons,DRHotNet RchivalTag
+maptools::readAsciiGrid,rworldmap
+maptools::readShapePoly,hydroTSM
+maptools::readShapeSpatial,openadds
+maptools::solarnoon,PWFSLSmoke
+maptools::solarpos,EMbC
+maptools::SpatialLines2PolySet,DRHotNet MapGAM RchivalTag
+maptools::SpatialLinesMidPoints,gDefrag
+maptools::SpatialPolygons2PolySet,MapGAM
+maptools::spCbind,eeptools
+maptools::spRbind,APfun ecospat iSDM micromapST track2KBA
+maptools::sunriset,FLightR PWFSLSmoke
+maptools::unionSpatialPolygons,BayesX bfsMaps disaggregation LabourMarketAreas micromap micromapST RchivalTag rmapzen stampr
+maptools::writePointsShape,biogeo
+maptools::writePolyShape,monographaR
+maptools::writeSpatialShape,monographaR
+rgdal::closeDataset,ursa
+rgdal::copyDataset,FIESTAutils
+rgdal::CRSargs,geonetwork inlabru intamap micromapST plotKML rosm TOC tripEstimation ursa
+rgdal::GDAL.close,FIESTAutils ursa
+rgdal::GDAL.open,FIESTAutils
+rgdal::GDALcall,FIESTAutils ursa
+rgdal::GDALinfo,APfun bnspatial FIESTA FIESTAutils ursa
+rgdal::GDALis3ormore,sdmpredictors
+rgdal::get_rgdal_show_exportToProj4_warnings,inlabru
+rgdal::get_thin_PROJ6_warnings,inlabru
+rgdal::getDescription,FIESTAutils
+rgdal::getDriver,ursa
+rgdal::getDriverName,ursa
+rgdal::getGDALCheckVersion,geoviz
+rgdal::getProjectionRef,FIESTAutils
+rgdal::getRasterBand,FIESTAutils
+rgdal::getRasterData,FIESTAutils ursa
+rgdal::make_EPSG,FIESTAutils
+rgdal::new_proj_and_gdal,inlabru micromapST
+rgdal::ogrInfo,bnspatial nhdR ursa
+rgdal::ogrListLayers,eechidna mapReasy nhdR rmapzen ursa
+rgdal::project,ConR ctmm eixport eseis FIESTAutils hyperbrick kernelPhil red tripEstimation ursa
+rgdal::projInfo,FIESTAutils
+rgdal::putRasterData,FIESTAutils ursa
+rgdal::readGDAL,inlabru openSTARS plotKML
+rgdal::readOGR,agriwater APfun ASIP BARIS bdvis bfsMaps biosurvey briskaR cropDemand cropZoning eechidna ExposR FIESTAutils HurreconR hyfo iconr importinegi intamap LabourMarketAreas letsR malariaAtlas mapReasy micromapST modchart naijR OasisR occTest openSTARS plotKML rcanvec rdhs ref.ICAR riverdist rmapzen RSIP secrlinear SegEnvIneq ShapePattern SSN TUFLOWR ursa wallace wux
+rgdal::rgdal_extSoftVersion,ConR micromapST
+rgdal::saveDataset,FIESTAutils ursa
+rgdal::set_P6_datum_hard_fail,micromapST
+rgdal::set_rgdal_show_exportToProj4_warnings,inlabru micromapST
+rgdal::set_thin_PROJ6_warnings,inlabru micromapST
+rgdal::setCPLConfigOption,ExposR HurreconR ursa
+rgdal::showEPSG,postGIStools
+rgdal::showP4,ursa
+rgdal::showSRID,inlabru
+rgdal::showWKT,geotopbricks quickmapr ursa
+rgdal::writeGDAL,ParallelDSM plotKML sperich
+rgdal::writeOGR,animaltracker APfun ConR ctmm foster gDefrag GPSeqClus grainscape iSDM LabourMarketAreas micromapST movecost occTest OCNet openSTARS plotKML prevR PWFSLSmoke rangemap rcanvec Rsagacmd ShapePattern SSN ursa
+rgeos::createPolygonsComment,occTest
+rgeos::createSPComment,ggOceanMaps
+rgeos::gArea,bivariatemaps eechidna ForestTools gDefrag itcSegment LabourMarketAreas lakemorpho leastcostpath letsR MBNMAdose movecost psda ptools quickmapr quickPlot raptr redlistr rKIN rTLS ShapePattern spatsoc stampr wux
+rgeos::gBinarySTRtreeQuery,waver
+rgeos::gBoundary,leastcostpath Watersheds
+rgeos::gBuffer,amt biosurvey bRacatus briskaR changeRangeR cleangeo ConR CoordinateCleaner expp FLightR geoviz ggvoronoi hero hypervolume itcSegment lakemorpho leastcostpath micromapST phyloregion rangemap shadow ShapePattern spatsoc spatsurv stampr wallace Watersheds
+rgeos::gCentroid,atakrig biosurvey ForestTools geogrid gfcanalysis hierarchicalDS letsR micromapST OasisR rangemap raptr SegEnvIneq shadow stampr SurfaceTortoise Watersheds
+rgeos::gContains,animalEKF eechidna lakemorpho letsR occTest SpaDES.tools
+rgeos::gContainsProperly,amt occTest rKIN
+rgeos::gConvexHull,amt gfcanalysis itcSegment shadow stampr
+rgeos::gCrosses,cleangeo lakemorpho Watersheds
+rgeos::gDifference,birdring briskaR cleangeo gDefrag lakemorpho leastcostpath micromapST rTLS Rtrack stampr SurfaceTortoise
+rgeos::gDisjoint,lgcp
+rgeos::gDistance,antaresViz fieldRS FLightR gDefrag ggOceanMaps OasisR quickmapr SegEnvIneq shadow SpatialGraph stampr Watersheds waver
+rgeos::gEnvelope,stampr
+rgeos::gEquals,occTest
+rgeos::getScale,cleangeo
+rgeos::gIntersection,animalEKF birdring bRacatus changeRangeR cleangeo DivE eechidna expp gDefrag ggOceanMaps LabourMarketAreas lakemorpho leastcostpath lgcp mapsRinteractive Momocs OasisR psda ptools rangemap red rKIN shadow spatialfusion SpatialGraph spatsoc stampr SurfaceTortoise waver wux
+rgeos::gIntersects,amt birdring cartograflow eechidna gfcanalysis lakemorpho lgcp occTest quickPlot shadow spatsoc stampr Watersheds waver
+rgeos::gIsEmpty,animalEKF ShapePattern
+rgeos::gIsValid,cleangeo ggOceanMaps leastcostpath
+rgeos::gLength,bfsMaps lakemorpho leastcostpath movecost OasisR quickmapr shadow ShapePattern stampr
+rgeos::gLineMerge,gDefrag shadow
+rgeos::gNode,leastcostpath
+rgeos::gOverlaps,lakemorpho letsR
+rgeos::gPointOnSurface,gDefrag
+rgeos::gPolygonize,leastcostpath
+rgeos::gSimplify,eechidna FLightR ggOceanMaps oceanic rangemap red stampr
+rgeos::gTouches,expp gDefrag gfcanalysis HCV lgcp
+rgeos::gUnarySTRtreeQuery,occTest
+rgeos::gUnaryUnion,amt ForestTools gDefrag HDSpatialScan leastcostpath lgcp rangemap rKIN shadow stampr waver
+rgeos::gUnion,FLightR gDefrag rTLS shadow spatialfusion
+rgeos::gUnionCascaded,birdring briskaR cleangeo expp
+rgeos::gWithin,lakemorpho quickmapr
+rgeos::gWithinDistance,FLightR quickmapr SpatialGraph
+rgeos::intersect,ggvoronoi muHVT
+rgeos::readWKT,bfsMaps ConR expp MBNMAdose postGIStools rpostgis
+rgeos::writeWKT,postGIStools rpostgis
