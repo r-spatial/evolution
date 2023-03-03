@@ -9,4 +9,7 @@ For more details, please see
 * [the first blog post](https://r-spatial.org/r/2022/04/12/evolution.html).
 * [the second blog post](https://r-spatial.org/r/2022/12/14/evolution2.html).
 
+
+Diffs between ASDAR 2nd edition code and migrated code not using retired packages added to website.
+
 Interim reports published in https://r-spatial.github.io/evolution/.
