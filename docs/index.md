@@ -16,19 +16,25 @@ theme: united
 
 ## ASDAR diffs by chapter (made using `diff2html`): 
 
-- [Classes for Spatial Data in R](https://r-spatial.github.io/evolution/diffs/cm_diff.html)
+- [Classes for Spatial Data in R, `sf` version](https://r-spatial.github.io/evolution/diffs/cm_diff.html)
 
-- [Visualising Spatial Data](https://r-spatial.github.io/evolution/diffs/vis_diff.html)
+- [Classes for Spatial Data in R, `terra` version](https://r-spatial.github.io/evolution/diffs/cm_terra_diff.html)
 
-- [Spatial Data Import and Export](https://r-spatial.github.io/evolution/diffs/die_diff.html)
+- [Visualising Spatial Data, `sf` version](https://r-spatial.github.io/evolution/diffs/vis_diff.html)
 
-- [Further Methods for Handling Spatial Data](https://r-spatial.github.io/evolution/diffs/cm2_diff.html)
+- [Spatial Data Import and Export, `sf` version](https://r-spatial.github.io/evolution/diffs/die_diff.html)
 
-- [Spatial Point Pattern Analysis](https://r-spatial.github.io/evolution/diffs/sppa_diff.html)
+- [Spatial Data Import and Export, `terra` version](https://r-spatial.github.io/evolution/diffs/die_terra_diff.html)
 
-- [Interpolation and Geostatistics](https://r-spatial.github.io/evolution/diffs/geos_diff.html)
+- [Further Methods for Handling Spatial Data, `sf` version](https://r-spatial.github.io/evolution/diffs/cm2_diff.html)
 
-- [Modelling Areal Data](https://r-spatial.github.io/evolution/diffs/lat_diff.html)
+- [Further Methods for Handling Spatial Data, `terra` version](https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html)
 
-- [Disease Mapping](https://r-spatial.github.io/evolution/diffs/dismap_diff.html)
+- [Spatial Point Pattern Analysis, `sf` version](https://r-spatial.github.io/evolution/diffs/sppa_diff.html)
+
+- [Interpolation and Geostatistics, `sf` version](https://r-spatial.github.io/evolution/diffs/geos_diff.html)
+
+- [Modelling Areal Data, `sf` version](https://r-spatial.github.io/evolution/diffs/lat_diff.html)
+
+- [Disease Mapping, `sf` version](https://r-spatial.github.io/evolution/diffs/dismap_diff.html)
 
