@@ -17,6 +17,6 @@ Study group: Modernizing R-spatial: Changes in OSGeo FOSS Libraries and the Evol
 
 ## Diffs for ASDAR scripts
 
-Diffs between ASDAR 2nd edition code and migrated code not using retired packages added to website; also added diffs for `terra` versions of `cm`, `die` and `cm2`, ch. 2, 4 and 5.
+Diffs between ASDAR 2nd edition code and migrated code not using retired packages added to website; also added diffs for `terra` versions of `cm`, `die` and `cm2`, ch. 2, 4 and 5. Scripts in bundles on https://github.com/rsbivand/sf_asdar2ed.
 
 Interim reports published in https://r-spatial.github.io/evolution/.
