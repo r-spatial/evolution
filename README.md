@@ -10,6 +10,6 @@ For more details, please see
 * [the second blog post](https://r-spatial.org/r/2022/12/14/evolution2.html).
 
 
-Diffs between ASDAR 2nd edition code and migrated code not using retired packages added to website.
+Diffs between ASDAR 2nd edition code and migrated code not using retired packages added to website; also added diffs for `terra` versions of `cm`, `die` and `cm2`.
 
 Interim reports published in https://r-spatial.github.io/evolution/.
