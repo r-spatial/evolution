@@ -1,103 +1,103 @@
-function,ASDAR_sf,mod_line_sf,ASDAR_terra,mod_line_terra,used_by
-maptools::crepuscule,,,,,birdscanR incR
-maptools::gcDestination,,,,,ggsn
-maptools::getinfo.shape,,,,,SSN
-maptools::getKMLcoordinates,,,,,animaltracker
-maptools::gzAzimuth,https://r-spatial.github.io/evolution/diffs/die_diff.html,63,,,FLightR
-maptools::kmlPolygon,,,,,red
-maptools::kmlPolygons,,,,,red
-maptools::map2SpatialLines,,,,,MapGAM
-maptools::map2SpatialPolygons,https://r-spatial.github.io/evolution/diffs/cm_diff.html,315,,,ausplotsR rangemap
-maptools::pointLabel,car::pointlabel,,,,GEOexplorer
-maptools::PolySet2SpatialPolygons,,,,,RchivalTag
-maptools::readAsciiGrid,,,,,rworldmap
-maptools::readShapePoly,,,,,hydroTSM
-maptools::readShapeSpatial,,,,,openadds
-maptools::solarnoon,,,,,PWFSLSmoke
-maptools::solarpos,,,,,EMbC
-maptools::SpatialLines2PolySet,,,,,MapGAM RchivalTag
-maptools::SpatialLinesMidPoints,,,,,gDefrag
-maptools::SpatialPolygons2PolySet,,,,,MapGAM
-maptools::spCbind,https://r-spatial.github.io/evolution/diffs/die_diff.html,144,,,eeptools
-maptools::spRbind,,,,,APfun ecospat iSDM micromapST track2KBA
-maptools::sunriset,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,516,,,birdscanR FLightR PWFSLSmoke
-maptools::unionSpatialPolygons,https://r-spatial.github.io/evolution/diffs/die_diff.html,477,,,BayesX bfsMaps disaggregation LabourMarketAreas micromap micromapST RchivalTag rmapzen stampr
-maptools::writePointsShape,,,,,biogeo
-maptools::writePolyShape,,,,,monographaR
-maptools::writeSpatialShape,,,,,monographaR
-rgdal::closeDataset,,,,,ursa
-rgdal::copyDataset,,,,,FIESTAutils
-rgdal::CRSargs,,,,,geonetwork inlabru intamap micromapST plotKML rosm tripEstimation ursa
-rgdal::GDAL.close,,,,,FIESTAutils ursa
-rgdal::GDAL.open,,,,,FIESTAutils
-rgdal::GDALcall,,,,,FIESTAutils ursa
-rgdal::GDALinfo,,,,,APfun bnspatial FIESTA FIESTAutils ursa
-rgdal::GDALis3ormore,,,,,sdmpredictors
-rgdal::get_rgdal_show_exportToProj4_warnings,,,,,inlabru
-rgdal::get_thin_PROJ6_warnings,,,,,inlabru
-rgdal::getDescription,,,,,FIESTAutils
-rgdal::getDriver,,,,,ursa
-rgdal::getDriverName,,,,,ursa
-rgdal::getGDALCheckVersion,,,,,geoviz
-rgdal::getProjectionRef,,,,,FIESTAutils
-rgdal::getRasterBand,,,,,FIESTAutils
-rgdal::getRasterData,,,,,FIESTAutils ursa
-rgdal::make_EPSG,https://r-spatial.github.io/evolution/diffs/die_diff.html,14,,,FIESTAutils
-rgdal::new_proj_and_gdal,,,,,inlabru micromapST
-rgdal::ogrInfo,,,,,bnspatial nhdR ursa
-rgdal::ogrListLayers,,,,,eechidna mapReasy nhdR rmapzen ursa
-rgdal::project,,,,,ConR ctmm eixport eseis FIESTAutils hyperbrick kernelPhil red tripEstimation ursa
-rgdal::projInfo,,,,,FIESTAutils
-rgdal::putRasterData,,,,,FIESTAutils ursa
-rgdal::readGDAL,https://r-spatial.github.io/evolution/diffs/die_diff.html,291,,,inlabru openSTARS plotKML
-rgdal::readOGR,https://r-spatial.github.io/evolution/diffs/die_diff.html,125,,,agriwater APfun ASIP BARIS bdvis bfsMaps biosurvey briskaR cropDemand cropZoning eechidna ExposR FIESTAutils HurreconR hyfo iconr importinegi intamap LabourMarketAreas letsR malariaAtlas mapReasy micromapST modchart naijR OasisR occTest openSTARS plotKML rcanvec rdhs ref.ICAR riverdist rmapzen RSIP secrlinear SegEnvIneq ShapePattern SSN TUFLOWR ursa wallace wux
-rgdal::rgdal_extSoftVersion,,,,,ConR micromapST
-rgdal::saveDataset,,,,,FIESTAutils ursa
-rgdal::set_P6_datum_hard_fail,,,,,micromapST
-rgdal::set_rgdal_show_exportToProj4_warnings,,,,,inlabru micromapST
-rgdal::set_thin_PROJ6_warnings,,,,,inlabru micromapST
-rgdal::setCPLConfigOption,,,,,ExposR HurreconR ursa
-rgdal::showEPSG,,,,,postGIStools
-rgdal::showP4,,,,,ursa
-rgdal::showSRID,,,,,inlabru
-rgdal::showWKT,,,,,geotopbricks quickmapr ursa
-rgdal::writeGDAL,https://r-spatial.github.io/evolution/diffs/die_diff.html,330,,,ParallelDSM plotKML sperich
-rgdal::writeOGR,https://r-spatial.github.io/evolution/diffs/die_diff.html,182,,,animaltracker APfun ConR ctmm gDefrag GPSeqClus grainscape iSDM LabourMarketAreas micromapST movecost occTest OCNet openSTARS plotKML prevR PWFSLSmoke rangemap rcanvec Rsagacmd ShapePattern SSN ursa
-rgeos::createPolygonsComment,,,,,occTest
-rgeos::createSPComment,https://r-spatial.github.io/evolution/diffs/cm_diff.html,493,,,ggOceanMaps
-rgeos::gArea,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,84,,,bivariatemaps eechidna ForestTools gDefrag itcSegment LabourMarketAreas lakemorpho leastcostpath letsR MBNMAdose movecost psda quickmapr quickPlot raptr redlistr rKIN rTLS ShapePattern spatsoc stampr wux
-rgeos::gBinarySTRtreeQuery,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,253,,,waver
-rgeos::gBoundary,,,,,leastcostpath Watersheds
-rgeos::gBuffer,,,,,biosurvey bRacatus briskaR changeRangeR cleangeo ConR CoordinateCleaner expp FLightR geoviz ggvoronoi hero hypervolume itcSegment lakemorpho leastcostpath micromapST phyloregion rangemap shadow ShapePattern spatsoc spatsurv stampr wallace Watersheds flowDensity
-rgeos::gCentroid,,,,,atakrig biosurvey ForestTools geogrid gfcanalysis hierarchicalDS letsR micromapST OasisR rangemap raptr SegEnvIneq shadow stampr SurfaceTortoise Watersheds
-rgeos::gContains,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,504,,,animalEKF eechidna lakemorpho letsR occTest SpaDES.tools
-rgeos::gContainsProperly,,,,,occTest rKIN
-rgeos::gConvexHull,,,,,gfcanalysis itcSegment shadow stampr
-rgeos::gCrosses,,,,,cleangeo lakemorpho Watersheds
-rgeos::gDifference,,,,,birdring briskaR cleangeo gDefrag lakemorpho leastcostpath micromapST rTLS Rtrack stampr SurfaceTortoise flowDensity
-rgeos::gDisjoint,,,,,lgcp
-rgeos::gDistance,,,,,antaresViz FLightR gDefrag ggOceanMaps OasisR quickmapr SegEnvIneq shadow SpatialGraph stampr Watersheds waver
-rgeos::gEnvelope,,,,,stampr
-rgeos::gEquals,,,,,occTest
-rgeos::getScale,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,98,,,cleangeo
-rgeos::gIntersection,https://r-spatial.github.io/evolution/diffs/die_diff.html,239,,,animalEKF birdring bRacatus changeRangeR cleangeo DivE eechidna expp gDefrag ggOceanMaps LabourMarketAreas lakemorpho leastcostpath lgcp mapsRinteractive Momocs OasisR psda rangemap red rKIN shadow spatialfusion SpatialGraph spatsoc stampr SurfaceTortoise waver wux
-rgeos::gIntersects,,,,,birdring cartograflow eechidna gfcanalysis lakemorpho lgcp occTest quickPlot shadow spatsoc stampr Watersheds waver flowDensity
-rgeos::gIsEmpty,,,,,animalEKF ShapePattern
-rgeos::gIsValid,,,,,cleangeo ggOceanMaps leastcostpath
-rgeos::gLength,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,201,,,bfsMaps lakemorpho leastcostpath movecost OasisR quickmapr shadow ShapePattern stampr
-rgeos::gLineMerge,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,229,,,gDefrag shadow
-rgeos::gNode,,,,,leastcostpath
-rgeos::gOverlaps,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,91,,,lakemorpho letsR
-rgeos::gPointOnSurface,,,,,gDefrag
-rgeos::gPolygonize,,,,,leastcostpath
-rgeos::gSimplify,,,,,eechidna FLightR ggOceanMaps oceanic rangemap red stampr
-rgeos::gTouches,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,208,,,expp gDefrag gfcanalysis HCV lgcp
-rgeos::gUnarySTRtreeQuery,,,,,occTest
-rgeos::gUnaryUnion,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,83,,,ForestTools gDefrag HDSpatialScan leastcostpath lgcp rangemap rKIN shadow stampr waver
-rgeos::gUnion,,,,,FLightR gDefrag rTLS shadow spatialfusion
-rgeos::gUnionCascaded,,,,,birdring briskaR cleangeo expp
-rgeos::gWithin,,,,,lakemorpho quickmapr
-rgeos::gWithinDistance,,,,,FLightR quickmapr SpatialGraph
-rgeos::intersect,,,,,ggvoronoi muHVT
-rgeos::readWKT,,,,,bfsMaps ConR expp MBNMAdose postGIStools rpostgis
-rgeos::writeWKT,,,,,postGIStools rpostgis
+function,ASDAR_sf,mod_line_sf,ASDAR_terra,mod_line_terra,other packages,used_by
+maptools::crepuscule,,,,,solartime::,birdscanR incR
+maptools::gcDestination,,,,,Deprecated,ggsn
+maptools::getinfo.shape,,,,,Deprecated,SSN
+maptools::getKMLcoordinates,,,,,,animaltracker
+maptools::gzAzimuth,https://r-spatial.github.io/evolution/diffs/die_diff.html,63,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,66,lwgeom::st_geod_azimuth,FLightR
+maptools::kmlPolygon,,,,,,red
+maptools::kmlPolygons,,,,,,red
+maptools::map2SpatialLines,,,,,sf::st_as_sf,MapGAM
+maptools::map2SpatialPolygons,https://r-spatial.github.io/evolution/diffs/cm_diff.html,315,https://r-spatial.github.io/evolution/diffs/cm_terra_diff.html,314,sf::st_as_sf,ausplotsR rangemap
+maptools::pointLabel,car::pointlabel,,car::pointlabel,,car::pointlabel,GEOexplorer
+maptools::PolySet2SpatialPolygons,,,,,,RchivalTag
+maptools::readAsciiGrid,,,,,Deprecated,rworldmap
+maptools::readShapePoly,,,,,Deprecated,hydroTSM
+maptools::readShapeSpatial,,,,,Deprecated,openadds
+maptools::solarnoon,,,,,solartime::,PWFSLSmoke
+maptools::solarpos,,,,,solartime::,EMbC
+maptools::SpatialLines2PolySet,,,,,,MapGAM RchivalTag
+maptools::SpatialLinesMidPoints,,,,,,gDefrag
+maptools::SpatialPolygons2PolySet,,,,,,MapGAM
+maptools::spCbind,https://r-spatial.github.io/evolution/diffs/die_diff.html,144,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,150,"sf::merge, terra::merge",eeptools
+maptools::spRbind,,,,,,APfun ecospat iSDM micromapST track2KBA
+maptools::sunriset,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,516,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,489,solartime::computeSunriseHour,birdscanR FLightR PWFSLSmoke
+maptools::unionSpatialPolygons,https://r-spatial.github.io/evolution/diffs/die_diff.html,477,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,491,"sf::st_union, terra::aggregate",BayesX bfsMaps disaggregation LabourMarketAreas micromap micromapST RchivalTag rmapzen stampr
+maptools::writePointsShape,,,,,Deprecated,biogeo
+maptools::writePolyShape,,,,,Deprecated,monographaR
+maptools::writeSpatialShape,,,,,Deprecated,monographaR
+rgdal::closeDataset,,,,,Deprecated,ursa
+rgdal::copyDataset,,,,,"sf::st_crs, terra::crs",FIESTAutils
+rgdal::CRSargs,,,,,Deprecated,geonetwork inlabru intamap micromapST plotKML rosm tripEstimation ursa
+rgdal::GDAL.close,,,,,Deprecated,FIESTAutils ursa
+rgdal::GDAL.open,,,,,Deprecated,FIESTAutils
+rgdal::GDALcall,,,,,Deprecated,FIESTAutils ursa
+rgdal::GDALinfo,,,,,Deprecated,APfun bnspatial FIESTA FIESTAutils ursa
+rgdal::GDALis3ormore,,,,,Deprecated,sdmpredictors
+rgdal::get_rgdal_show_exportToProj4_warnings,,,,,Deprecated,inlabru
+rgdal::get_thin_PROJ6_warnings,,,,,Deprecated,inlabru
+rgdal::getDescription,,,,,Deprecated,FIESTAutils
+rgdal::getDriver,,,,,Deprecated,ursa
+rgdal::getDriverName,,,,,Deprecated,ursa
+rgdal::getGDALCheckVersion,,,,,Deprecated,geoviz
+rgdal::getProjectionRef,,,,,Deprecated,FIESTAutils
+rgdal::getRasterBand,,,,,Deprecated,FIESTAutils
+rgdal::getRasterData,,,,,Deprecated,FIESTAutils ursa
+rgdal::make_EPSG,https://r-spatial.github.io/evolution/diffs/die_diff.html,14,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,14,sf::sf_proj_search_paths,FIESTAutils
+rgdal::new_proj_and_gdal,,,,,Deprecated,inlabru micromapST
+rgdal::ogrInfo,,,,,Deprecated,bnspatial nhdR ursa
+rgdal::ogrListLayers,,,,,sf::st_layers,eechidna mapReasy nhdR rmapzen ursa
+rgdal::project,,,,,"sf::sf_project, terra::project",ConR ctmm eixport eseis FIESTAutils hyperbrick kernelPhil red tripEstimation ursa
+rgdal::projInfo,,,,,sf::sf_proj_info,FIESTAutils
+rgdal::putRasterData,,,,,Deprecated,FIESTAutils ursa
+rgdal::readGDAL,https://r-spatial.github.io/evolution/diffs/die_diff.html,291,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,294,"stars::read_stars, terra::rast",inlabru openSTARS plotKML
+rgdal::readOGR,https://r-spatial.github.io/evolution/diffs/die_diff.html,125,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,131,"sf::st_read, terra::vect",agriwater APfun ASIP BARIS bdvis bfsMaps biosurvey briskaR cropDemand cropZoning eechidna ExposR FIESTAutils HurreconR hyfo iconr importinegi intamap LabourMarketAreas letsR malariaAtlas mapReasy micromapST modchart naijR OasisR occTest openSTARS plotKML rcanvec rdhs ref.ICAR riverdist rmapzen RSIP secrlinear SegEnvIneq ShapePattern SSN TUFLOWR ursa wallace wux
+rgdal::rgdal_extSoftVersion,,,,,"sf::sf_extSostVersion, terra::gdal",ConR micromapST
+rgdal::saveDataset,,,,,Deprecated,FIESTAutils ursa
+rgdal::set_P6_datum_hard_fail,,,,,Deprecated,micromapST
+rgdal::set_rgdal_show_exportToProj4_warnings,,,,,Deprecated,inlabru micromapST
+rgdal::set_thin_PROJ6_warnings,,,,,Deprecated,inlabru micromapST
+rgdal::setCPLConfigOption,,,,,Deprecated,ExposR HurreconR ursa
+rgdal::showEPSG,,,,,"sf::st_crs, terra::crs",postGIStools
+rgdal::showP4,,,,,"sf::st_crs, terra::crs",ursa
+rgdal::showSRID,,,,,"sf::st_crs, terra::crs",inlabru
+rgdal::showWKT,,,,,"sf::st_crs, terra::crs",geotopbricks quickmapr ursa
+rgdal::writeGDAL,https://r-spatial.github.io/evolution/diffs/die_diff.html,330,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,315,"stars::write_stars, terra::writeRaster",ParallelDSM plotKML sperich
+rgdal::writeOGR,https://r-spatial.github.io/evolution/diffs/die_diff.html,182,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,187,"sf::st_write, terra::writeVector",animaltracker APfun ConR ctmm gDefrag GPSeqClus grainscape iSDM LabourMarketAreas micromapST movecost occTest OCNet openSTARS plotKML prevR PWFSLSmoke rangemap rcanvec Rsagacmd ShapePattern SSN ursa
+rgeos::createPolygonsComment,,,,,Deprecated,occTest
+rgeos::createSPComment,https://r-spatial.github.io/evolution/diffs/cm_diff.html,493,https://r-spatial.github.io/evolution/diffs/cm_terra_diff.html,486,coerce to sf and back,ggOceanMaps
+rgeos::gArea,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,84,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,,"sf::st_area, raster::area",bivariatemaps eechidna ForestTools gDefrag itcSegment LabourMarketAreas lakemorpho leastcostpath letsR MBNMAdose movecost psda quickmapr quickPlot raptr redlistr rKIN rTLS ShapePattern spatsoc stampr wux
+rgeos::gBinarySTRtreeQuery,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,253,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,,sf uses STRtree internally,waver
+rgeos::gBoundary,,,,,sf::st_boundary,leastcostpath Watersheds
+rgeos::gBuffer,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,273,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,244,"sf::st_buffer, terra::buffer",biosurvey bRacatus briskaR changeRangeR cleangeo ConR CoordinateCleaner expp FLightR geoviz ggvoronoi hero hypervolume itcSegment lakemorpho leastcostpath micromapST phyloregion rangemap shadow ShapePattern spatsoc spatsurv stampr wallace Watersheds flowDensity
+rgeos::gCentroid,,,,,sf::st_centroid,atakrig biosurvey ForestTools geogrid gfcanalysis hierarchicalDS letsR micromapST OasisR rangemap raptr SegEnvIneq shadow stampr SurfaceTortoise Watersheds
+rgeos::gContains,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,504,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,505,"sf::st_contains, terra::relate",animalEKF eechidna lakemorpho letsR occTest SpaDES.tools
+rgeos::gContainsProperly,,,,,"sf::st_contains_properly, terra::relate",occTest rKIN
+rgeos::gConvexHull,,,,,"sf::st_convex_hull, terra::convHull",gfcanalysis itcSegment shadow stampr
+rgeos::gCrosses,,,,,"sf::st_crosses, terra::relate",cleangeo lakemorpho Watersheds
+rgeos::gDifference,,,,,sf::st_difference,birdring briskaR cleangeo gDefrag lakemorpho leastcostpath micromapST rTLS Rtrack stampr SurfaceTortoise flowDensity
+rgeos::gDisjoint,,,,,"sf::st_disjoint, terra::relate",lgcp
+rgeos::gDistance,,,,,"sf::st_distance, terra::distance",antaresViz FLightR gDefrag ggOceanMaps OasisR quickmapr SegEnvIneq shadow SpatialGraph stampr Watersheds waver
+rgeos::gEnvelope,,,,,"sf::st_bbox, terra::ext",stampr
+rgeos::gEquals,,,,,"sf::st_equals, terra::relate",occTest
+rgeos::getScale,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,98,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,96,sf::st_precision,cleangeo
+rgeos::gIntersection,https://r-spatial.github.io/evolution/diffs/die_diff.html,239,https://r-spatial.github.io/evolution/diffs/die_terra_diff.html,244,"sf::st_intersection, terra::crop",animalEKF birdring bRacatus changeRangeR cleangeo DivE eechidna expp gDefrag ggOceanMaps LabourMarketAreas lakemorpho leastcostpath lgcp mapsRinteractive Momocs OasisR psda rangemap red rKIN shadow spatialfusion SpatialGraph spatsoc stampr SurfaceTortoise waver wux
+rgeos::gIntersects,,,,,"sf::st_intersects, terra::relate",birdring cartograflow eechidna gfcanalysis lakemorpho lgcp occTest quickPlot shadow spatsoc stampr Watersheds waver flowDensity
+rgeos::gIsEmpty,,,,,sf::st_is_empty,animalEKF ShapePattern
+rgeos::gIsValid,,,,,sf::st_is_valid,cleangeo ggOceanMaps leastcostpath
+rgeos::gLength,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,201,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,194,sf::st_length,bfsMaps lakemorpho leastcostpath movecost OasisR quickmapr shadow ShapePattern stampr
+rgeos::gLineMerge,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,229,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,221,"sf::st_aggregate, terra::aggregate",gDefrag shadow
+rgeos::gNode,,,,,sf::st_node,leastcostpath
+rgeos::gOverlaps,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,91,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,98,"sf::st_overlaps, terra::relate",lakemorpho letsR
+rgeos::gPointOnSurface,,,,,sf::st_point_on_surface,gDefrag
+rgeos::gPolygonize,,,,,sf::st_polygonize,leastcostpath
+rgeos::gSimplify,,,,,sf::st_simplify,eechidna FLightR ggOceanMaps oceanic rangemap red stampr
+rgeos::gTouches,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,208,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,200,"sf::st_touches, terra::relate",expp gDefrag gfcanalysis HCV lgcp
+rgeos::gUnarySTRtreeQuery,,,,,sf uses STRtree internally,occTest
+rgeos::gUnaryUnion,https://r-spatial.github.io/evolution/diffs/cm2_diff.html,83,https://r-spatial.github.io/evolution/diffs/cm2_terra_diff.html,81,"sf::st_union, terra::aggregate",ForestTools gDefrag HDSpatialScan leastcostpath lgcp rangemap rKIN shadow stampr waver
+rgeos::gUnion,,,,,"sf::st_union, terra::union",FLightR gDefrag rTLS shadow spatialfusion
+rgeos::gUnionCascaded,,,,,"sf::st_union, terra::aggregate",birdring briskaR cleangeo expp
+rgeos::gWithin,,,,,"sf::st_within, terra::relate",lakemorpho quickmapr
+rgeos::gWithinDistance,,,,,sf::st_is_within_distance,FLightR quickmapr SpatialGraph
+rgeos::intersect,,,,,"sf::st_intersects, terra:.relate",ggvoronoi muHVT
+rgeos::readWKT,,,,,"sf::st_as_sfc, terra::vect",bfsMaps ConR expp MBNMAdose postGIStools rpostgis
+rgeos::writeWKT,,,,,"sf::st_as_text, terra::geom",postGIStools rpostgis
