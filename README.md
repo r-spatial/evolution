@@ -9,6 +9,8 @@ For more details, please see
 * [the first blog post](https://r-spatial.org/r/2022/04/12/evolution.html).
 * [the second blog post](https://r-spatial.org/r/2022/12/14/evolution2.html).
 * [the third blog post](https://r-spatial.org/r/2023/04/10/evolution3.html).
+* [the fourth blog post](https://r-spatial.org/r/2023/05/15/evolution4.html).
+
 
 ## Center for Spatial Data Science 2023 workshop and study group materials
 
