@@ -1,8 +1,9 @@
 Run date: 2023-06-15 
 Input watchlist length: 223 
-Input watchlist name: watchlists/watchlist_2023-06-14.csv 
+Input watchlist name: watchlists/watchlist_2023-06-15.csv 
 New most reverse dependencies: gps.track 
 New versions: animint2, bamlss, chronosphere, ecospat, elevatr, ExposR, gbm.auto, GeNetIt, HurreconR, naijR, rKIN, usmap 
+Check results OK: animint2, chronosphere, ExposR, gbm.auto, GeNetIt, gps.track, HurreconR, rKIN 
 Check results (any not OK):
    package version error warning note
 2   bamlss   1.2-0     0       0    1
