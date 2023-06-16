@@ -1,4 +1,0 @@
-Run date: 2023-06-16 
-Input watchlist length: 214 
-Input watchlist name: watchlists/watchlist_2023-06-16.csv 
-No change.
