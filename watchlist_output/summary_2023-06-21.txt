@@ -3,7 +3,7 @@ Input watchlist length: 213
 Input watchlist name: watchlists/watchlist_2023-06-19.csv 
 Watchlist packages not available now: MinBAR 
 New versions: ecocomDP, inlabru, modchart, MoleculeExperiment, monographaR, morphomap, mtbls2, nightmares, npphen, occUncertain, oceanmap, OCNet, OpenStreetMap, patternize, places, plotKML, PointedSDMs, psgp, PWFSLSmoke, rangeModelMetadata, RchivalTag, rdhs, recurse, rLiDAR, rmapzen, rosm, rpaleoclim, RPhosFate, RSIP, Rtrack, sara4r, sdmpredictors, sdStaf, shadow, shp2graph, soilassessment, spatialfusion, spatsoc, spMaps, STMedianPolish, streamDepletr, SubgrPlots, tipsae, treetop, trip, UScensus2010, waterquality, waver, weed, zonator 
-First order reverse depenencies of new versions: ambhasGW, animaltracker, ausplotsR, bioRad, biosurvey, bivariatemaps, bnspatial, briskaR, cleangeo, ctmm, dartR 
+First order reverse dependencies of new versions: ambhasGW, animaltracker, ausplotsR, bioRad, biosurvey, bivariatemaps, bnspatial, briskaR, cleangeo, ctmm, dartR 
 Check results OK: ecocomDP, inlabru, PointedSDMs 
 Check results (any not OK):
               package version error warning note
