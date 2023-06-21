@@ -1,0 +1,69 @@
+Run date: 2023-06-21 
+Input watchlist length: 213 
+Input watchlist name: watchlists/watchlist_2023-06-19.csv 
+Watchlist packages not available now: adaptivetau 
+New versions: ecocomDP, inlabru, modchart, MoleculeExperiment, monographaR, morphomap, mtbls2, nightmares, npphen, occUncertain, oceanmap, OCNet, OpenStreetMap, patternize, places, plotKML, PointedSDMs, psgp, PWFSLSmoke, rangeModelMetadata, RchivalTag, rdhs, recurse, rLiDAR, rmapzen, rosm, rpaleoclim, RPhosFate, RSIP, Rtrack, sara4r, sdmpredictors, sdStaf, shadow, shp2graph, soilassessment, spatialfusion, spatsoc, spMaps, STMedianPolish, streamDepletr, SubgrPlots, tipsae, treetop, trip, UScensus2010, waterquality, waver, weed, zonator 
+First order reverse depenencies of new versions: ambhasGW, animaltracker, ausplotsR, bioRad, biosurvey, bivariatemaps, bnspatial, briskaR, cleangeo, ctmm, dartR 
+Check results OK: ecocomDP, inlabru, PointedSDMs 
+Check results (any not OK):
+              package version error warning note
+1            ambhasGW   0.0.2     1       0    0
+2       animaltracker   0.2.0     1       0    0
+3           ausplotsR   1.2.9     1       0    0
+4              bioRad   0.6.2     1       0    0
+5           biosurvey   0.1.1     1       0    0
+6       bivariatemaps     1.0     1       0    0
+7           bnspatial   1.1.1     1       0    0
+8             briskaR   1.0.4     1       0    0
+9            cleangeo   0.2-4     1       0    0
+10               ctmm   1.1.0     1       0    0
+11              dartR   2.9.7     1       0    0
+14           modchart     0.5     1       0    0
+15 MoleculeExperiment   1.0.1     0       1    0
+16        monographaR   1.2.1     1       0    0
+17          morphomap     1.4     1       0    0
+18             mtbls2  1.30.0     0       4    3
+19         nightmares   0.0.2     1       0    0
+20             npphen   1.5.2     1       0    0
+21       occUncertain   0.1.0     1       0    0
+22           oceanmap   0.1.1     1       0    0
+23              OCNet   1.0.1     1       0    0
+24      OpenStreetMap   0.3.4     1       0    0
+25         patternize   0.0.3     1       0    0
+26             places   0.1.1     1       0    0
+27            plotKML   0.8-3     1       0    0
+29               psgp  0.3-19     1       0    0
+30         PWFSLSmoke 1.2.117     1       0    0
+31 rangeModelMetadata   0.1.4     1       0    0
+32         RchivalTag   0.1.2     1       0    0
+33               rdhs   0.7.6     1       0    0
+34            recurse   1.1.2     3       0    2
+35             rLiDAR   0.1.5     1       0    0
+36            rmapzen   0.4.4     1       0    0
+37               rosm   0.2.6     1       0    0
+38         rpaleoclim   1.0.0     2       0    1
+39          RPhosFate   1.0.3     1       0    0
+40               RSIP   1.0.0     1       0    0
+41             Rtrack   1.0.7     1       0    0
+42             sara4r   0.0.9     1       0    0
+43      sdmpredictors  0.2.14     1       0    0
+44             sdStaf   1.0.2     1       0    0
+45             shadow   0.7.1     1       0    0
+46          shp2graph     0-5     1       0    0
+47     soilassessment   0.2.5     1       1    1
+48      spatialfusion   0.6-6     1       0    0
+49            spatsoc  0.1.16     1       0    0
+50             spMaps   0.4.0     1       0    0
+51     STMedianPolish     0.2     1       0    0
+52      streamDepletr   0.1.1     2       0    1
+53         SubgrPlots   0.1.3     1       0    2
+54             tipsae  0.0.13     1       0    5
+55            treetop   0.0.5     1       0    0
+56               trip   1.9.0     1       0    0
+57       UScensus2010  0.20.0     1       0    0
+58       waterquality   0.3.0     1       0    0
+59              waver   0.2.1     1       0    0
+60               weed   1.1.1     1       0    0
+61            zonator   0.6.0     1       0    0
+Output watchlist length: 210 
+Watchlist length change: -3 
