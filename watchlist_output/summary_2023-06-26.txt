@@ -1,0 +1,11 @@
+Run date: 2023-06-26 
+Input watchlist length: 210 
+Input watchlist name: watchlists/watchlist_2023-06-23.csv 
+Watchlist packages not available now: MinBAR, tipsae 
+New versions: Mapinguari, ref.ICAR 
+Check results OK: ref.ICAR 
+Check results (any not OK):
+     package version error warning note
+1 Mapinguari   2.0.1     0       0    1
+Output watchlist length: 208 
+Watchlist length change: -2 
