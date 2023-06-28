@@ -1,0 +1,5 @@
+Run date: 2023-06-28 
+Input watchlist length: 208 
+Input watchlist name: watchlists/watchlist_2023-06-26.csv 
+Watchlist packages not available now: MinBAR, tipsae 
+No change.
