@@ -18,6 +18,8 @@ theme: united
 
 - [Report 4, May 2023](https://r-spatial.org/r/2023/05/15/evolution4.html)
 
+- [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
+
 
 ## ASDAR diffs by chapter (made using `diff2html`): 
 
