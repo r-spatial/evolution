@@ -1,0 +1,12 @@
+Run date: 2023-07-05 
+Input watchlist length: 206 
+Input watchlist name: watchlists/watchlist_2023-07-03.csv 
+Watchlist packages not available now: MinBAR 
+New versions: ausplotsR, dispeRse, ggOceanMaps, tipsae 
+Check results OK: ausplotsR, dispeRse 
+Check results (any not OK):
+      package version error warning note
+3 ggOceanMaps   2.0.0     0       0    1
+4      tipsae  0.0.17     0       0    4
+Output watchlist length: 202 
+Watchlist length change: -4 
