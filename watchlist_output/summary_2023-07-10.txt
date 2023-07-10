@@ -1,17 +1,7 @@
 Run date: 2023-07-10 
-Input watchlist length: 202 
-Input watchlist name: watchlists/watchlist_2023-07-05.csv 
+Input watchlist length: 197 
+Input watchlist name: watchlists/watchlist_2023-07-07.csv 
 Watchlist packages not available now: binaryTimeSeries, bioRad, biosurvey, geoviz, hsdar, mapmisc, MinBAR, rasterList, shadow, zoon 
-Previously untracked most reverse dependencies: SpaDES.core 
-New versions: cleangeo, GWmodel, soilassessment 
-First order reverse dependencies of new versions: gwer, GWPR.light, micromapST 
-Check results OK: cleangeo, soilassessment 
-Check results (any not OK):
-      package version error warning note
-2        gwer     3.0     1       0    0
-3     GWmodel   2.3-1     0       0    1
-4  GWPR.light   0.2.1     0       0    1
-5  micromapST   2.0.1     1       0    0
-7 SpaDES.core   2.0.2     0       0    1
-Output watchlist length: 198 
-Watchlist length change: -4 
+New versions: soilassessment 
+Output watchlist length: 196 
+Watchlist length change: -1 
