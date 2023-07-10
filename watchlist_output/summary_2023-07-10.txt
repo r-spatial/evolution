@@ -1,75 +1,17 @@
 Run date: 2023-07-10 
-Input watchlist length: 199 
-Input watchlist name: watchlists/watchlist_2023-07-07.csv 
+Input watchlist length: 202 
+Input watchlist name: watchlists/watchlist_2023-07-05.csv 
 Watchlist packages not available now: binaryTimeSeries, bioRad, biosurvey, geoviz, hsdar, mapmisc, MinBAR, rasterList, shadow, zoon 
-New versions: GWPR.light, hero, hydroPSO, hydroTSM, iconr, ie2miscdata, intensity.analysis, kernelPhil, landsat8, leaflet.opacity, leafletCN, leastcostpath, loa, makePalette, MakeYourPalette, malariaAtlas, MapGAM, meteo, modchart, MoleculeExperiment, monographaR, morphomap, naijR, nightmares, occUncertain, oceanmap, OpenStreetMap, ParallelDSM, patternize, places, plotKML, PointedSDMs, psgp, rangeModelMetadata, rCAT, RchivalTag, rdhs, rLiDAR, rosm, rpaleoclim, RSIP, SAEforest, sara4r, sdmpredictors, SeerMapper, soilassessment, SpatialGraph, spatsoc, SSN, streamDepletr, StreamMetabolism, SubgrPlots, TrajDataMining, treetop, Watersheds, waver 
-First order reverse dependencies of new versions: changeRangeR, GPSeqClus, OCNet, openSTARS, OSMscale, satscanMapper, spatsurv, wallace, waterquality 
-Check results OK: PointedSDMs 
+Previously untracked most reverse dependencies: SpaDES.core 
+New versions: cleangeo, GWmodel, soilassessment 
+First order reverse dependencies of new versions: gwer, GWPR.light, micromapST 
+Check results OK: cleangeo, soilassessment 
 Check results (any not OK):
-              package  version error warning note
-1        changeRangeR    1.0.2     1       0    0
-2           GPSeqClus    1.3.0     1       0    0
-3          GWPR.light    0.2.1     0       0    1
-4                hero    0.4.7     1       0    0
-5            hydroPSO    0.5-1     1       0    0
-6            hydroTSM    0.6-0     1       0    0
-7               iconr    0.1.0     1       0    0
-8         ie2miscdata    1.0.3     1       0    2
-9  intensity.analysis    0.1.6     1       0    0
-10         kernelPhil      0.1     1       0    0
-11           landsat8   0.1-10     1       0    0
-12    leaflet.opacity    0.1.0     1       0    2
-13          leafletCN    0.2.1     1       0    0
-14      leastcostpath    1.8.7     1       0    0
-15                loa 0.2.48.1     1       0    0
-16        makePalette    0.1.1     1       0    0
-17    MakeYourPalette    0.1.3     1       0    0
-18       malariaAtlas    1.0.1     1       0    0
-19             MapGAM    1.2-6     1       0    0
-20              meteo    0.1-5     1       0    0
-21           modchart      0.5     1       0    0
-22 MoleculeExperiment    1.0.1     0       1    0
-23        monographaR    1.2.1     1       0    0
-24          morphomap      1.4     1       0    0
-25              naijR    0.5.2     1       0    0
-26         nightmares    0.0.2     1       0    0
-27       occUncertain    0.1.0     1       0    0
-28           oceanmap    0.1.1     1       0    0
-29              OCNet    1.0.1     1       0    0
-30          openSTARS    1.2.3     1       0    0
-31      OpenStreetMap    0.3.4     1       0    0
-32           OSMscale    0.5.1     1       0    0
-33        ParallelDSM    0.3.7     1       0    0
-34         patternize    0.0.3     1       0    0
-35             places    0.1.1     1       0    0
-36            plotKML    0.8-3     1       0    0
-38               psgp   0.3-19     1       0    0
-39 rangeModelMetadata    0.1.4     1       0    0
-40               rCAT    0.1.6     1       0    0
-41         RchivalTag    0.1.2     1       0    0
-42               rdhs    0.7.6     1       0    0
-43             rLiDAR    0.1.5     1       0    0
-44               rosm    0.2.6     1       0    0
-45         rpaleoclim    1.0.0     2       0    1
-46               RSIP    1.0.0     1       0    0
-47          SAEforest    1.0.0     1       0    0
-48             sara4r    0.0.9     1       0    0
-49      satscanMapper    1.0.2     1       0    0
-50      sdmpredictors   0.2.14     1       0    0
-51         SeerMapper    1.2.5     1       0    0
-52     soilassessment    0.2.6     1       0    0
-53       SpatialGraph    1.0-2     1       0    0
-54            spatsoc   0.1.16     1       0    0
-55           spatsurv    1.8-2     1       0    0
-56                SSN   1.1.17     1       0    0
-57      streamDepletr    0.1.1     2       0    1
-58   StreamMetabolism    1.1.2     1       0    0
-59         SubgrPlots    0.1.3     1       0    2
-60     TrajDataMining    0.1.6     1       0    0
-61            treetop    0.0.5     1       0    0
-62            wallace    2.0.5     1       0    0
-63       waterquality    0.3.0     1       0    0
-64         Watersheds      1.1     1       0    0
-65              waver    0.2.1     1       0    0
-Output watchlist length: 193 
-Watchlist length change: -6 
+      package version error warning note
+2        gwer     3.0     1       0    0
+3     GWmodel   2.3-1     0       0    1
+4  GWPR.light   0.2.1     0       0    1
+5  micromapST   2.0.1     1       0    0
+7 SpaDES.core   2.0.2     0       0    1
+Output watchlist length: 198 
+Watchlist length change: -4 
