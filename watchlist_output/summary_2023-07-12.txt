@@ -1,0 +1,13 @@
+Run date: 2023-07-12 
+Input watchlist length: 196 
+Input watchlist name: watchlists/watchlist_2023-07-10.csv 
+Watchlist packages not available now: binaryTimeSeries, bioRad, biosurvey, geoviz, hsdar, mapmisc, MinBAR, rasterList, shadow, zoon 
+Previously untracked most reverse dependencies: pRecipe 
+New versions: canadianmaps, OCNet 
+Check results OK: pRecipe 
+Check results (any not OK):
+       package version error warning note
+1 canadianmaps   1.3.0     0       0    2
+2        OCNet   1.1.0     1       0    0
+Output watchlist length: 195 
+Watchlist length change: -1 
