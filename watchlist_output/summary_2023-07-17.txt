@@ -1,0 +1,11 @@
+Run date: 2023-07-17 
+Input watchlist length: 195 
+Input watchlist name: watchlists/watchlist_2023-07-14.csv 
+Watchlist packages not available now: binaryTimeSeries, bioRad, biosurvey, geoviz, hsdar, mapmisc, MinBAR, rasterList, rTLS, shadow, zoon 
+New versions: hero, MapGAM 
+Check results OK: MapGAM 
+Check results (any not OK):
+  package version error warning note
+1    hero     0.6     0       0    2
+Output watchlist length: 193 
+Watchlist length change: -2 
