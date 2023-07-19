@@ -6,6 +6,6 @@ New versions: bioRad, sperich
 Check results OK: sperich 
 Check results (any not OK):
   package version error warning note
-1  bioRad   0.7.1     2       0    2
-Output watchlist length: 192 
-Watchlist length change: -1 
+1  bioRad   0.7.1     0       0    1
+Output watchlist length: 191 
+Watchlist length change: -2 
