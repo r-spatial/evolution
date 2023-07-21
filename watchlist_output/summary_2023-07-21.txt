@@ -1,0 +1,12 @@
+Run date: 2023-07-21 
+Input watchlist length: 191 
+Input watchlist name: watchlists/watchlist_2023-07-19.csv 
+Watchlist packages not available now (11): binaryTimeSeries, biosurvey, ForestTools, geoviz, hsdar, mapmisc, MinBAR, rasterList, rTLS, shadow, zoon
+Previously untracked most reverse dependencies: agricolaeplotr 
+New versions: psgp, streamDepletr 
+Check results OK: agricolaeplotr, streamDepletr 
+Check results (any not OK):
+  package version error warning note
+2    psgp  0.3-20     0       0    1
+Output watchlist length: 189 
+Watchlist length change: -2 
