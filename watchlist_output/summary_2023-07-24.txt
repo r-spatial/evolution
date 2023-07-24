@@ -1,0 +1,5 @@
+Run date: 2023-07-24 
+Input watchlist length: 189 
+Input watchlist name: watchlists/watchlist_2023-07-21.csv 
+Watchlist packages not available now (11): binaryTimeSeries, biosurvey, ForestTools, geoviz, hsdar, mapmisc, MinBAR, rasterList, rTLS, shadow, zoon
+No change.
