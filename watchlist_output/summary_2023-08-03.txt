@@ -1,0 +1,10 @@
+Run date: 2023-08-03 
+Input watchlist length: 189 
+Input watchlist name: watchlists/watchlist_2023-07-24.csv 
+Watchlist packages not available now (11): binaryTimeSeries, biosurvey, ForestTools, geoviz, hsdar, mapmisc, MinBAR, rasterList, rTLS, shadow, zoon
+New versions: MoleculeExperiment 
+Check results (any not OK):
+             package version error warning note
+1 MoleculeExperiment   1.0.2     0       0    3
+Output watchlist length: 188 
+Watchlist length change: -1 
