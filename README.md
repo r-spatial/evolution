@@ -11,6 +11,7 @@ For more details, please see
 * [the third blog post](https://r-spatial.org/r/2023/04/10/evolution3.html).
 * [the fourth blog post](https://r-spatial.org/r/2023/05/15/evolution4.html).
 * [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
+* [Add `rgdal` CRS vignette](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
 
 ## Center for Spatial Data Science 2023 workshop and study group materials
 
