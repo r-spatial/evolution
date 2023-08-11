@@ -1,5 +1,4 @@
 weak_all_package,weak_all_version,weak_all_error,weak_all_warning,weak_all_note,issue,nrevdeps,revdeps
-usmap,0.6.2,3,1,1,https://github.com/pdil/usmap/issues/70,3,cpsvote ecocomDP PracTools
 recurse,1.1.2,3,0,2,https://github.com/cbracis/recurse/issues/4,0,
 rpaleoclim,1.0.0,2,0,1,https://github.com/joeroe/rpaleoclim/issues/18,0,
 rworldmap,1.3-6,1,0,0,https://github.com/AndySouth/rworldmap/issues/20,17,arakno BAwiR bayesPop bayesTFR birdring bRacatus DataVisualizations epimdr2 GGoutlieR jcext loon rcites rfishnet2 rworldxtra spidR virtualspecies wux
@@ -408,6 +407,7 @@ trajectories,0.2-7,0,0,1,https://github.com/edzer/trajectories/issues/29,NA,NA
 transfR,1.0.7,0,0,1,,NA,NA
 UBL,0.0.7,0,0,1,,NA,NA
 ukpolice,0.2.2,0,0,1,,NA,NA
+usmap,0.6.2,0,0,1,https://github.com/pdil/usmap/issues/70,NA,NA
 variosig,0.3-1,0,0,1,,NA,NA
 vegtable,0.1.8,0,0,1,,NA,NA
 WASP,1.4.3,0,0,1,,NA,NA
