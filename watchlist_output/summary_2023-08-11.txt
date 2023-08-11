@@ -1,0 +1,11 @@
+Run date: 2023-08-11 
+Input watchlist length: 181 
+Input watchlist name: watchlists/watchlist_2023-08-09.csv 
+Watchlist packages not available now (12): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, zoon
+New versions: ForestTools, geotopbricks, micromapST, rasterList, rpaleoclim, Rtrack 
+Check results OK: ForestTools, geotopbricks, micromapST, rasterList, rpaleoclim 
+Check results (any not OK):
+  package version error warning note
+6  Rtrack   2.0.2     0       0    1
+Output watchlist length: 175 
+Watchlist length change: -6 
