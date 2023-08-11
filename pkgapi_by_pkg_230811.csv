@@ -1,0 +1,363 @@
+package,function
+abmR,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+adegraphics,sp::GridTopology sp::Polygon sp::Polygons sp::sp.grid sp::sp.lines sp::sp.points sp::sp.polygons sp::SpatialGrid sp::SpatialPolygons
+adehabitatHR,sp::as.image.SpatialGridDataFrame sp::CRS sp::gridparameters sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+adehabitatHS,sp::CRS sp::gridparameters
+adehabitatLT,sp::CRS sp::gridparameters sp::identicalCRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame
+adehabitatMA,sp::as.image.SpatialGridDataFrame sp::CRS sp::getPolygonCoordsSlot sp::getPolygonHoleSlot sp::getPolygonsIDSlot sp::getPolygonsPolygonsSlot sp::getSpPpolygonsSlot sp::gridparameters sp::image2Grid sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+AFM,sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::spDistsN1
+AGPRIS,sp::coordinates sp::CRS sp::proj4string sp::SpatialPoints sp::spTransform
+agricolaeplotr,sp::CRS
+AHMbook,sp::bubble sp::coordinates
+aire.zmvm,sp::spDists
+angstroms,sp::CRS sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+animalEKF,rgeos::gContains rgeos::gIntersection rgeos::gIsEmpty sp::coordinates sp::Line sp::Lines sp::over sp::plot sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::spsample
+animaltracker,maptools::getKMLcoordinates rgdal::writeOGR sp::coordinates sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPointsDataFrame sp::SpatialPolygons
+anipaths,sp::CRS
+antaresViz,rgeos::gDistance sp::coordinates sp::CRS sp::over sp::SpatialPoints sp::spChFIDs sp::spTransform
+APfun,maptools::spRbind rgdal::GDALinfo rgdal::readOGR rgdal::writeOGR sp::spChFIDs
+aqp,sp::coordinates sp::CRS sp::SpatialPoints sp::SpatialPointsDataFrame
+AquaBEHER,sp::coordinates sp::CRS sp::proj4string
+AQuadtree,sp::as.SpatialPolygons.GridTopology sp::GridTopology sp::identicalCRS sp::merge sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+archiDART,sp::Polygon
+ASGS.foyer,sp::coordinates sp::over sp::SpatialPoints
+ASIP,rgdal::readOGR
+atakrig,rgeos::gCentroid sp::CRS sp::SpatialPoints
+automap,sp::bubble sp::Polygon sp::SpatialPoints sp::spDists sp::zerodist
+bamlss,sp::CRS sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+BasketballAnalyzeR,sp::point.in.polygon
+BayesX,sp::bbox sp::coordinates sp::Polygon sp::polygons sp::Polygons sp::SpatialPolygons
+bdvis,rgdal::readOGR
+biogeo,maptools::writePointsShape sp::CRS sp::SpatialPoints sp::SpatialPointsDataFrame
+bioRad,sp::coordinates sp::CRS sp::GridTopology sp::over sp::proj4string sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::spTransform
+birdring,rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gUnionCascaded sp::CRS sp::GridTopology sp::Line sp::Lines sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons
+birdscanR,maptools::crepuscule maptools::sunriset sp::CRS sp::SpatialPoints
+bivariatemaps,rgeos::gArea sp::CRS sp::proj4string sp::spTransform
+bnspatial,rgdal::GDALinfo rgdal::ogrInfo
+bRacatus,rgeos::gBuffer rgeos::gIntersection sp::coordinates sp::CRS sp::proj4string sp::spChFIDs
+briskaR,rgdal::readOGR rgeos::gBuffer rgeos::gDifference rgeos::gUnionCascaded sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+calibrationband,sp::coordinates sp::Line sp::Lines sp::SpatialLines
+camtrapR,sp::plot
+canadianmaps,sp::coordinates sp::CRS sp::proj4string sp::spTransform
+Cardinal,sp::point.in.polygon
+cartograflow,rgeos::gIntersects
+cartography,sp::bbox sp::coordinates sp::plot
+cellmigRation,sp::Polygon
+ceramic,sp::plot
+changeRangeR,rgeos::gBuffer rgeos::gIntersection sp::coordinates sp::CRS sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+chillR,sp::spDistsN1
+cholera,sp::point.in.polygon sp::Polygon sp::spDistsN1 sp::spsample
+cleangeo,sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+cmsafops,sp::coordinates sp::CRS sp::SpatialPoints sp::spDistsN1
+cmsafvis,sp::coordinates sp::CRS sp::GridTopology sp::over sp::proj4string sp::SpatialGrid sp::SpatialPoints
+colorscience,sp::point.in.polygon
+ConR,rgdal::project rgdal::rgdal_extSoftVersion rgdal::writeOGR rgeos::gBuffer rgeos::readWKT sp::coordinates sp::CRS sp::identicalCRS sp::Line sp::Lines sp::over sp::plot sp::Polygons sp::proj4string sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+cooltools,sp::plot
+CoordinateCleaner,rgeos::gBuffer sp::coordinates sp::CRS sp::disaggregate sp::over sp::Polygons sp::proj4string sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spTransform
+covatest,sp::SpatialPoints
+crawl,sp::coordinates sp::proj4string
+cropDemand,rgdal::readOGR
+cropZoning,rgdal::readOGR
+cruts,sp::CRS
+cshapes,sp::spDists
+ctmm,rgdal::project rgdal::writeOGR sp::coordinates sp::CRS sp::plot sp::point.in.polygon sp::Polygon sp::Polygons sp::proj4string sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spsample sp::spTransform
+dartR,sp::coordinates sp::CRS sp::elide sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesLengths sp::SpatialPointsDataFrame
+dbmss,sp::gridded sp::SpatialPoints sp::SpatialPointsDataFrame
+DEPONS2R,sp::bbox sp::coordinates sp::CRS sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons
+dggridR,sp::CRS sp::makegrid sp::Polygon sp::Polygons sp::SpatialPolygons
+disaggregation,maptools::unionSpatialPolygons sp::bbox sp::spplot
+dismo,sp::CRS sp::plot sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+dispeRse,sp::CRS
+DivE,rgeos::gIntersection sp::Line sp::Lines sp::SpatialLines
+doolkit,sp::Polygon
+dots,sp::spsample
+DRHotNet,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons
+DrugSim2DR,sp::plot
+DSSP,sp::coordinates
+dtwSat,sp::CRS sp::Polygon sp::Polygons sp::SpatialPointsDataFrame sp::SpatialPolygons
+dynamAedes,sp::CRS sp::SpatialPoints
+ecospat,maptools::spRbind sp::CRS sp::SpatialPoints sp::SpatialPointsDataFrame
+eechidna,rgdal::ogrListLayers rgdal::readOGR rgeos::gArea rgeos::gContains rgeos::gIntersection rgeos::gIntersects rgeos::gSimplify sp::Polygon sp::SpatialPoints sp::SpatialPolygonsDataFrame
+EEM,sp::point.in.polygon
+EgoCor,sp::coordinates
+ei,sp::point.in.polygon
+eixport,rgdal::project
+elevatr,sp::bbox sp::coordinates sp::CRS sp::Polygon sp::Polygons sp::proj4string sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::spTransform sp::wkt
+EMbC,maptools::solarpos sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame
+EnvExpInd,sp::coordinates
+epcc,sp::SpatialPoints
+epiflows,sp::SpatialLinesDataFrame
+epitweetr,sp::coordinates sp::CRS sp::proj4string sp::spTransform
+espadon,sp::point.in.polygon
+excursions,sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPolygons
+expowo,sp::merge
+fasterize,sp::CRS
+fastmaRching,sp::spTransform
+FEA,sp::Line sp::Lines sp::plot sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons sp::spsample
+FedData,sp::GridTopology sp::SpatialPolygonsDataFrame
+FeedbackTS,sp::point.in.polygon sp::SpatialPointsDataFrame
+FLightR,maptools::gzAzimuth maptools::sunriset rgeos::gBuffer rgeos::gDistance rgeos::gSimplify rgeos::gUnion rgeos::gWithinDistance sp::CRS sp::identicalCRS sp::over sp::plot sp::proj4string sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spDists sp::spDistsN1 sp::spsample sp::spTransform
+flowDensity,rgeos::gBuffer rgeos::gDifference rgeos::gIntersects sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialPolygons
+ForestGapR,sp::coordinates
+FORTLS,sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+frenchCurve,sp::point.in.polygon
+FRK,sp::as.SpatialPolygons.GridTopology sp::CRS sp::HexPoints2SpatialPolygons sp::Line sp::Lines sp::points2grid sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spsample
+gaiah,sp::coordinates sp::gridded
+gazepath,sp::point.in.polygon
+gDefrag,maptools::SpatialLinesMidPoints rgdal::writeOGR rgeos::gArea rgeos::gDifference rgeos::gDistance rgeos::gIntersection rgeos::gLineMerge rgeos::gPointOnSurface rgeos::gTouches rgeos::gUnaryUnion rgeos::gUnion sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialLinesLengths sp::SpatialPointsDataFrame
+gdistance,sp::coordinates sp::CRS sp::Line sp::SpatialLines
+gecko,sp::Polygon sp::Polygons sp::SpatialPolygons
+GeoAdjust,rgeos::gWithin sp::as.SpatialPolygons.PolygonsList sp::CRS sp::over sp::SpatialPoints sp::spTransform
+geoBayes,sp::point.in.polygon sp::spDists
+GeodesiCL,sp::coordinates sp::CRS sp::proj4string sp::spTransform
+geodetector,sp::SpatialPointsDataFrame
+geodiv,sp::coordinates sp::CRS sp::Line sp::Lines sp::proj4string sp::SpatialLines
+GEOexplorer,maptools::pointLabel
+geofacet,sp::coordinates sp::CRS
+geogrid,rgeos::gCentroid sp::coordinates sp::CRS sp::HexPoints2SpatialPolygons sp::merge sp::plot sp::SpatialPixels sp::SpatialPolygonsDataFrame sp::spDists sp::spDistsN1 sp::spsample
+geojsonio,sp::CRS sp::Polygon sp::Polygons sp::proj4string sp::SpatialGridDataFrame sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons
+geomerge,sp::CRS sp::GridTopology sp::SpatialGridDataFrame
+geoR,sp::coordinates sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+GeoRange,sp::Polygon
+geospt,sp::rbind.SpatialPointsDataFrame
+geoTS,sp::coordinates sp::gridded
+gfcanalysis,rgeos::gCentroid rgeos::gConvexHull rgeos::gIntersects rgeos::gTouches sp::CRS sp::GridTopology sp::SpatialGrid
+GGoutlieR,sp::plot
+ggsn,maptools::gcDestination
+ggvoronoi,rgeos::gBuffer rgeos::intersect sp::Polygon sp::Polygons sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+GInSARCorW,sp::SpatialPoints
+gmGeostats,sp::bbox sp::coordinates sp::CRS sp::getGridIndex sp::getGridTopology sp::GridTopology sp::point.in.polygon sp::points2grid sp::proj4string sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+gMOIP,sp::point.in.polygon
+googletraffic,sp::CRS
+gps.track,sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame
+GPSeqClus,rgdal::writeOGR sp::CRS sp::proj4string sp::SpatialPoints sp::SpatialPointsDataFrame
+grainscape,sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints
+graph4lg,sp::coordinates sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame
+graphx,sp::plot
+graticule,sp::CRS sp::degreeLabelsEW sp::degreeLabelsNS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPolygonsDataFrame
+gstat,sp::bpy.colors sp::gridparameters sp::GridTopology sp::mapasp sp::point.in.polygon sp::SpatialGrid sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygonsDataFrame sp::spDists sp::zerodist
+gwer,sp::CRS sp::SpatialPointsDataFrame sp::SpatialPolygonsDataFrame
+gwfa,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+GWLelast,sp::spDistsN1
+GWPR.light,sp::bbox sp::coordinates sp::merge
+GWSDAT,sp::point.in.polygon
+HCV,rgeos::gTouches
+HDSpatialScan,sp::spDists
+hemispheR,sp::Polygon sp::Polygons sp::SpatialPolygons
+hero,sp::coordinates sp::CRS sp::plot sp::Polygon sp::Polygons sp::SpatialPolygons sp::spDists sp::spsample
+Hmsc,sp::CRS sp::spDists
+hydroPSO,sp::coordinates sp::spplot
+hydroTSM,maptools::readShapePoly sp::CRS sp::layout.north.arrow sp::layout.scale.bar sp::proj4string sp::SpatialPoints sp::spplot
+hyfo,rgdal::readOGR
+hyperbrick,rgdal::project
+hypervolume,sp::plot sp::SpatialPoints
+icardaFIGSr,sp::SpatialPoints
+iccTraj,sp::CRS sp::SpatialPoints sp::spDists
+iconr,rgdal::readOGR
+icosa,sp::Line sp::Lines sp::plot sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPolygons sp::spsample sp::spTransform
+IDE,sp::SpatialPoints
+image.ContourDetector,sp::Line sp::Lines sp::plot sp::SpatialLines
+image.LineSegmentDetector,sp::Line sp::Lines sp::plot sp::SpatialLines
+importinegi,rgdal::readOGR
+inlabru,sp::cbind.Spatial sp::coordinates sp::coordnames sp::CRS sp::get_evolution_status sp::Line sp::Lines sp::over sp::point.in.polygon sp::Polygon sp::Polygons sp::set_evolution_status sp::SpatialGridDataFrame sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spDists sp::wkt
+INLAspacetime,sp::bbox sp::coordinates sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::spTransform
+intamap,sp::CRS sp::Polygon sp::Polygons sp::remove.duplicates sp::SpatialGridDataFrame sp::SpatialLinesDataFrame sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spDistsN1 sp::zerodist
+intkrige,sp::bbox sp::coordinates sp::coordnames sp::gridparameters sp::is.projected sp::Line sp::Lines sp::sp.lines sp::SpatialLines sp::SpatialPixelsDataFrame sp::SpatialPointsDataFrame sp::spDists sp::spplot
+intSDM,sp::CRS sp::SpatialPointsDataFrame
+Irescale,sp::Polygon
+iSDM,maptools::spRbind rgdal::writeOGR sp::coordinates sp::over sp::Polygon sp::Polygons sp::SpatialPolygons
+isocat,sp::SpatialPoints
+IsoriX,sp::coordinates sp::CRS sp::get_ll_warn sp::gridded sp::point.in.polygon sp::proj4string sp::set_ll_warn sp::sp.points sp::sp.polygons
+itcSegment,rgeos::gArea rgeos::gBuffer rgeos::gConvexHull sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+kehra,sp::CRS sp::SpatialPoints
+Kernelheaping,sp::point.in.polygon
+kernelPhil,rgdal::project
+KnowBR,sp::plot
+LabourMarketAreas,maptools::unionSpatialPolygons rgdal::readOGR rgdal::writeOGR rgeos::gArea rgeos::gIntersection sp::merge sp::SpatialPolygonsDataFrame
+lakemorpho,rgeos::gArea rgeos::gBuffer rgeos::gContains rgeos::gCrosses rgeos::gDifference rgeos::gIntersection rgeos::gIntersects rgeos::gLength rgeos::gOverlaps rgeos::gWithin sp::CRS sp::Line sp::Lines sp::proj4string sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons
+landsat,sp::getGridTopology sp::read.asciigrid
+landscapemetrics,sp::coordinates sp::disaggregate sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPointsDataFrame sp::SpatialPolygons
+landsepi,sp::SpatialPolygonsDataFrame
+latticeDensity,sp::bbox
+leaflet,sp::bbox sp::coordinates sp::CRS sp::polygons sp::SpatialLines
+leafletCN,sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+leafR,sp::coordinates sp::gridded
+leastcostpath,rgeos::gArea rgeos::gBoundary rgeos::gBuffer rgeos::gDifference rgeos::gIntersection rgeos::gIsValid rgeos::gLength rgeos::gNode rgeos::gPolygonize rgeos::gUnaryUnion sp::coordinates sp::Polygon sp::Polygons sp::SpatialLinesDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spsample
+lgcp,rgeos::gDisjoint rgeos::gIntersection rgeos::gIntersects rgeos::gTouches rgeos::gUnaryUnion sp::CRS sp::GridTopology sp::Polygon sp::Polygons sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+lidR,sp::SpatialPointsDataFrame sp::surfaceArea
+loa,sp::coordinates sp::CRS sp::proj4string sp::spTransform
+malariaAtlas,rgdal::readOGR sp::bbox sp::rbind.SpatialPolygonsDataFrame
+mapedit,sp::bbox sp::coordinates sp::CRS sp::Lines sp::Polygons sp::spTransform
+mapReasy,rgdal::ogrListLayers rgdal::readOGR sp::getSpPPolygonsLabptSlots
+maptools,sp::as.image.SpatialGridDataFrame sp::as.SpatialPolygons.PolygonsList sp::CRS sp::gridparameters sp::GridTopology sp::identicalCRS sp::is.projected sp::Line sp::LineLength sp::Lines sp::mapasp sp::Polygon sp::Polygons sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+mapview,sp::coordinates sp::CRS sp::Lines sp::Polygons sp::proj4string sp::spTransform
+marmap,sp::Line sp::Lines sp::point.in.polygon sp::SpatialLines sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+maskRangeR,sp::coordinates
+MEDITS,sp::CRS
+memgene,sp::SpatialPoints
+MetaLandSim,sp::select.spatial sp::SpatialPoints
+meteo,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons sp::spDists sp::zerodist
+meteoForecast,sp::CRS
+MetricGraph,sp::CRS sp::Line sp::LineLength sp::Lines sp::proj4string sp::SpatialLines sp::SpatialPoints sp::SpatialPointsDataFrame sp::spDists
+micromap,sp::Polygon sp::Polygons sp::SpatialPolygons
+modchart,rgdal::readOGR sp::merge
+momentuHMM,sp::coordinates sp::CRS sp::proj4string sp::spDistsN1 sp::spTransform
+Momocs,rgeos::gIntersection sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPolygons sp::spsample
+monographaR,maptools::writePolyShape maptools::writeSpatialShape
+morphomap,sp::CRS sp::point.in.polygon
+Morphoscape,sp::coordinates sp::gridded sp::point.in.polygon sp::SpatialPoints
+mosaicCalc,sp::point.in.polygon
+move,sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::spDistsN1
+movecost,sp::coordinates sp::Polygon sp::Polygons sp::SpatialLinesDataFrame sp::SpatialPolygons
+moveHMM,sp::spDistsN1
+mregions,sp::spTransform
+muHVT,rgeos::intersect sp::point.in.polygon
+multimark,sp::gridded sp::over sp::plot sp::points2grid sp::SpatialGrid sp::SpatialPoints
+mvGPS,sp::Polygon sp::Polygons sp::SpatialPolygons
+naturaList,sp::Polygon sp::Polygons sp::SpatialPointsDataFrame sp::SpatialPolygons
+nodiv,sp::CRS sp::points2grid sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+npsp,sp::CRS sp::gridparameters sp::GridTopology sp::SpatialGridDataFrame sp::SpatialPoints
+OasisR,rgdal::readOGR rgeos::gCentroid rgeos::gDistance rgeos::gIntersection rgeos::gLength
+oceanic,sp::CRS sp::SpatialPoints
+oceanmap,sp::bbox sp::Line sp::Lines sp::Polygon sp::Polygons sp::proj4string sp::SpatialLines sp::SpatialPolygons
+OCNet,rgdal::writeOGR sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame
+ohun,sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+openSTARS,rgdal::readGDAL rgdal::readOGR rgdal::writeOGR sp::coordinates sp::merge
+OpenStreetMap,sp::CRS
+Orcs,sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+OSMscale,sp::CRS
+ParallelDSM,rgdal::writeGDAL
+patternize,sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+pavo,sp::point.in.polygon
+perspectev,sp::Polygon sp::Polygons
+pgirmess,sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+phenopix,sp::Polygon sp::Polygons sp::SpatialPolygons
+phyloclim,sp::read.asciigrid sp::SpatialPoints
+phyloregion,rgeos::gBuffer sp::CRS sp::HexPoints2SpatialPolygons sp::merge sp::over sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spsample
+places,sp::CRS sp::SpatialPointsDataFrame
+plotKML,rgdal::CRSargs rgdal::readGDAL rgdal::readOGR rgdal::writeGDAL rgdal::writeOGR sp::CRS sp::gridparameters sp::GridTopology sp::Line sp::LineLength sp::Lines sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame sp::SpatialPolygonsDataFrame
+PointedSDMs,sp::SpatialPixelsDataFrame sp::SpatialPointsDataFrame
+polyCub,sp::Polygons sp::SpatialPolygons
+PopGenReport,sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesLengths sp::SpatialPolygons
+pRecipe,sp::CRS sp::proj4string
+psda,rgeos::gArea rgeos::gIntersection sp::Polygon sp::Polygons sp::SpatialPolygons
+psgp,sp::SpatialPointsDataFrame
+ptools,sp::bbox sp::coordinates sp::is.projected sp::over sp::Polygon sp::Polygons sp::proj4string sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+PWFSLSmoke,maptools::solarnoon maptools::sunriset rgdal::writeOGR sp::CRS sp::SpatialPointsDataFrame
+pycno,rgeos::gContains sp::CRS sp::getGridTopology sp::GridTopology sp::SpatialGrid sp::SpatialPixelsDataFrame sp::SpatialPoints
+QRAGadget,sp::CRS
+quadmesh,sp::coordinates sp::CRS sp::SpatialPoints
+quickmapr,rgdal::showWKT rgeos::gArea rgeos::gDistance rgeos::gLength rgeos::gWithin rgeos::gWithinDistance sp::bbox sp::coordinates sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons sp::spTransform
+r2d2,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+RAC,sp::coordinates sp::CRS sp::gridded sp::proj4string
+RapidPolygonLookup,sp::point.in.polygon
+raptr,sp::SpatialPoints sp::spsample
+raster,sp::bbox sp::coordinates sp::CRS sp::geometry sp::gridded sp::GridTopology sp::Line sp::Lines sp::over sp::plot sp::Polygon sp::Polygons sp::proj4string sp::SpatialGrid sp::SpatialGridDataFrame sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spsample sp::spTransform
+rasterVis,sp::CRS sp::degreeLabelsNS sp::point.in.polygon sp::SpatialPoints sp::SpatialPointsDataFrame
+rbgm,sp::CRS sp::Line sp::Lines sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spDistsN1
+rcanvec,rgdal::readOGR rgdal::writeOGR sp::coordinates sp::CRS sp::plot sp::SpatialPoints sp::spTransform
+rCAT,sp::CRS
+RCGLS,sp::CRS
+RchivalTag,maptools::PolySet2SpatialPolygons maptools::SpatialLines2PolySet maptools::unionSpatialPolygons sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+RclusTool,sp::point.in.polygon
+rcrimeanalysis,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons
+rddapp,sp::point.in.polygon
+rdhs,rgdal::readOGR
+red,maptools::kmlPolygon maptools::kmlPolygons rgdal::project rgeos::gIntersection rgeos::gSimplify sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+redlistr,rgeos::gArea sp::Polygon sp::Polygons sp::SpatialPolygons
+refreg,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+rerddapXtracto,sp::point.in.polygon
+rgeos,sp::CRS sp::identicalCRS sp::Lines sp::overDF_for_rgeos sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::zerodist
+RgoogleMaps,sp::bbox sp::coordinates sp::CRS sp::degreeLabelsEW sp::degreeLabelsNS sp::plot sp::proj4string sp::SpatialPointsDataFrame sp::spTransform
+rinat,sp::bbox
+rleafmap,sp::CRS
+rLiDAR,sp::over sp::Polygon sp::Polygons sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+rmapshaper,sp::identicalCRS sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame
+rnpn,sp::coordinates
+rosm,rgdal::CRSargs sp::bbox sp::coordinates sp::CRS sp::plot sp::SpatialPoints sp::spTransform
+rpostgis,rgeos::readWKT rgeos::writeWKT sp::CRS sp::proj4string sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialMultiPoints sp::SpatialMultiPointsDataFrame sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spTransform
+RSIP,rgdal::readOGR sp::CRS
+rtop,sp::CRS sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spDists sp::spDistsN1
+RWmisc,sp::CRS sp::identicalCRS
+rworldmap,maptools::readAsciiGrid sp::as.image.SpatialGridDataFrame sp::gridparameters sp::GridTopology sp::SpatialGridDataFrame
+satin,sp::degAxis
+scBio,sp::Polygon sp::Polygons sp::proj4string sp::SpatialPolygons
+sdm,sp::CRS sp::SpatialPointsDataFrame
+sdmpredictors,rgdal::GDALis3ormore
+SDPDmod,sp::Polygon sp::Polygons sp::SpatialLinesLengths sp::SpatialPolygons
+sdStaf,sp::CRS sp::SpatialPoints
+secrlinear,sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialLinesLengths sp::SpatialPointsDataFrame
+SeerMapper,sp::CRS sp::SpatialPolygonsDataFrame sp::spTransform
+seg,sp::CRS sp::over sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygonsDataFrame
+SegEnvIneq,rgdal::readOGR rgeos::gCentroid rgeos::gDistance
+SeuratObject,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+sfdct,sp::over
+shp2graph,sp::as.SpatialLines.SLDF sp::SpatialLinesDataFrame
+smacpod,sp::spDists
+soilassessment,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons
+soiltexture,sp::point.in.polygon
+SongEvo,sp::CRS sp::SpatialPointsDataFrame sp::spDists
+spacetime,sp::.invert sp::CRS sp::identicalCRS sp::Line sp::Lines sp::longlat.scales sp::mapasp sp::overDF_for_rgeos sp::SpatialLines sp::SpatialPoints sp::zerodist
+SpatialBSS,sp::SpatialPointsDataFrame sp::spplot
+SpatialEpi,sp::CRS sp::Polygon sp::Polygons sp::SpatialPolygons
+spatialfusion,rgeos::gIntersection rgeos::gUnion sp::bbox sp::CRS sp::makegrid sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+SpatialGraph,rgeos::gDistance rgeos::gIntersection rgeos::gWithinDistance sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPointsDataFrame
+SpatialPosition,sp::identicalCRS
+spatsoc,rgeos::gArea rgeos::gBuffer rgeos::gIntersection rgeos::gIntersects sp::CRS sp::Line sp::Lines sp::SpatialLines sp::SpatialPointsDataFrame
+spatsurv,rgeos::gBuffer sp::CRS sp::plot sp::Polygon sp::Polygons sp::SpatialPixels sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+spbabel,sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialMultiPoints sp::SpatialMultiPointsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+spcosa,sp::getGridTopology sp::identicalCRS sp::SpatialGridDataFrame sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+spDates,sp::coordinates sp::fullgrid sp::gridded sp::proj4string sp::SpatialPointsDataFrame sp::spDistsN1 sp::spplot sp::spsample sp::zerodist
+spdep,sp::CRS sp::get_ll_TOL sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::spDists
+sperich,sp::CRS sp::SpatialPixelsDataFrame sp::SpatialPoints
+spex,sp::coordinates sp::CRS sp::Polygons sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+spgwr,sp::CRS sp::Polygons sp::SpatialPointsDataFrame sp::SpatialPolygonsDataFrame sp::spDistsN1
+sphet,sp::spDists
+SPIAT,sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialPolygons
+spm,sp::coordinates
+spm2,sp::coordinates
+spqdep,sp::SpatialPoints
+SRTsim,sp::Polygon
+SSDM,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+SSN,maptools::getinfo.shape rgdal::readOGR rgdal::writeOGR sp::Line sp::Lines sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+StatDA,sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+stJoincount,sp::coordinates
+STMedianPolish,sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::spDists
+stppSim,sp::CRS sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+structToolbox,sp::point.in.polygon
+stxplore,sp::CRS sp::proj4string sp::SpatialPoints
+SubgrPlots,sp::plot sp::Polygon sp::Polygons sp::SpatialPolygons
+SUMMER,sp::coordinates sp::merge sp::over sp::plot sp::Polygon sp::proj4string sp::spplot
+SUNGEO,sp::bbox sp::coordinates sp::CRS sp::proj4string sp::spTransform
+surveillance,sp::GridTopology sp::identicalCRS sp::is.projected sp::layout.scale.bar sp::point.in.polygon sp::Polygon sp::Polygons sp::SpatialGrid sp::SpatialPixelsDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::spDistsN1
+SWTools,sp::CRS sp::over sp::SpatialPoints
+telemac,sp::as.SpatialLines.SLDF sp::Line sp::Lines sp::SpatialLines sp::SpatialPoints sp::SpatialPointsDataFrame
+Ternary,sp::point.in.polygon
+tiler,sp::CRS
+topoDistance,sp::SpatialLinesLengths sp::SpatialPoints
+track2KBA,sp::CRS sp::is.projected sp::SpatialPixels sp::SpatialPoints sp::SpatialPointsDataFrame sp::spDistsN1 sp::spTransform
+trackeR,sp::spDists
+TrajDataMining,sp::CRS sp::identicalCRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialLinesLengths sp::SpatialPoints sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+trajectories,sp::bbexpand sp::bpy.colors sp::CRS sp::identicalCRS sp::Line sp::LineLength sp::Lines sp::longlat.scales sp::mapasp sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialLinesLengths sp::SpatialPoints sp::spDists
+trip,sp::as.image.SpatialGridDataFrame sp::coordinates sp::coordinatevalues sp::CRS sp::image2Grid sp::Line sp::Lines sp::proj4string sp::SpatialGridDataFrame sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame
+tripEstimation,sp::as.image.SpatialGridDataFrame
+TUFLOWR,sp::coordinates sp::fullgrid sp::gridded sp::makegrid sp::proj4string sp::SpatialPoints sp::SpatialPointsDataFrame
+uavRmp,sp::coordinates sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::proj4string sp::remove.duplicates sp::SpatialLines sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame sp::spTransform
+UBL,sp::SpatialPoints
+ursa,rgdal::closeDataset rgdal::CRSargs rgdal::GDAL.close rgdal::GDALcall rgdal::GDALinfo rgdal::getDriver rgdal::getDriverName rgdal::getRasterData rgdal::ogrInfo rgdal::ogrListLayers rgdal::project rgdal::putRasterData rgdal::readOGR rgdal::saveDataset rgdal::setCPLConfigOption rgdal::showP4 rgdal::showWKT rgdal::writeOGR
+UScensus2010,sp::layout.north.arrow
+variosig,sp::coordinates
+vec2dtransf,sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialLinesDataFrame sp::SpatialPoints sp::SpatialPointsDataFrame sp::SpatialPolygons sp::SpatialPolygonsDataFrame
+VIM,sp::SpatialPoints
+virtualspecies,sp::coordinates
+vivid,sp::point.in.polygon
+walkboutr,sp::SpatialPoints sp::spDists
+wallace,rgdal::readOGR rgeos::gBuffer
+Watersheds,rgeos::gBoundary rgeos::gBuffer rgeos::gCentroid rgeos::gCrosses rgeos::gDistance rgeos::gIntersects sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons
+waver,rgeos::gBinarySTRtreeQuery rgeos::gDistance rgeos::gIntersection rgeos::gIntersects rgeos::gUnaryUnion sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPolygons
+WEGE,sp::CRS
+wikilake,sp::coordinates
+wildlifeDI,sp::CRS
+wkb,sp::CRS sp::Line sp::Lines sp::Polygon sp::Polygons sp::SpatialLines sp::SpatialPoints sp::SpatialPolygons
+wux,rgdal::readOGR rgeos::gArea rgeos::gIntersection sp::CRS sp::over sp::Polygon sp::Polygons sp::SpatialPoints sp::SpatialPolygons sp::spDistsN1
+xROI,sp::Polygons sp::SpatialPolygons
