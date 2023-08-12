@@ -1,9 +1,8 @@
-weak_all_package,weak_all_version,weak_all_error,weak_all_warning,weak_all_note,issue,nrevdeps,revdeps
+most_all_package,most_all_version,most_all_error,most_all_warning,most_all_note,issue,nrevdeps,revdeps
 recurse,1.1.2,3,0,2,https://github.com/cbracis/recurse/issues/4,0,
 rpaleoclim,1.0.0,2,0,1,https://github.com/joeroe/rpaleoclim/issues/18,0,
 rworldmap,1.3-6,1,0,0,https://github.com/AndySouth/rworldmap/issues/20,17,arakno BAwiR bayesPop bayesTFR birdring bRacatus DataVisualizations epimdr2 GGoutlieR jcext loon rcites rfishnet2 rworldxtra spidR virtualspecies wux
 elevatr,0.4.5,1,0,1,https://github.com/jhollist/elevatr/issues/77,10,cholera gwavr IsoriX movecost rayshader rivnet sharpshootR shoredate transfR traudem
-move,4.2.4,1,0,0,,9,amt ctmm EMbC move2 moveWindSpeed recurse segclust2d track2KBA trackdf
 OpenStreetMap,0.3.4,1,0,0,https://github.com/ifellows/ROSM/issues/15,7,CSHShydRology loa OSMscale spatsurv stars tmaptools trajectories
 ctmm,1.1.0,1,0,0,https://github.com/ctmm-initiative/ctmm/issues/45,4,amt ctpm move trackdf
 hydroTSM,0.6-0,1,0,0,https://github.com/hzambran/hydroTSM/issues/19,4,hydroGOF hydroMOPSO hydroPSO SWTools
@@ -536,6 +535,7 @@ micromap,1.9.7,0,0,0,,NA,NA
 mkde,0.2,0,0,0,,NA,NA
 MODISTools,1.1.4,0,0,0,https://github.com/ropensci/MODISTools/issues/47,NA,NA
 Morphoscape,1.0.2,0,0,0,,NA,NA
+move,4.2.4,0,0,0,,NA,NA
 moveHMM,1.9,0,0,0,,NA,NA
 multimark,2.1.6,0,0,0,,NA,NA
 nhdplusTools,0.6.2,0,0,0,,NA,NA
