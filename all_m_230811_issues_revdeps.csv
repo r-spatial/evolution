@@ -1,6 +1,5 @@
 most_all_package,most_all_version,most_all_error,most_all_warning,most_all_note,issue,nrevdeps,revdeps
 recurse,1.1.2,3,0,2,https://github.com/cbracis/recurse/issues/4,0,
-rpaleoclim,1.0.0,2,0,1,https://github.com/joeroe/rpaleoclim/issues/18,0,
 rworldmap,1.3-6,1,0,0,https://github.com/AndySouth/rworldmap/issues/20,17,arakno BAwiR bayesPop bayesTFR birdring bRacatus DataVisualizations epimdr2 GGoutlieR jcext loon rcites rfishnet2 rworldxtra spidR virtualspecies wux
 elevatr,0.4.5,1,0,1,https://github.com/jhollist/elevatr/issues/77,10,cholera gwavr IsoriX movecost rayshader rivnet sharpshootR shoredate transfR traudem
 OpenStreetMap,0.3.4,1,0,0,https://github.com/ifellows/ROSM/issues/15,7,CSHShydRology loa OSMscale spatsurv stars tmaptools trajectories
@@ -118,7 +117,6 @@ mapping,1.3,1,0,0,https://github.com/serafinialessio/mapping/issues/3,0,
 mapReasy,1.0,1,0,0,,0,
 MEDITS,0.1.7,1,0,0,,0,
 meteo,0.1-5,1,0,0,,0,
-micromapST,2.0.1,1,0,0,https://github.com/jpearson0525/micromapST/issues/3,0,
 modchart,0.5,1,0,0,https://github.com/byadu/modchart/issues/1,0,
 monographaR,1.2.1,1,0,0,https://github.com/mreginato/monographaR/issues/1,0,
 morphomap,1.4,1,0,0,https://github.com/AProfico/morphomap/issues/1,0,
@@ -143,7 +141,6 @@ rLiDAR,0.1.5,1,0,0,https://github.com/carlos-alberto-silva/weblidar-treetop/issu
 rnpn,1.2.5,1,0,0,https://github.com/usa-npn/rnpn/issues/30,0,
 RPhosFate,1.0.3,1,0,0,https://github.com/gisler/RPhosFate/issues/17,0,
 RSIP,1.0.0,1,0,0,,0,
-Rtrack,1.0.7,1,0,0,https://github.com/rupertoverall/Rtrack/issues/2,0,
 SAEforest,1.0.0,1,0,0,https://github.com/krennpa/SAEforest/issues/2,0,
 sara4r,0.0.9,1,0,0,,0,
 satscanMapper,1.0.2,1,0,0,,0,
@@ -376,6 +373,7 @@ rsatscan,1.0.5,0,0,1,,NA,NA
 rsinaica,0.6.1,0,0,1,,NA,NA
 rsyncrosim,1.4.2,0,0,1,,NA,NA
 rtop,0.6-6,0,0,1,,NA,NA
+Rtrack,2.0.2,0,0,1,https://github.com/rupertoverall/Rtrack/issues/2,NA,NA
 satellite,1.0.4,0,0,1,https://github.com/fdetsch/MODIS/issues/130,NA,NA
 SCpubr,1.1.2,0,0,1,,NA,NA
 SDMPlay,2.0,0,0,1,,NA,NA
@@ -532,6 +530,7 @@ memgene,1.0.2,0,0,0,,NA,NA
 meta4diag,2.1.1,0,0,0,,NA,NA
 meteoForecast,0.56,0,0,0,https://github.com/oscarperpinan/meteoForecast/issues/27,NA,NA
 micromap,1.9.7,0,0,0,,NA,NA
+micromapST,3.0.0,0,0,0,https://github.com/jpearson0525/micromapST/issues/3,NA,NA
 mkde,0.2,0,0,0,,NA,NA
 MODISTools,1.1.4,0,0,0,https://github.com/ropensci/MODISTools/issues/47,NA,NA
 Morphoscape,1.0.2,0,0,0,,NA,NA
@@ -577,6 +576,7 @@ rgrass,0.3-8,0,0,0,,NA,NA
 rinat,0.1.9,0,0,0,,NA,NA
 rmapshaper,0.5.0,0,0,0,https://github.com/ateucher/rmapshaper/issues/129,NA,NA
 RNCEP,1.0.10,0,0,0,,NA,NA
+rpaleoclim,1.0.1,0,0,0,https://github.com/joeroe/rpaleoclim/issues/18,NA,NA
 RSAGA,1.4.0,0,0,0,,NA,NA
 rts,1.1-8,0,0,0,,NA,NA
 RWmisc,0.1.2,0,0,0,,NA,NA
