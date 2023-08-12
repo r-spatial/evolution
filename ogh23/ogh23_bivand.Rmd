@@ -111,6 +111,7 @@ Note also that WRE (and CRAN) permit dependencies on Bioconductor packages, and,
 WRE https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-Dependencies describes the fields in the `DESCRIPTION` file specifying dependencies: `Depends`, `Imports`, `LinkingTo`, `Suggests` and `Enhances`. Strong dependencies are those that must be installed for the packages depending on them to function, that is the first three listed (definition in `?tools::package_dependencies`). 
 
 Packages listed as `Depends` are loaded and attached before the package in which they are listed (loaded means that their namespaces are available and may be accessed in code using the double colon operator `::`, and objects may be imported in the `NAMESPACE` file, while attached means that the packages are available as though `library` or `require` had been used). WRE notes:
+
 > Field ‘Depends’ should nowadays be used rarely, only for packages which are intended to be put on the search path to make their facilities available to the end user (and not to the package itself)
 
 Packages listed as `Imports` are loaded but not attached, so that their namespaces can be cherry-picked in the `NAMESPACE` file. This is important if you consider that bulk-importing the namespaces of many packages will also import the namespaces of their strong forward dependencies, so that the search path used by the R engine grows in length and it takes longer to find functions during execution.

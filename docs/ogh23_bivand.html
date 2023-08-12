@@ -1792,10 +1792,12 @@ namespaces are available and may be accessed in code using the double
 colon operator <code>::</code>, and objects may be imported in the
 <code>NAMESPACE</code> file, while attached means that the packages are
 available as though <code>library</code> or <code>require</code> had
-been used). WRE notes: &gt; Field ‘Depends’ should nowadays be used
-rarely, only for packages which are intended to be put on the search
-path to make their facilities available to the end user (and not to the
-package itself)</p>
+been used). WRE notes:</p>
+<blockquote>
+<p>Field ‘Depends’ should nowadays be used rarely, only for packages
+which are intended to be put on the search path to make their facilities
+available to the end user (and not to the package itself)</p>
+</blockquote>
 <p>Packages listed as <code>Imports</code> are loaded but not attached,
 so that their namespaces can be cherry-picked in the
 <code>NAMESPACE</code> file. This is important if you consider that
