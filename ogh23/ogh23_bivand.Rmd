@@ -1,0 +1,232 @@
+---
+title: "Progress in modernizing and replacing infrastructure packages in R-spatial workflows"
+author: "Roger Bivand"
+date: Tuesday 29 August 2023, 13:30-17:00 CEST
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 2
+bibliography: refs.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, paged.print=FALSE)
+```
+
+# Introduction
+
+Modernizing and replacing infrastructure packages in R-spatial workflows affects workflows using `sp` [@sp], `sf` [@sf] and `raster` [@raster] and `terra` [@terra] taken together. Since 2016, `sf` and `terra` have interfaced OSGeo libraries `PROJ`, `GDAL` and `GEOS` directly, using the `Rcpp` [@Rcpp] framework. This means that they no longer need to use `rgdal` [@rgdal] or `rgeos` [@rgeos] as `sp` and `raster` used to do. Using `Rcpp` is more efficient and easier to maintain. Rather than leaving `rgdal` and `rgeos` to decay, they are being archived on CRAN in October 2023, as first announced in Edzer Pebesma's useR! plenary in July 2021. In addition, `maptools` [@maptools] and `rgrass7` [@rgrass7] will be archived at the same time. The Evolution project was created by us and partially supported by the R Consortium (from early 2022: https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools) and will conclude at the end of 2023.
+
+## Background
+
+Since the publication of the second edition of ASDAR (https://asdar-book.org/) ten years ago [@asdar], and based on what we had learned about representing spatial data, it became clear that alternatives to `sp` should be sought, leading to `sf`, and most recently to [@sdsr]. In parallel, Robert Hijmans started moving more of `raster` processing into compiled code, leading to the development of the `terra` package no longer using `rgdal` or `rgeos`. So modernisation has been taking place in infrastructure packages.
+
+However, continuing to maintain both the outdated interfaces to `PROJ`, `GDAL` and `GEOS` as well as developing `sf` and `terra` is arguably a waste of very limited resources, and assumes that I as maintainer will be able to continue to keep the packages working in the future. Since I retired two years ago, I have also determined that work on `spdep` and `spatialreg` are a more sensible use of my available effort, so we should acknowledge that modernisation has happened and that the retiring packages can be satisfactorily replaced by `sf` and `terra` now. 
+
+## Plan for today
+
+We'll spend time up to the break establishing more or less the state of play now.
+
+### How to carry out retirement of `maptools`, `rgdal` and `rgeos`
+
+What remained to do from early 2022 was to plan and execute the retirement of `rgdal`, `rgeos`, `maptools` and `rgrass7`. The latter has been replaced by `rgrass` [@rgrass]. The three main retiring packages had, however, many reverse dependencies on the Comprehensive R Archive Network (CRAN), so to explain the extent of the retirement process, we'll need an overview of what packages are, how maintainers of packages published on CRAN view their responsibilities, what are package dependencies, and so on, before proceeding to show any progress achieved in de-coupling CRAN packages from depending on retiring packages.
+
+### Hackathon-style: mitigating retirement for chosen packages 
+
+After the break, we'll create smaller groups to try to make changes to chosen packages whose maintainers have not yet responded to increasingly urgent messages asking for updates to their packages to adapt to the retiring packages ceasing to be available during October 2023.
+
+
+# What are R packages?
+
+When one installs R itself, base and recommended packages also get installed. Among these packages are the functions needed to administer other, contributed, packages. But what are packages as understood by R?
+
+## R packages
+
+R packages are defined in the "Writing R Extensions" manual (WRE) (https://cran.r-project.org/doc/manuals/r-release/R-exts.html). This manual is versioned, so users can adapt to forthcoming changes in the development version of R. A package:
+
+> is a directory of files which extend R, a source package (the master files of a package), or a tarball containing the files of a source package, or an installed package, the result of running R CMD INSTALL on a source package.
+
+We can distinguish between source packages (which can be modified) and binary packages (which should not be modified):
+
+> On some platforms (notably macOS and Windows) there are also binary packages, a zip file or tarball containing the files of an installed package which can be unpacked rather than installing from sources. 
+
+Installed packages are kept in one or more libraries: 
+
+> A directory into which packages are installed, e.g. /usr/lib/R/library: in that sense it is sometimes referred to as a library directory or library tree (since the library is a directory which contains packages as directories, which themselves contain directories). 
+
+Package structure is defined as:
+
+> The sources of an R package consist of a subdirectory containing the files DESCRIPTION and NAMESPACE, and the subdirectories R, data, demo, exec, inst, man, po, src, tests, tools and vignettes (some of which can be missing, but which should not be empty). The package subdirectory may also contain files INDEX, configure, cleanup, LICENSE, LICENCE and NEWS. 
+
+Operations on packages include:
+
+> Source packages can be built. This involves taking a source directory and creating a tarball ready for distribution, including cleaning it up and creating PDF/HTML documentation from any vignettes it may contain. 
+
+> Source packages (and most often tarballs) can be checked, when a test installation is done and tested (including running its examples); also, the contents of the package are tested in various ways for consistency and portability. 
+
+> The most common is installation which takes a source package and installs it in a library using R CMD INSTALL or install.packages.
+
+The latter should be qualified by noting that installing binary (pre-installed package images) packages also uses `R CMD INSTALL` or `install.packages`.
+
+Packages may be written and used without being submitted to CRAN or Bioconductor (aggregating and curating R packages used in "rigorous and reproducible analysis of data from current and emerging biological assays" https://www.bioconductor.org/). Many organisations have in-house packages used for their own purposes. Since they are not centrally registered, it is unknown which other packages they may use - some are hosted on Github, but finding them is not simple. An exception is the use of `drat` repositories, perhaps to host packages that are too large for CRAN (https://jakubnowosad.com/spData/). Packages held on the central repositories - CRAN, Bioconductor - share listing criteria and may be analysed readily.
+
+### Why write packages?
+
+Usually, packages are written to encapsulate software and/or data components that need to be used by (and/or propagated to) others or over time in a controlled way. Sometimes, they document implementations of new or existing methods of handling or analysing data, occasionally for a thesis or article. They may provide abstractions of data representations, and may interface R code with compiled code in Fortran, C, C++, or external modules in Python, etc. There is a threshold beyond which providing say course particpants with scripts and data sets becomes too unwieldy, and the extra effort of creating a package with minimal structure (`R` and `man` directories and `DESCRIPTION` and `NAMESPACE` files) is worthwhile. 
+
+### CRAN packages
+
+R packages distributed from CRAN have been submitted at some point in the past, and all versions are held in the CRAN archives. The active, latest, version is the one shown usng `sf` as an example, on the https://cran.r-project.org/package=sf web page. There are multiple "mirror" sites used by CRAN, including https://cloud.r-project.org. These mirrors update typically several times a day, with https://cran.r-project.org being the site from which they update (hosted by https://www.wu.ac.at/ in Vienna).
+
+CRAN packages are provided as source packages (known as tarballs, file extension `.tar,gz`) and built as binary packages for three Windows (R-devel, current R-release (now 4.3.1), and previous R release (now R 4.2.3) and (currently) two macOS R versions (current R-release (now 4.3.1), and previous R release (now R 4.2.3)) for two architectures (arm64 and x86_64). The state of CRAN is recorded in https://cran.r-project.org/src/contrib/PACKAGES files and similar, which contain snapshots of the instantaneous state of the site.
+
+When users use `utils::install.packages`, the function `utils::available.packages` downloading the appropriate list of currently available packages will typically be called - which list is used depends on the current R version, platform, and indicated package type. The cohesion of this information is crucial, including the local lists of already installed packages on the installing platform. The same considerations apply when using `utils::update.packages`, which should be treated as something one does like brushing teeth, unless the updates change how a package behaves in an undesirable way (very unlikely and against CRAN backward compatibility guidelines).
+
+The notation using a double colon in `utils::install.packages` can be read as object `install.packages` made visible (exported) in the namespace of base package `utils`. This object is a function, and whether a function contained in a package is exported or not is stated in the package `NAMESPACE` file.
+
+Once on CRAN, all packages are checked in principle daily against 13 different R versions/platform, of which five cover the development version of R. This permits R-core to test changes in R itself against the set of active packages. If changes in R worsen packages check results, the changes may be modified, or package maintainers may be alerted by CRAN team that they need to make modifications to their packages to accommodate anticipated changes. Recently, the changes have also been in the most recent versions of GCC and clang build systems rather than in R itself. Usually, CRAN team give clear guidance about steps to be taken to prepare packages for forthcoming upstream changes.
+
+### CRAN package check results
+
+When preparing an R source package for submission to CRAN, a source tarball should be built first, and `R CMD check` run on that tarball. If `--as-cran` is added, a set of environment variables (https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools) is used that matches those used during the submission process. The maintainer submitting the package also confirms that `R CMD check --as-cran` has completed `OK` or with unavoidable `NOTE` results (often larger documentation or shared library directories) on both R as released and a recent development version of R. The submission process triggers matching checks on several platforms. 
+
+Once happily on CRAN, the web page of the package will begin to show `CRAN checks`, a table of check results from the check farms across R versions and different platforms. Sometimes it takes several days from a package update for all the results to be given for the current version, just as it can take some time for versions to be built for on the Windows and macOS build farms. Maintainers with multiple CRAN packages can access their summary results by name: https://cran.r-project.org/web/checks/check_results_roger.bivand_at_nhh.no.html shows my current state.
+
+A side note about package check results is that packages using unit testing (most often `testthat`) not infrequently test as though the packages on which they depend never change. This can cause spurious test failures when packages are updated or for example emit new informative messages.
+
+## Dependencies between R packages
+
+At first submission to CRAN, no other packages depend on new package `A`. It will almost certainly itself declare dependencies, most likely on a version of R greater than or equal to a given level (often because newer compression algorithms are used when reducing the size of stored data objects). Dependencies on packages, say `B` and `C`, may also be versioned, these are known as forward dependencies, `A` depends on `B` and `C` - and `C` may itself depend on `D`. 
+
+As the package attracts users, some may contribute their own CRAN packages, or update existing CRAN packages to utilize functionality in the new package. This creates reverse dependencies, say `Z` and `Y` depend on `A`. The CRAN package list includes the forward dependencies declared by packages. Dependency graphs may be created using `tools::package_dependencies`, based on a package database like that returned by `utils::available.packages`.
+
+Note also that WRE (and CRAN) permit dependencies on Bioconductor packages, and, when using the `Additional_repositories` field in the `DESCRIPTION` file, to other repositories such as those using `drat`, or for example INLA by https://www.r-inla.org/download-install. Reverse dependencies back to CRAN packages from Bioconductor packages may be found by updating the package database repository list from `utils::available.packages` before running `tools::package_dependencies`.
+
+### Strong dependencies
+
+WRE https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-Dependencies describes the fields in the `DESCRIPTION` file specifying dependencies: `Depends`, `Imports`, `LinkingTo`, `Suggests` and `Enhances`. Strong dependencies are those that must be installed for the packages depending on them to function, that is the first three listed (definition in `?tools::package_dependencies`). 
+
+Packages listed as `Depends` are loaded and attached before the package in which they are listed (loaded means that their namespaces are available and may be accessed in code using the double colon operator `::`, and objects may be imported in the `NAMESPACE` file, while attached means that the packages are available as though `library` or `require` had been used). WRE notes:
+> Field ‘Depends’ should nowadays be used rarely, only for packages which are intended to be put on the search path to make their facilities available to the end user (and not to the package itself)
+
+Packages listed as `Imports` are loaded but not attached, so that their namespaces can be cherry-picked in the `NAMESPACE` file. This is important if you consider that bulk-importing the namespaces of many packages will also import the namespaces of their strong forward dependencies, so that the search path used by the R engine grows in length and it takes longer to find functions during execution.
+
+The `LinkingTo` field is used when C/C++ code in the package links to headers for compilation in the specified package - `Rcpp` has very many such reverse dependencies as would be expected. 
+
+### Weak dependencies
+
+The `Suggests` and `Enhances` fields are weak dependencies, as they are not required to be present for the package to perform its core functions. If a package is listed as `Suggests`, any use in code, examples, vignettes, etc. must be conditional, that is the code using the suggested package can be avoided using for example: `if (require(, quietly = TRUE))` or `if (requireNamespace(, quietly = TRUE))`. WRE notes:
+> On most systems, R CMD check can be run with only those packages declared in ‘Depends’ and ‘Imports’ by setting environment variable _R_CHECK_DEPENDS_ONLY_=true, whereas setting _R_CHECK_SUGGESTS_ONLY_=true also allows suggested packages, but not those in ‘Enhances’ nor those not mentioned in the DESCRIPTION file. It is recommended that a package is checked with each of these set, as well as with neither. 
+
+Usefully, `_R_CHECK_SUGGESTS_ONLY_` lets us check packages in a constricted setting:
+> If set to a true value, running examples, tests and vignettes is done with a temporary library directory populated by all the Depends/Imports/Suggests packages. (As exceptions, packages in a ‘VignetteBuilder’ field are always made available.) Default: false (but true for CRAN submission checks: some of the regular checks use true and some use false).
+
+Another important environmental variable set for checking is `_R_CHECK_FORCE_SUGGESTS_`,
+> If true, give an error if suggested packages are not available. Default: true (but false for CRAN submission checks).
+
+
+### Implicit/recursive dependencies
+
+A further possible source of difficulties that are hard to debug is where a package itself has no direct dependency relationship with another package, but where they are related through an intermediate package. `tools::package_dependencies` has some options  to handle these settings, but such problems do place responsibility on maintainers to review the check results of packages they maintain regularly, and to `update.packages` themselves when updating their own packages.
+
+
+# Retirement/evolution project
+
+> Preparing CRAN for the Retirement of rgdal, rgeos and maptools focuses on finding suitable alternatives for the functionalities offered by the retiring packages and providing guidance to package maintainers on necessary adjustments and migration steps. By doing so, it aims to minimize disruption to CRAN packages and existing R scripts, ensuring the overall stability and robustness of the CRAN ecosystem. The retirement process will simplify the maintenance of the "R Spatial stack" and contribute to the long-term health of the CRAN ecosystem. 
+
+The retiring packages `maptools`, `rgdal` and `rgeos` (with knock-on `rgrass7`) are now due to be archived on CRAN during October 2023, and a version of `sp` dropping the retiring packages will be submitted to CRAN in late September 2023. None of the retiring packages has been moved from SVN repositories on R-forge, a decision made years ago to signal that these packages were not being developed further beyond adaptations to upstream external software libraries.
+
+So far four project reports have been written (https://r-spatial.github.io/evolution/), and a presentation (with video) given at the Center for Spatial Data Science at the University of Chicago in January 2023. 
+
+## Project so far
+
+From earlier descriptions of package dependencies, it should be clear that removing three infrastructure packages with many strong reverse dependencies and more weak dependencies presents challenges. While modern alternatives have existed for some time, chiefly `sf` and `stars` or `terra`, even recent new packages follow legacy practice and start from `sp` and `raster`, leading to at least some retiring packages being drawn in as dependencies (current `sp` 2.0-0 still suggests all three but deprecates their use, `raster` 3.5-21 from June 2022 suggested `rgdal` and `rgeos`; `raster` 3.6-3 from September 2022 dropped them all). 
+
+One step has been to add intrusive start-up messages to the retiring packages and `sp`, supplemented by postings on R and Bioconductor mailing lists, on (then) twitter and more recently on mastodon. These link to retirement project reports.
+
+Since reverse dependency checks have been run systematically (largely by me) for packages wth `SystemRequirements` (as shown in their `DESCRIPTION` files) on `GDAL`, `GEOS` and `PROJ` for years to ensure that successive versions of external software work well with these R packages, the same framework has also been used extensively to see what consequences follow from steps in the retirement project. Typically, a parallel `CMD check` run on `"strong"` or `"most"` non-recursive reverse dependencies of retiring packages takes about four hours, less if more packages fail early on.
+
+In addition to https://r-spatial.github.io/evolution/ linking to the reports, https://github.com/r-spatial/evolution provides access to working data and listings, in partcular listings generated for reverse dependencies of retiring packages using `pkgapi` [@pkgapi] using `pkgapi::map_package` to establish which functions in retiring packages are used by their strong reverse dependencies. In listings generated 11 August 2023, 74 functions exported by retiring packages were still being used by 87 packages declaring strong dependency on retiring packages in their own code. One year before, 11 August 2022, 138 functions from retiring packages were being used by 232 packages declaring strong dependency on retiring packages in their own code. Naturally, these `pkgapi` runs do not detect conditional use in code where only weak dependency is involved, or vignettes, examples or tests.
+
+If we use package page-rank scores (which are not strictly comparable over time as the graph is dynamic (graph of dependencies from `miniCRAN::makeDepGraph`, page-ranks from `igraph::page_rank`), we see interesting changes during the evolution project period:
+
+```{r, echo=FALSE}
+pr_2308 <- readRDS("pr_230810.rds")
+pr_2308 <- pr_2308[c("sf", "sp", "terra", "raster", "rgdal", "rgeos", "maptools"), 1]
+pr_dec <- readRDS("pr_221222.rds")
+pr_2212 <- pr_dec[c("sf", "sp", "terra", "raster", "rgdal", "rgeos", "maptools"), 1]
+z_2111 <- readRDS("all_z_211124.rds")
+pr_2111 <- unlist(z_2111)[c("sf", "sp", "terra", "raster", "rgdal", "rgeos", "maptools")]
+m <- cbind(pr_2111, pr_2212, pr_2308)
+colnames(m) <- c("Nov. 2021", "Dec. 2022", "Aug 2023")
+m
+```
+
+
+### `raster`/`terra`
+
+The publication on CRAN of the `raster` package, version 3.6-3 in September 2022, removing its dependencies on `rgdal` and `rgeos`, and replacing them with access to PROJ, GDAL and GEOS through `terra`, was a major step forward. In December 2022, github issues were raised where packages using `raster` listed github repositories, and emails were sent to package maintainers otherwise. These typically drew attention to the fact that `rgdal` and `rgeos` may not be used directly in the package, but had previously been added to `Suggests` in order to ensure that their use by `raster` was satisfied. This addition of `rgdal` and `rgeos` to `Suggests` is also seen for `sp`. 
+
+By mid-January, some package maintainers had responded, with more response from github issues than emails. 
+
+### Preparing `sp` 
+
+Since `sp` depended on all the retiring packages, a mechanism was introduced and subsequently extended to permit `sp` to run in one of three evolution status settings. Evolution status 0 was business as usual, status 1 was to stop if `rgdal` or `rgeos` were not available, and status 2 was to use `sf` in place of `rgdal`. Evolution status was controlled in `sp` 1.5-0 from 5 June 2022 by an R option to be set before `sp` was loaded and an environment variable. `sp` 1.6-0 from 20 January 2023 added and exported functions to set and report evolution status from within loaded `sp`; for both these versions, the default evolution status was 0, business as usual.
+
+Because of the tight links between `sp` and ASDAR [@asdar], sets of scripts modifying the current code from the book were created to show how to modify existing `sp`-based scripts to adapt to the post-October 2023 setting of no available retiring packages (https://github.com/rsbivand/sf_asdar2ed). Diffs are availablle on https://r-spatial.github.io/evolution/, and https://github.com/r-spatial/evolution/blob/main/pkgapi_230305_refs.csv provides then valid pointers from retiring package functions to examples showing how to make required changes. These were extended in April 2023 to show how to use `sf` or `terra` in place of retiring packages, see https://r-spatial.org/r/2023/04/10/evolution3.html#asdar-examples-using-sf-or-terra. The same report indicates how to conserve workflows using `sp` classes but changing to `sf` or `terra` for reading and writing files.
+
+Further rounds of raising or repeating github issues and sending emails to maintainers followed the publication of reports in April and May. In addition, web searches were made to try to locate github repositories for packages not declaring such repositories in their `DESCRIPTION` files, and emails were sent to maintainers who had not shown any github issue response drawing attention to impending problems.
+
+From the publication of `sp` 2.0-0 on 22 June 2023, the default evolution status is set to 2, using `sf` in place of `rgdal`. Packages which had earlier suggested `rgdal` to meet `sp`'s need for that dependency should replace it with `sf`. In June and July, github issuues and maintainer emails were further followed up.
+
+The forthcoming `sp` version 2.1-0 to be submitted to CRAN in early October 2023 will remove dependencies on retiring packages completely, and the mechanisms intended to switch between evolution status setting will cease to have any effect.
+
+## Remaining tasks
+
+Because `sp` has been changing (happily, `raster` was already on a firm footing from September 2022), all checks have been applied to packages `"most"` depending on `sp`, `maptools`, `rgdal` and `rgeos`. `"most"` includes `Depends`, `Imports`, `LinkingTo` and `Suggests`. 
+
+### Watchlist checking
+
+An automated watchlist https://github.com/r-spatial/evolution/tree/main/watchlist_output was started in mid-June 2023, checking CRAN for new versions of packages being watched three times a week. Initially, 222 packages were failing `CMD check` with `sp` 2.0-0 without retiring packages on the library path as of 14 June, but by 11 August only 175 were still on the active watchlist, of which 12 had been archived on CRAN or Bioconductor. Some of these withdrawals of packages from CRAN (archiving) are positive pre-emptive decisions by maintainers no longer wishing to update their packages, and are in many cases a good way of helping CRAN team by avoiding the work involved in contacting the maintainer for updates.
+
+The watchlist process is run on my desktop to which I have no access when not at home, so power or network outages may cause gaps in the reports.
+
+### `"most"` dependencies needing attention from 11 August
+
+A spreadsheet has been posted on https://github.com/r-spatial/evolution/blob/main/all_m_230811_issues_revdeps.csv listing the versons, `CMD check` scores, github issue (if any) for all packages listing `sp`, `maptools`, `rgdal` or `rgeos` as `"most"` dependencies. The spreadsheet is sorted (as displayed) by the error count and the count of `"most"` reverse dependencies of that package for packages with `CMD check` errors. The reverse dependency count is important because it shows the potential fall-out impacting other packages if a package is not updated before the retiring packages are archived. 
+
+This spreadsheet will be updated (manually and after further checking) in the light of successive watchlist output. Some watchlist packages are not shown because they were no longer available on CRAN when the reverse dependencie checks were carried out (8-10 August). Of the 658 affected packages `"most"` depending on `sp` or the retiring packages as of 11 August, 166 fail `CMD check` with forthcoming `sp` version 2.1-0 (https://github.com/rsbivand/sp/tree/sp210), and without retiring packages on the library path (https://r-spatial.org/r/2023/04/10/evolution3.html#splitting-r_libs). Of these, all but about 40 have github issues, and all have been emailed multiple times. Some of the required mitigations are trivial, stemming from stale `roxygen` markup retaining dependencies on retiring packages when none are required in any way. 
+
+# Mitigating retirement for chosen packages
+
+It would be good if we could follow up and at least create pull requests for a number of packages now failing reverse dependency checks to save overworked (or inattentive) maintainers from having to scramble with limited notice when asked for fixes by CRAN in October. So far, no such packages have been nominated, but https://github.com/r-spatial/evolution/blob/main/all_m_230811_issues_revdeps.csv can be used as a guide, or packages we use (or have used) may be chosen.
+
+## Software required
+
+To help, form small groups where at least one member has a laptop with current R and the underlying software needed to install packages from source (typically current RTools43 for Windows, XCode etc. for macOS, and usual system build components on Linux or other Unix systems). We can get by without git and github, but they are probably the lowest threshold route for package maintainers with github repos.
+
+## Repair process
+
+Check the chosen package first untouched in the instrumented setting as will be from October 2023. Then iterate editing, building and checking until none of the check log output is related to missing retiring packages.
+
+### Package sources
+
+It is possible to start from the source package from your preferred CRAN mirror. If not, a zipfile of the state of the relevant branch on github can be downloaded and used. 
+
+### Tools to build and check source packages
+
+You may use released `sp` 2.0-0 or forthcoming `sp` version 2.1-0 (https://github.com/rsbivand/sp/tree/sp210), but crucially we need to be sure that none of the retiring packages are on the library path when checking the packages being corrected. Then preferably use from the command line `R_LIBS=<path without retiring packages> R CMD build <target package source directory>`, followed by `R_LIBS=<path without retiring packages> R CMD check <target package source tarball>`. Do this first for the untouched package. Then iterate editing, building and checking until none of the check log output is related to missing retiring packages.
+
+Probably Windows and macOS will also need LaTeX and pandoc installed.
+
+If not using github, please keep a copy of the original source files, and use `diff` at the command line to create documentation of the fixes.
+
+### Use of github repositories
+
+A full-feature approoach is to fork the github repository, clone your fork (being careful to access any non-default branch that shows more activity than the default), and create a new branch locally. Working in your local branch, fix the package if possible, and once satisfied, commit and push to your fork. Then create a pull request to the original repository from your fork branch.
+
+### References

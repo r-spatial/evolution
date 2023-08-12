@@ -20,6 +20,8 @@ theme: united
 
 - [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
 
+- [OpenGeoHub Summer School session, 29 August 2023](https://r-spatial.github.io/evolution/ogh23_bivand.html)
+
 - [Former `rgdal` vignette: Why have CRS, projections and transformations changed?](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
 
 
