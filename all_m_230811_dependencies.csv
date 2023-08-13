@@ -1,0 +1,659 @@
+package,depends,imports,linksto,suggests
+recurse,,,,sp rgeos
+rworldmap,sp,maptools,,rgdal
+elevatr,,sp,,rgdal
+OpenStreetMap,,sp rgdal,,maptools
+ctmm,,sp rgdal,,
+hydroTSM,,sp maptools,,
+SSN,sp,maptools rgdal rgeos,,
+CoordinateCleaner,,sp rgdal rgeos,,
+ecospat,,sp maptools,,rgdal rgeos
+flowDensity,,sp rgeos,,
+geofacet,,sp,,
+ggsn,,maptools,,
+hydroPSO,,sp,,
+loa,,sp rgdal,,
+plotKML,,sp rgdal,,maptools
+rangeModelMetadata,,sp rgdal rgeos,,
+rosm,,sp rgdal,,
+riverplot,,,,maptools
+phyloregion,,sp rgdal rgeos,,
+rdhs,,rgdal,,
+wallace,,rgdal rgeos,,sp
+ie2miscdata,,,,maptools
+antaresViz,,sp rgeos,,
+cmsaf,,sp maptools,,
+ConR,sp,rgdal rgeos,,
+EMbC,,sp maptools,,
+geodetector,,sp maptools rgdal rgeos,,
+geogrid,,sp rgeos,,
+hyfo,,maptools,,
+Momocs,,sp rgeos,,
+OasisR,,rgdal rgeos,,
+oceanmap,,sp maptools,,
+OCNet,,sp rgdal,,
+OSMscale,,sp,,
+PopGenReport,,sp rgdal,,
+red,,sp maptools rgdal rgeos,,
+rpostgis,,sp rgeos,,rgdal
+SeerMapper,,sp maptools rgdal,,
+SiMRiv,,sp rgdal,,rgeos
+spatsoc,,sp rgeos,,
+spMaps,sp rgeos,,,
+latticeDensity,,sp,,rgdal
+leaflet.opacity,,,,rgdal
+MBNMAtime,,,,rgeos
+SubgrPlots,,sp,,rgeos
+gamlss.spatial,,,,maptools
+ambhasGW,,rgdal,,
+animalEKF,sp maptools rgeos,rgdal,,
+animaltracker,,sp maptools rgdal,,
+APfun,,sp maptools rgdal,,
+ASIP,,rgdal,,
+atakrig,,sp rgeos,,rgdal
+bdc,,,,sp
+bdvis,,rgdal,,
+biogeo,,sp maptools,,
+birdring,,sp rgdal rgeos,,
+birdscanR,,sp maptools,,
+bivariatemaps,,sp rgeos,,
+bnspatial,,rgdal,,
+bRacatus,,sp maptools rgdal rgeos,,
+briskaR,,sp rgdal rgeos,,
+cartograflow,,sp maptools rgeos,,
+cffdrs,rgdal,,,
+changeRangeR,,sp rgeos,,rgdal
+cropDemand,,rgdal,,
+cropZoning,,rgdal,,
+dartR,,sp,,
+disaggregation,,sp maptools rgdal rgeos,,
+DivE,sp rgeos,,,
+downscaledl,,sp rgdal,,
+dtwSat,,sp rgdal,,
+DWBmodelUN,,rgdal,,
+EcoIndR,,rgeos,,sp
+eechidna,,sp rgdal rgeos,,maptools
+eixport,,sp rgdal,,
+EnvExpInd,,sp maptools,,
+epcc,,sp rgdal,,
+epitweetr,,sp rgdal,,
+fastmaRching,,sp rgdal,,
+FLightR,,sp maptools rgdal rgeos,,
+FORTLS,,sp rgeos,,
+gDefrag,sp,maptools rgdal rgeos,,
+GeoAdjust,,sp rgeos,,maptools rgdal
+GeodesiCL,,sp rgdal,,
+geodiv,,sp rgdal rgeos,,maptools
+GEOexplorer,,maptools,,
+geotopbricks,,,,
+gfcanalysis,,sp rgdal rgeos,,
+GGoutlieR,,sp,,
+ggvoronoi,,sp rgeos,,
+GPSeqClus,,sp rgdal,,
+gwer,sp,maptools,,rgdal
+HCV,,sp rgeos,,
+highriskzone,rgeos,,,
+hyperbrick,,rgdal,,
+iconr,,rgdal,,
+importinegi,,rgdal,,
+intensity.analysis,rgdal,,,
+iSDM,,sp maptools rgdal,,
+itcSegment,sp maptools rgeos,,,
+jcext,,sp,,
+kernelPhil,,rgdal,,
+LabourMarketAreas,sp,maptools rgdal rgeos,,
+lakemorpho,,sp rgdal rgeos,,
+landsat,sp rgdal,,,
+landsat8,,sp rgdal,,
+leafletCN,,sp rgeos,,
+leastcostpath,,sp rgdal rgeos,,
+letsR,NA,NA,NA,NA
+lgcp,,sp maptools rgeos,,rgdal
+LPDynR,,rgdal,,
+makePalette,,rgdal,,
+MakeYourPalette,,rgdal,,
+malariaAtlas,,sp rgdal,,
+mapping,,rgdal,,
+mapReasy,sp rgdal,,,
+MEDITS,,sp rgdal rgeos,,
+meteo,,sp rgdal,,
+modchart,,sp rgdal,,
+monographaR,maptools,sp,,
+morphomap,,sp rgdal,,
+muHVT,,sp rgeos,,
+nightmares,,sp rgdal,,
+npphen,,rgdal,,rgeos
+occUncertain,rgdal,,,
+openSTARS,,sp rgdal,,
+ParallelDSM,sp,rgdal,,
+patternize,,sp rgdal,,
+phenomap,,rgdal,,
+places,,sp rgdal,,
+psda,,sp rgeos,,
+PWFSLSmoke,,sp maptools rgdal,,
+pycno,sp maptools rgeos,,,
+quickmapr,,sp rgdal rgeos,,
+rcanvec,sp,rgdal,,
+rCAT,,sp rgdal,,rgeos
+RchivalTag,,sp maptools rgeos,,
+redlistr,sp,rgeos,,rgdal
+rLiDAR,,sp rgeos,,
+rnpn,,sp rgdal,,
+RPhosFate,,,,sp
+RSIP,sp rgdal,,,
+SAEforest,NA,NA,NA,NA
+sara4r,,sp rgdal,,
+satscanMapper,,sp,,
+sdmpredictors,,rgdal,,
+sdStaf,,sp rgdal rgeos,,
+SegEnvIneq,,rgdal rgeos,,
+shp2graph,,sp maptools,,
+spatialfusion,,sp rgeos,,
+SpatialGraph,,sp rgeos,,
+spatsurv,,sp rgeos,,rgdal
+STMedianPolish,,sp maptools,,
+stppSim,,sp rgdal,,
+StreamMetabolism,maptools,,,
+track2KBA,,sp rgdal rgeos,,
+TrajDataMining,,sp rgdal,,rgeos
+treetop,,sp rgdal,,
+ursa,,rgdal,,sp rgeos
+UScensus2010,sp maptools,,,rgdal
+Watersheds,sp maptools rgeos,,,
+waver,sp rgdal,rgeos,,
+weed,,rgeos,,
+wux,sp,rgdal rgeos,,
+xROI,,sp rgdal,,
+zonator,,rgdal,,
+mtbls2,,,,sp
+synergyfinder,,sp,,
+link2GI,,,,sp
+gen3sis,,sp,,
+lutz,,,,sp rgdal
+tipsae,,sp,,
+actel,,,,sp rgdal
+camtrapR,,sp,,rgdal
+clhs,,sp,,
+emdi,,,,maptools rgeos
+exactextractr,,,,rgdal
+GSCA,sp,,,
+KnowBR,sp,,,
+PBSmapping,,,,maptools
+rgee,,,,rgdal
+saeTrafo,,,,sp maptools rgeos
+sdmTMB,,,,rgdal
+spatialwarnings,,,,sp
+StratifiedSampling,,,,rgeos
+surveillance,sp,,,rgeos
+synoptReg,,,,maptools rgeos
+VIM,,sp,,
+ade4,,sp,,
+aire.zmvm,,sp,,
+apsimx,,,,sp
+bayesTFR,,,,sp rgdal
+BetaBit,,,,sp
+BiodiversityR,,,,sp
+canadianmaps,,sp,,
+cancensus,,,,sp rgdal rgeos
+DatabionicSwarm,,,,sp
+DataVisualizations,,sp,,
+dggridR,sp,,,
+dots,,sp,,
+EnvStats,,,,sp
+foto,,,,rgdal
+FRK,,sp,,rgdal
+GeoWeightedModel,,sp,,rgdal
+ggplot2,,,,maptools rgeos
+gmGeostats,,sp,,
+GpGp,,,,maptools
+GWLelast,,sp,,
+GWnnegPCA,,sp,,
+hero,,sp,,
+HistData,,,,sp
+hwsdr,,,,rgdal
+hypervolume,,sp,,
+leri,,,,sp maptools
+mapedit,,sp,,
+maptools,sp,,,rgeos
+mapview,,sp,,rgdal
+mgwrsar,sp,,,
+momentuHMM,,sp,,
+mvGPS,,sp,,
+naturaList,,sp,,maptools rgdal rgeos
+parlitools,,,,rgdal
+plotly,,,,maptools rgeos
+polyCub,,sp,,rgeos
+PracTools,,,,sp
+prioriactions,,,,sp
+raptr,,sp,,
+rgdal,sp,,sp,maptools rgeos
+rgeoprofile,,sp,,rgdal
+rgeos,sp,,sp,maptools rgdal
+RgoogleMaps,,sp,,maptools
+rnaturalearth,,sp,,
+rSPDE,,,,rgdal
+RtD3,,,,rgeos
+RTL,,,,rgdal
+rworldxtra,sp,,,
+scanstatistics,,,,sp
+sdmApp,,sp,,rgdal rgeos
+secr,,,,sp
+smapr,,,,sp rgdal
+sp,,,,maptools rgdal rgeos
+spatstat.model,,,,maptools
+spData,,sp,,
+spDates,,sp,,
+spqdep,,sp,,
+SSDM,,sp,,rgdal
+stelfi,,,,maptools rgdal
+TeachingDemos,,,,maptools
+telefit,,sp,,
+telemac,,sp,,rgdal
+tilegramsR,,sp,,
+trackeR,,sp,,
+wiad,,,,sp rgdal
+adespatial,,sp,,rgeos
+agridat,,,,sp rgdal
+AHMbook,,sp,,
+aqp,,sp,,
+ar.matrix,,sp,,
+archiDART,,sp,,
+argoFloats,,,,rgdal
+bamlss,,sp,,
+bamm,,sp,,
+basemaps,,,,rgdal
+BasketballAnalyzeR,,sp,,
+BayesfMRI,,sp,,
+BayesX,,sp,,rgeos
+bcmaps,,,,sp rgdal rgeos
+bioRad,,sp,,
+bsam,,sp,,
+Cardinal,,sp,,
+cholera,,sp,,
+ClustGeo,,sp,,
+covatest,,sp,,
+crawl,,sp,,
+csdata,,,,sp rgeos
+DClusterm,sp,,,
+demcon,,,,rgeos
+dismo,sp,,,
+DiversityOccupancy,,,,rgdal
+doolkit,,sp,,
+DrugSim2DR,,sp,,
+DSSP,,sp,,
+dynamAedes,,sp,,rgdal
+ENMeval,,,,sp
+envirem,,,,rgdal
+epiR,,,,sp rgeos
+eSDM,,,,maptools
+eurostat,,,,sp
+excursions,sp,,,rgdal
+expowo,,sp,,
+ExtremalDep,,sp,,rgeos
+fasterize,,sp,,
+FIESTA,,,,sp
+FracKrigingR,,,,sp
+gcKrig,,,,sp
+geneHapR,,,,maptools
+geohashTools,,,,sp rgdal
+geomerge,,sp,,rgdal
+GeoRange,,sp,,
+geosed,,,,sp
+geosphere,,sp,,
+geouy,,sp,,
+ggformula,,,,maptools rgeos
+ggspatial,,,,sp rgdal
+gMOIP,,sp,,
+graph4lg,,sp,,
+graphx,,sp,,
+gwfa,,sp,,rgdal rgeos
+GWmodel,sp,,,
+GWPR.light,,sp,,rgeos
+GWSDAT,,sp,,
+HDSpatialScan,,sp,,
+hemispheR,,sp,,
+hglm.data,sp,,,
+hillshader,,,,rgdal
+hypergate,,,,sp rgeos
+hyperSpec,,,,sp
+icardaFIGSr,,sp,,
+intamap,sp,,,rgdal
+interp,,,,sp
+intkrige,sp,,,
+intSDM,sp,,,rgeos
+ipumsr,,,,sp rgdal
+Irescale,,sp,,
+IsoriX,,sp,,maptools rgdal rgeos
+knitrBootstrap,,,,maptools
+landscapemetrics,,sp,,
+landsepi,sp,,,
+leafem,,,,rgdal
+leaflet,,sp,,rgdal rgeos
+leafR,,sp,,
+lidR,,sp,,
+lingtypology,,,,sp
+LMMsolver,,sp,,
+LSRS,,,,sp
+lwgeom,,,,sp
+maps,,,,sp
+metafor,,,,sp
+MetaLandSim,,sp,,
+metR,,,,rgdal
+MetricGraph,,sp,,
+MLID,,,,sp
+mosaic,,,,sp maptools
+mosaicCalc,,sp,,
+movecost,,sp,,
+mregions,,sp,,rgdal rgeos
+oce,,,,sp
+oceanic,,sp,,
+onemapsgapi,,,,sp rgdal
+opensensmapr,,,,maptools rgeos
+osmdata,NA,NA,NA,NA
+overlap,,,,sp maptools
+pedometrics,,,,sp
+pgirmess,,sp,,
+plotdap,,,,maptools
+prabclus,,,,maptools
+prettymapr,,,,sp maptools rgdal
+psgp,,sp,,
+R2BayesX,,,,sp rgdal
+raster,sp,,,
+RCGLS,,sp,,
+recmap,sp,,,
+rerddapXtracto,,sp,,maptools rgdal
+rgeoda,,,,sp
+rgrass7,,,,sp rgdal
+rioja,,,,maptools
+rleafmap,,sp,,
+rnaturalearthdata,,sp,,
+rnoaa,,,,rgdal
+rpanel,,,,sp
+rsatscan,,,,sp rgdal
+rsinaica,,,,sp
+rsyncrosim,,,,rgdal
+rtop,,sp,,rgdal rgeos
+Rtrack,,,,
+satellite,,,,rgdal
+SCpubr,,,,rgdal
+SDMPlay,,,,sp maptools rgdal
+seg,sp,,,rgdal
+SeuratObject,sp,,,rgeos
+sf,,,,sp
+shoredate,,,,rgdal
+simplevis,,,,rgdal rgeos
+SimSurvey,NA,NA,NA,NA
+solaR,,,,sp
+SpaDES.core,,,,sp
+spatstat.explore,,,,maptools
+spatstat.geom,,,,maptools
+spdep,,sp,,
+spemd,,sp,,
+sphet,,sp,,
+SPIAT,,sp,,
+spm,,sp,,
+spnet,sp,,,
+spup,,sp,,
+stars,,,,sp
+structToolbox,,sp,,
+subniche,,,,maptools
+SUMMER,,sp,,
+Ternary,,sp,,
+tidyUSDA,,,,rgeos
+trajectories,,sp,,
+transfR,,,,rgdal
+UBL,sp,,,
+ukpolice,,,,sp
+usmap,,,,sp
+variosig,,sp,,
+vegtable,,sp,,
+WASP,,sp,,
+WEGE,,sp,,
+wildlifeDI,,sp,,rgeos
+abmR,,sp,,
+adegraphics,,sp,,
+adehabitatHR,sp,,,
+adehabitatHS,sp,,,
+adehabitatLT,sp,,,
+adehabitatMA,sp,,,
+AFM,,sp,,
+AGPRIS,,sp,,
+agricolaeplotr,,sp,,
+akima,,sp,,
+amt,,,,sp
+angstroms,,sp,,
+animint2,,,,sp
+anipaths,,sp,,
+AquaBEHER,,sp,,
+AQuadtree,sp,,,
+ASGS.foyer,,sp,,
+automap,,sp,,
+BarcodingR,sp,,,
+belg,,,,sp
+biomod2,,sp,,
+broom,,,,sp
+calibrationband,,sp,,
+cartography,,sp,,
+CAST,,,,sp
+CCAMLRGIS,sp,,,
+cellmigRation,,sp,,
+ceramic,,sp,,
+chillR,,sp,,
+cleangeo,,sp,,
+climatol,,,,sp
+climetrics,sp,,,
+cmsafops,,sp,,
+cmsafvis,,sp,,
+colorscience,sp,,,
+cooltools,,sp,,
+cruts,,sp,,
+cshapes,,sp,,
+ctmcmove,sp,,,
+dbmss,,sp,,
+DEPONS2R,,sp,,
+dispeRse,,sp,,
+dissever,,sp,,
+DRHotNet,,sp,,
+dsm,,,,sp
+ecochange,,sp,,
+EEM,,sp,,
+EFDR,,sp,,
+EgoCor,,sp,,
+ei,,sp,,
+elsa,sp,,,
+ENMTools,NA,NA,NA,NA
+epiflows,,sp,,
+eRTG3D,,,,sp
+espadon,,sp,,
+FEA,,sp,,
+FedData,,sp,,
+FeedbackTS,,sp,,
+fitPS,,,,sp
+FlexScan,,sp,,
+ForestGapR,,sp,,
+fossil,sp,,,
+frenchCurve,,sp,,
+gaiah,,sp,,
+gamclass,,,,sp
+gazepath,,sp,,
+gcmr,,sp,,
+gdistance,,sp,,
+gear,,,,sp
+gecko,,sp,,
+geoBayes,,sp,,
+geojson,,sp,,
+geojsonio,,sp,,
+geoknife,,,,sp
+geomod,,sp,,
+geoR,,sp,,
+geospt,sp,,,
+geosptdb,sp,,,
+geoTS,,sp,,
+GET,,,,sp
+ggalluvial,,,,sp
+ggfortify,,,,sp
+GInSARCorW,sp,,,
+googletraffic,,sp,,
+gps.track,,sp,,
+grainscape,,sp,,
+graticule,sp,,,
+gstat,,sp,,
+Guerry,,sp,,
+GWpcor,,sp,,
+Hmsc,,sp,,
+HSAUR3,,,,sp
+hSDM,,,,sp
+HydroCode,,sp,,
+iccTraj,,sp,,
+icosa,,sp,,
+IDE,,sp,,
+image.ContourDetector,,sp,,
+image.LineSegmentDetector,,sp,,
+INLABMA,sp,,,
+inlabru,sp,,,
+INLAspacetime,sp,,,
+installr,,,,sp
+isocat,,sp,,
+itsadug,,,,sp
+kehra,,sp,,
+Kernelheaping,,sp,,
+lctools,,sp,,
+leaflet.extras2,,,,sp
+leafpop,,,,sp
+loon,,,,sp
+MapGAM,sp,,,
+mapi,,,,sp
+marmap,,sp,,
+maskRangeR,,sp,,
+MBA,,,,sp
+memgene,,sp,,
+meta4diag,sp,,,
+meteoForecast,sp,,,
+micromap,sp,,,
+micromapST,,,,
+mkde,,sp,,
+MODISTools,,sp,,
+Morphoscape,,sp,,
+move,sp,,,
+moveHMM,,sp,,
+multimark,,sp,,
+nhdplusTools,,,,sp
+nhdR,,,,sp
+nodiv,,sp,,
+npsp,,sp,,
+ohun,,sp,,
+Orcs,,sp,,
+orsifronts,sp,,,
+pavo,,sp,,
+perspectev,,sp,,
+phenopix,,sp,,
+phyloclim,,sp,,
+plainview,,,,sp
+PlanetNICFI,,,,sp
+plotfunctions,,,,sp
+PlotTools,,,,sp
+PointedSDMs,,sp,,
+pRecipe,,sp,,
+ptools,,sp,,
+QRAGadget,,sp,,
+quadmesh,,sp,,
+quickPlot,,,,sp
+r2d2,,sp,,
+RAC,,sp,,
+RapidPolygonLookup,sp,,,
+rasterVis,,sp,,
+rbgm,sp,,,
+RclusTool,,sp,,
+rcrimeanalysis,,sp,,
+rddapp,,sp,,
+recolorize,,,,sp
+ref.ICAR,,sp,,
+refreg,,sp,,
+remote,,,,sp
+reproducible,,,,sp
+rgplates,,,,sp
+rgrass,,,,sp
+rinat,,sp,,
+rmapshaper,,sp,,
+RNCEP,,sp,,
+rpaleoclim,,,,
+RSAGA,,,,sp
+rts,,sp,,
+RWmisc,,sp,,
+satin,,sp,,
+sbtools,,,,sp
+scBio,,sp,,
+scgwr,,sp,,
+sdcSpatial,,,,sp
+sdm,sp,,,
+SDPDmod,,sp,,
+secrlinear,,sp,,
+SeerMapper2010East,,sp,,
+SeerMapper2010Regs,,sp,,
+SeerMapper2010West,,sp,,
+SeerMapperEast,,sp,,
+SeerMapperRegs,,sp,,
+SeerMapperWest,,sp,,
+segclust2d,,,,sp
+sfdct,,sp,,
+sftime,,,,sp
+ShapePattern,sp,,,
+siland,,sp,,
+silicate,,,,sp
+smacpod,,sp,,
+smerc,,,,sp
+smoothr,,,,sp
+snapKrig,,,,sp
+soilassessment,,sp,,
+soiltexture,,sp,,
+SongEvo,,sp,,
+spacetime,,sp,,
+SpaDES.tools,,,,sp
+SPARTAAS,,sp,,
+SpatialAcc,,sp,,
+SpatialBSS,,sp,,
+spatialEco,,,,sp
+SpatialEpi,sp,,,
+SpatialKDE,,,,sp
+SpatialPosition,,sp,,
+spbabel,,sp,,
+spBayes,,sp,,
+spcosa,,sp,,
+spdynmod,sp,,,
+sperich,,sp,,
+sperrorest,,,,sp
+spex,,sp,,
+spflow,,,,sp
+spgwr,sp,,,
+spind,,,,sp
+splancs,sp,,,
+spm2,,sp,,
+spTDyn,,sp,,
+spTimer,,sp,,
+SRTsim,,sp,,
+ssfa,sp,,,
+sta,,,,sp
+StatDA,,sp,,
+stJoincount,,sp,,
+stops,,,,sp
+stxplore,,sp,,
+SUNGEO,,sp,,
+SWTools,,sp,,
+synthACS,,,,sp
+tigris,,,,sp
+tiler,,sp,,
+topoDistance,,sp,,
+trackdf,,,,sp
+trajr,,,,sp
+trip,,sp,,
+tripEstimation,,sp,,
+TUFLOWR,,sp,,
+uavRmp,,sp,,
+varycoef,,,,sp
+vec2dtransf,sp,,,
+via,,,,sp
+virtualspecies,,sp,,
+vivid,,sp,,
+walkboutr,,sp,,
+wikilake,,sp,,
+wkb,,sp,,

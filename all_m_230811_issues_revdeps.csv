@@ -179,7 +179,7 @@ exactextractr,0.9.1,0,0,3,https://github.com/isciences/exactextractr/issues/92,N
 GSCA,2.30.0,0,0,3,,NA,NA
 KnowBR,2.1,0,0,3,,NA,NA
 PBSmapping,2.73.2,0,0,3,,NA,NA
-https://github.com/r-spatial/rgee/issues/305,csaybar@gmail.com,0,0,3,,NA,NA
+rgee,1.1.5,0,0,3,https://github.com/r-spatial/rgee/issues/305,NA,NA
 saeTrafo,1.0.0,0,0,3,,NA,NA
 sdmTMB,0.3.0,0,0,3,,NA,NA
 spatialwarnings,3.0.3,0,0,3,,NA,NA
