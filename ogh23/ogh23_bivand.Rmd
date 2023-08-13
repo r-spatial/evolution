@@ -204,7 +204,7 @@ This spreadsheet will be updated (manually and after further checking) in the li
 
 The spreadsheet is accompanied by another CSV file https://github.com/r-spatial/evolution/blob/main/all_m_230811_dependencies.csv listing the dependencies of packages included above on `sp` and retiring packages as of 13 August (packages unavailable on CRAN 13 August are entered as NA). Packages failing when only `Suggests` retiring packages are absent do so because conditioning on the presence of these packages was insufficient. Failing packages with only `sp` as a dependency may fail because another of their strong dependencies itself has a strong dependency on a retiring package: `hydroPSO` imports `hydroTSM` which imports `maptools`; `geofacet` imports `geogrid` which imports `rgeos`. This can be seen from the reverse dependency listings in the first spreadsheet too.
 
-Check logs and install files for 650 packages with `"most"` dependencies on `sp` or retiring packages run 13 August with `sp` 2.1-0, without retiring packages on the library path, with `_R_CHECK_SUGGESTS_ONLY_=FALSE`, `_R_CHECK_FORCE_SUGGESTS_=FALSE`, have been posted as a zipfile: https://github.com/r-spatial/evolution/blob/main/check_logs_sp_p3_FALSE_230813.zip.
+Check logs and install files for 650 packages with `"most"` dependencies on `sp` or retiring packages run 13 August with `sp` 2.1-0, without retiring packages on the library path, with `_R_CHECK_SUGGESTS_ONLY_=FALSE`, `_R_CHECK_FORCE_SUGGESTS_=FALSE`, have been posted as a zipfile: https://github.com/r-spatial/evolution/blob/main/ogh23/check_logs_sp_p3_FALSE_230813.zip.
 
 # Mitigating retirement for chosen packages
 

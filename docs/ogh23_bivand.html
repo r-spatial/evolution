@@ -1900,8 +1900,8 @@ packages, the same framework has also been used extensively to see what
 consequences follow from steps in the retirement project. Typically, a
 parallel <code>CMD check</code> run on <code>&quot;strong&quot;</code> or
 <code>&quot;most&quot;</code> non-recursive reverse dependencies of retiring
-packages takes about four hours, less if more packages fail early
-on.</p>
+packages takes about four hours using four cores, less if more packages
+fail early on.</p>
 <p>In addition to <a href="https://r-spatial.github.io/evolution/" class="uri">https://r-spatial.github.io/evolution/</a> linking to the
 reports, <a href="https://github.com/r-spatial/evolution" class="uri">https://github.com/r-spatial/evolution</a> provides access
 to working data and listings, in partcular listings generated for
@@ -2057,6 +2057,12 @@ retiring package: <code>hydroPSO</code> imports <code>hydroTSM</code>
 which imports <code>maptools</code>; <code>geofacet</code> imports
 <code>geogrid</code> which imports <code>rgeos</code>. This can be seen
 from the reverse dependency listings in the first spreadsheet too.</p>
+<p>Check logs and install files for 650 packages with
+<code>&quot;most&quot;</code> dependencies on <code>sp</code> or retiring packages
+run 13 August with <code>sp</code> 2.1-0, without retiring packages on
+the library path, with <code>_R_CHECK_SUGGESTS_ONLY_=FALSE</code>,
+<code>_R_CHECK_FORCE_SUGGESTS_=FALSE</code>, have been posted as a
+zipfile: <a href="https://github.com/r-spatial/evolution/blob/main/ogh23/check_logs_sp_p3_FALSE_230813.zip" class="uri">https://github.com/r-spatial/evolution/blob/main/ogh23/check_logs_sp_p3_FALSE_230813.zip</a>.</p>
 </div>
 </div>
 </div>
