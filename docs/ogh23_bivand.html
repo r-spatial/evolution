@@ -1517,10 +1517,10 @@ infrastructure packages in R-spatial workflows</h1>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>Modernizing and replacing infrastructure packages in R-spatial
-workflows affects workflows using <code>sp</code> <span class="citation">(<a href="#ref-sp" role="doc-biblioref"><strong>sp?</strong></a>)</span>, <code>sf</code>
-<span class="citation">(<a href="#ref-sf" role="doc-biblioref">Pebesma
-2023</a>)</span> and <code>raster</code> <span class="citation">(<a href="#ref-raster" role="doc-biblioref">Hijmans 2023a</a>)</span> and
-<code>terra</code> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2023b</a>)</span> taken together. Since
+workflows affects workflows using <code>sp</code> <span class="citation">(<a href="#ref-sp" role="doc-biblioref">Pebesma and
+Bivand 2023a</a>)</span>, <code>sf</code> <span class="citation">(<a href="#ref-sf" role="doc-biblioref">Pebesma 2023</a>)</span> and
+<code>raster</code> <span class="citation">(<a href="#ref-raster" role="doc-biblioref">Hijmans 2023a</a>)</span> and <code>terra</code>
+<span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2023b</a>)</span> taken together. Since
 2016, <code>sf</code> and <code>terra</code> have interfaced OSGeo
 libraries <code>PROJ</code>, <code>GDAL</code> and <code>GEOS</code>
 directly, using the <code>Rcpp</code> <span class="citation">(<a href="#ref-Rcpp" role="doc-biblioref">Eddelbuettel et al.
@@ -1545,9 +1545,9 @@ ten years ago <span class="citation">(<a href="#ref-asdar" role="doc-biblioref">
 2013</a>)</span>, and based on what we had learned about representing
 spatial data, it became clear that alternatives to <code>sp</code>
 should be sought, leading to <code>sf</code>, and most recently to <span class="citation">(<a href="#ref-sdsr" role="doc-biblioref">Pebesma and
-Bivand 2023</a>)</span>. In parallel, Robert Hijmans started moving more
-of <code>raster</code> processing into compiled code, leading to the
-development of the <code>terra</code> package no longer using
+Bivand 2023b</a>)</span>. In parallel, Robert Hijmans started moving
+more of <code>raster</code> processing into compiled code, leading to
+the development of the <code>terra</code> package no longer using
 <code>rgdal</code> or <code>rgeos</code>. So modernisation has been
 taking place in infrastructure packages.</p>
 <p>However, continuing to maintain both the outdated interfaces to
@@ -1818,25 +1818,32 @@ perform its core functions. If a package is listed as
 <code>Suggests</code>, any use in code, examples, vignettes, etc. must
 be conditional, that is the code using the suggested package can be
 avoided using for example: <code>if (require(, quietly = TRUE))</code>
-or <code>if (requireNamespace(, quietly = TRUE))</code>. WRE notes: &gt;
-On most systems, R CMD check can be run with only those packages
+or <code>if (requireNamespace(, quietly = TRUE))</code>. WRE notes:</p>
+<blockquote>
+<p>On most systems, R CMD check can be run with only those packages
 declared in ‘Depends’ and ‘Imports’ by setting environment variable
 <em>R_CHECK_DEPENDS_ONLY</em>=true, whereas setting
 <em>R_CHECK_SUGGESTS_ONLY</em>=true also allows suggested packages, but
 not those in ‘Enhances’ nor those not mentioned in the DESCRIPTION file.
 It is recommended that a package is checked with each of these set, as
 well as with neither.</p>
+</blockquote>
 <p>Usefully, <code>_R_CHECK_SUGGESTS_ONLY_</code> lets us check packages
-in a constricted setting: &gt; If set to a true value, running examples,
-tests and vignettes is done with a temporary library directory populated
-by all the Depends/Imports/Suggests packages. (As exceptions, packages
-in a ‘VignetteBuilder’ field are always made available.) Default: false
-(but true for CRAN submission checks: some of the regular checks use
-true and some use false).</p>
+in a constricted setting:</p>
+<blockquote>
+<p>If set to a true value, running examples, tests and vignettes is done
+with a temporary library directory populated by all the
+Depends/Imports/Suggests packages. (As exceptions, packages in a
+‘VignetteBuilder’ field are always made available.) Default: false (but
+true for CRAN submission checks: some of the regular checks use true and
+some use false).</p>
+</blockquote>
 <p>Another important environmental variable set for checking is
-<code>_R_CHECK_FORCE_SUGGESTS_</code>, &gt; If true, give an error if
-suggested packages are not available. Default: true (but false for CRAN
-submission checks).</p>
+<code>_R_CHECK_FORCE_SUGGESTS_</code>,</p>
+<blockquote>
+<p>If true, give an error if suggested packages are not available.
+Default: true (but false for CRAN submission checks).</p>
+</blockquote>
 </div>
 <div id="implicitrecursive-dependencies" class="section level3">
 <h3>Implicit/recursive dependencies</h3>
@@ -1911,12 +1918,15 @@ reverse dependencies of retiring packages using <code>pkgapi</code>
 retiring packages are used by their strong reverse dependencies. In
 listings generated 11 August 2023, 74 functions exported by retiring
 packages were still being used by 87 packages declaring strong
-dependency on retiring packages in their own code. One year before, 11
-August 2022, 138 functions from retiring packages were being used by 232
-packages declaring strong dependency on retiring packages in their own
-code. Naturally, these <code>pkgapi</code> runs do not detect
-conditional use in code where only weak dependency is involved, or
-vignettes, examples or tests.</p>
+dependency on retiring packages in their own code <a href="https://github.com/r-spatial/evolution/blob/main/pkgapi_230811.csv" class="uri">https://github.com/r-spatial/evolution/blob/main/pkgapi_230811.csv</a>
+<a href="https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_230811.csv" class="uri">https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_230811.csv</a>.
+One year before, 11 August 2022, 138 functions from retiring packages
+were being used by 232 packages declaring strong dependency on retiring
+packages in their own code <a href="https://github.com/r-spatial/evolution/blob/main/pkgapi_220811.csv" class="uri">https://github.com/r-spatial/evolution/blob/main/pkgapi_220811.csv</a>
+<a href="https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_220811.csv" class="uri">https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_220811.csv</a>.
+Naturally, these <code>pkgapi</code> runs do not detect conditional use
+in code where only weak dependency is involved, or vignettes, examples
+or tests.</p>
 <p>If we use package page-rank scores (which are not strictly comparable
 over time as the graph is dynamic (graph of dependencies from
 <code>miniCRAN::makeDepGraph</code>, page-ranks from
@@ -2174,9 +2184,13 @@ Analysis</em>. <a href="https://cran.r-project.org/package=terra">https://cran.r
 Pebesma, Edzer. 2023. <em><span class="nocase">sf</span>: Simple
 Features for <span>R</span></em>. <a href="https://cran.r-project.org/package=sf">https://cran.r-project.org/package=sf</a>.
 </div>
+<div id="ref-sp" class="csl-entry">
+Pebesma, Edzer, and Roger Bivand. 2023a. <em>Sp: Classes and Methods for
+Spatial Data</em>. <a href="https://CRAN.R-project.org/package=sp">https://CRAN.R-project.org/package=sp</a>.
+</div>
 <div id="ref-sdsr" class="csl-entry">
-Pebesma, Edzer, and Roger Bivand. 2023. <em>Spatial Data Science with
-Applications in <span>R</span></em>. Chapman &amp; Hall. <a href="https://www.routledge.com/Spatial-Data-Science-With-Applications-in-R/Pebesma-Bivand/p/book/9781138311183">https://www.routledge.com/Spatial-Data-Science-With-Applications-in-R/Pebesma-Bivand/p/book/9781138311183</a>.
+———. 2023b. <em>Spatial Data Science with Applications in
+<span>R</span></em>. Chapman &amp; Hall. <a href="https://www.routledge.com/Spatial-Data-Science-With-Applications-in-R/Pebesma-Bivand/p/book/9781138311183">https://www.routledge.com/Spatial-Data-Science-With-Applications-in-R/Pebesma-Bivand/p/book/9781138311183</a>.
 </div>
 </div>
 </div>

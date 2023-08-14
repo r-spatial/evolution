@@ -121,12 +121,15 @@ The `LinkingTo` field is used when C/C++ code in the package links to headers fo
 ### Weak dependencies
 
 The `Suggests` and `Enhances` fields are weak dependencies, as they are not required to be present for the package to perform its core functions. If a package is listed as `Suggests`, any use in code, examples, vignettes, etc. must be conditional, that is the code using the suggested package can be avoided using for example: `if (require(, quietly = TRUE))` or `if (requireNamespace(, quietly = TRUE))`. WRE notes:
+
 > On most systems, R CMD check can be run with only those packages declared in ‘Depends’ and ‘Imports’ by setting environment variable _R_CHECK_DEPENDS_ONLY_=true, whereas setting _R_CHECK_SUGGESTS_ONLY_=true also allows suggested packages, but not those in ‘Enhances’ nor those not mentioned in the DESCRIPTION file. It is recommended that a package is checked with each of these set, as well as with neither. 
 
 Usefully, `_R_CHECK_SUGGESTS_ONLY_` lets us check packages in a constricted setting:
+
 > If set to a true value, running examples, tests and vignettes is done with a temporary library directory populated by all the Depends/Imports/Suggests packages. (As exceptions, packages in a ‘VignetteBuilder’ field are always made available.) Default: false (but true for CRAN submission checks: some of the regular checks use true and some use false).
 
 Another important environmental variable set for checking is `_R_CHECK_FORCE_SUGGESTS_`,
+
 > If true, give an error if suggested packages are not available. Default: true (but false for CRAN submission checks).
 
 
@@ -151,7 +154,7 @@ One step has been to add intrusive start-up messages to the retiring packages an
 
 Since reverse dependency checks have been run systematically (largely by me) for packages wth `SystemRequirements` (as shown in their `DESCRIPTION` files) on `GDAL`, `GEOS` and `PROJ` for years to ensure that successive versions of external software work well with these R packages, the same framework has also been used extensively to see what consequences follow from steps in the retirement project. Typically, a parallel `CMD check` run on `"strong"` or `"most"` non-recursive reverse dependencies of retiring packages takes about four hours using four cores, less if more packages fail early on.
 
-In addition to https://r-spatial.github.io/evolution/ linking to the reports, https://github.com/r-spatial/evolution provides access to working data and listings, in partcular listings generated for reverse dependencies of retiring packages using `pkgapi` [@pkgapi] using `pkgapi::map_package` to establish which functions in retiring packages are used by their strong reverse dependencies. In listings generated 11 August 2023, 74 functions exported by retiring packages were still being used by 87 packages declaring strong dependency on retiring packages in their own code. One year before, 11 August 2022, 138 functions from retiring packages were being used by 232 packages declaring strong dependency on retiring packages in their own code. Naturally, these `pkgapi` runs do not detect conditional use in code where only weak dependency is involved, or vignettes, examples or tests.
+In addition to https://r-spatial.github.io/evolution/ linking to the reports, https://github.com/r-spatial/evolution provides access to working data and listings, in partcular listings generated for reverse dependencies of retiring packages using `pkgapi` [@pkgapi] using `pkgapi::map_package` to establish which functions in retiring packages are used by their strong reverse dependencies. In listings generated 11 August 2023, 74 functions exported by retiring packages were still being used by 87 packages declaring strong dependency on retiring packages in their own code https://github.com/r-spatial/evolution/blob/main/pkgapi_230811.csv https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_230811.csv. One year before, 11 August 2022, 138 functions from retiring packages were being used by 232 packages declaring strong dependency on retiring packages in their own code https://github.com/r-spatial/evolution/blob/main/pkgapi_220811.csv  https://github.com/r-spatial/evolution/blob/main/pkgapi_by_pkg_220811.csv. Naturally, these `pkgapi` runs do not detect conditional use in code where only weak dependency is involved, or vignettes, examples or tests.
 
 If we use package page-rank scores (which are not strictly comparable over time as the graph is dynamic (graph of dependencies from `miniCRAN::makeDepGraph`, page-ranks from `igraph::page_rank`), we see interesting changes during the evolution project period:
 
