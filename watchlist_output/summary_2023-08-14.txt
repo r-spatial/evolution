@@ -1,0 +1,12 @@
+Run date: 2023-08-14 
+Input watchlist length: 175 
+Input watchlist name: watchlists/watchlist_2023-08-11.csv 
+Watchlist packages not available now (12): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, zoon
+Previously untracked most reverse dependencies: dartR.base 
+New versions: hyfo 
+Check results (any not OK):
+     package version error warning note
+1 dartR.base    0.49     0       0    1
+2       hyfo   1.4.5     1       0    0
+Output watchlist length: 175 
+Watchlist length change: 0 
