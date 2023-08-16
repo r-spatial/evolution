@@ -1,0 +1,11 @@
+Run date: 2023-08-16 
+Input watchlist length: 175 
+Input watchlist name: watchlists/watchlist_2023-08-14.csv 
+Watchlist packages not available now (12): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, zoon
+New versions: patternize, phyloregion 
+Check results OK: phyloregion 
+Check results (any not OK):
+     package version error warning note
+1 patternize   0.0.4     0       1    0
+Output watchlist length: 174 
+Watchlist length change: -1 
