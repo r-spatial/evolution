@@ -1517,7 +1517,7 @@ infrastructure packages in R-spatial workflows</h1>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>Modernizing and replacing infrastructure packages in R-spatial
-workflows affects workflows using <code>sp</code> <span class="citation">(<a href="#ref-sp" role="doc-biblioref">Pebesma and
+workflows affects routines using <code>sp</code> <span class="citation">(<a href="#ref-sp" role="doc-biblioref">Pebesma and
 Bivand 2023a</a>)</span>, <code>sf</code> <span class="citation">(<a href="#ref-sf" role="doc-biblioref">Pebesma 2023</a>)</span> and
 <code>raster</code> <span class="citation">(<a href="#ref-raster" role="doc-biblioref">Hijmans 2023a</a>)</span> and <code>terra</code>
 <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2023b</a>)</span> taken together. Since
@@ -1544,12 +1544,12 @@ and will conclude at the end of 2023.</p>
 ten years ago <span class="citation">(<a href="#ref-asdar" role="doc-biblioref">R. S. Bivand, Pebesma, and Gomez-Rubio
 2013</a>)</span>, and based on what we had learned about representing
 spatial data, it became clear that alternatives to <code>sp</code>
-should be sought, leading to <code>sf</code>, and most recently to <span class="citation">(<a href="#ref-sdsr" role="doc-biblioref">Pebesma and
-Bivand 2023b</a>)</span>. In parallel, Robert Hijmans started moving
-more of <code>raster</code> processing into compiled code, leading to
-the development of the <code>terra</code> package no longer using
-<code>rgdal</code> or <code>rgeos</code>. So modernisation has been
-taking place in infrastructure packages.</p>
+should be sought, leading to <code>sf</code>, and most recently to the
+Spatial Data Science book <span class="citation">(<a href="#ref-sdsr" role="doc-biblioref">Pebesma and Bivand 2023b</a>)</span>. In parallel,
+Robert Hijmans started moving more of <code>raster</code> processing
+into compiled code, leading to the development of the <code>terra</code>
+package no longer using <code>rgdal</code> or <code>rgeos</code>. So
+modernisation has been taking place in infrastructure packages.</p>
 <p>However, continuing to maintain both the outdated interfaces to
 <code>PROJ</code>, <code>GDAL</code> and <code>GEOS</code> as well as
 developing <code>sf</code> and <code>terra</code> is arguably a waste of
@@ -1681,13 +1681,13 @@ worthwhile.</p>
 <h3>CRAN packages</h3>
 <p>R packages distributed from CRAN have been submitted at some point in
 the past, and all versions are held in the CRAN archives. The active,
-latest, version is the one shown usng <code>sf</code> as an example, on
+latest, version is the one shown using <code>sf</code> as an example, on
 the <a href="https://cran.r-project.org/package=sf" class="uri">https://cran.r-project.org/package=sf</a> web page. There
 are multiple “mirror” sites used by CRAN, including <a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a>. These mirrors update
 typically several times a day, with <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> being the site from which
 they update (hosted by <a href="https://www.wu.ac.at/" class="uri">https://www.wu.ac.at/</a> in Vienna).</p>
 <p>CRAN packages are provided as source packages (known as tarballs,
-file extension <code>.tar,gz</code>) and built as binary packages for
+file extension <code>.tar.gz</code>) and built as binary packages for
 three Windows (R-devel, current R-release (now 4.3.1), and previous R
 release (now R 4.2.3) and (currently) two macOS R versions (current
 R-release (now 4.3.1), and previous R release (now R 4.2.3)) for two
@@ -1879,8 +1879,9 @@ from SVN repositories on R-forge, a decision made years ago to signal
 that these packages were not being developed further beyond adaptations
 to upstream external software libraries.</p>
 <p>So far four project reports have been written (<a href="https://r-spatial.github.io/evolution/" class="uri">https://r-spatial.github.io/evolution/</a>), and a
-presentation (with video) given at the Center for Spatial Data Science
-at the University of Chicago in January 2023.</p>
+presentation (with <a href="https://www.youtube.com/watch?v=TlpjIqTPMCA">video</a>) given at
+the Center for Spatial Data Science at the University of Chicago in
+January 2023.</p>
 <div id="project-so-far" class="section level2">
 <h2>Project so far</h2>
 <p>From earlier descriptions of package dependencies, it should be clear
