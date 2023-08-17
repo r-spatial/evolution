@@ -92,7 +92,7 @@ Once on CRAN, all packages are checked in principle daily against 13 different R
 
 ### CRAN package check results
 
-When preparing an R source package for submission to CRAN, a source tarball should be built first, and `R CMD check` run on that tarball. If `--as-cran` is added, a set of environment variables (https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools) is used that matches those used during the submission process. The maintainer submitting the package also confirms that `R CMD check --as-cran` has completed `OK` or with unavoidable `NOTE` results (often larger documentation or shared library directories) on both R as released and a recent development version of R. The submission process triggers matching checks on several platforms. 
+When preparing an R source package for submission to CRAN, a source tarball should be built first, and `R CMD check` run on that tarball. If `--as-cran` is added, a set of environment variables (https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools) is used that is similar to but not identical with those used during the submission process. The maintainer submitting the package also confirms that `R CMD check --as-cran` has completed `OK` or with unavoidable `NOTE` results (often larger documentation or shared library directories) on both R as released and a recent development version of R. The submission process triggers matching checks on several platforms. 
 
 Once happily on CRAN, the web page of the package will begin to show `CRAN checks`, a table of check results from the check farms across R versions and different platforms. Sometimes it takes several days from a package update for all the results to be given for the current version, just as it can take some time for versions to be built for on the Windows and macOS build farms. Maintainers with multiple CRAN packages can access their summary results by name: https://cran.r-project.org/web/checks/check_results_roger.bivand_at_nhh.no.html shows my current state.
 
@@ -187,7 +187,7 @@ Further rounds of raising or repeating github issues and sending emails to maint
 
 From the publication of `sp` 2.0-0 on 22 June 2023, the default evolution status is set to 2, using `sf` in place of `rgdal`. Packages which had earlier suggested `rgdal` to meet `sp`'s need for that dependency should replace it with `sf`. In June and July, github issuues and maintainer emails were further followed up.
 
-The forthcoming `sp` version 2.1-0 to be submitted to CRAN in early October 2023 will remove dependencies on retiring packages completely, and the mechanisms intended to switch between evolution status setting will cease to have any effect.
+The forthcoming `sp` version 2.1-0 to be submitted to CRAN in late September or early October 2023 (to be agreed with `sp`'s maintainer and CRAN team, subject to adequate reduction in the failing reverse dependency count) will remove dependencies on retiring packages completely, and the mechanisms intended to switch between evolution status setting will cease to have any effect.
 
 ## Remaining tasks
 
@@ -219,7 +219,7 @@ To help, form small groups where at least one member has a laptop with current R
 
 ## Repair process
 
-Check the chosen package first untouched in the instrumented setting as will be from October 2023. Then iterate editing, building and checking until none of the check log output is related to missing retiring packages.
+Check the chosen package first untouched in the instrumented setting as will be from October 2023. Then iterate editing, building and checking until none of the check log output is related to missing retiring packages. This will be run live after the break on one or more chosen packages, please propose candidates for example through the mattermost channel for this talk. We'll start with the "easy" ones.
 
 ### Package sources
 

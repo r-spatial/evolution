@@ -1728,11 +1728,11 @@ changes.</p>
 tarball should be built first, and <code>R CMD check</code> run on that
 tarball. If <code>--as-cran</code> is added, a set of environment
 variables (<a href="https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools" class="uri">https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools</a>)
-is used that matches those used during the submission process. The
-maintainer submitting the package also confirms that
-<code>R CMD check --as-cran</code> has completed <code>OK</code> or with
-unavoidable <code>NOTE</code> results (often larger documentation or
-shared library directories) on both R as released and a recent
+is used that is similar to but not identical with those used during the
+submission process. The maintainer submitting the package also confirms
+that <code>R CMD check --as-cran</code> has completed <code>OK</code> or
+with unavoidable <code>NOTE</code> results (often larger documentation
+or shared library directories) on both R as released and a recent
 development version of R. The submission process triggers matching
 checks on several platforms.</p>
 <p>Once happily on CRAN, the web page of the package will begin to show
@@ -1999,9 +1999,12 @@ default evolution status is set to 2, using <code>sf</code> in place of
 should replace it with <code>sf</code>. In June and July, github issuues
 and maintainer emails were further followed up.</p>
 <p>The forthcoming <code>sp</code> version 2.1-0 to be submitted to CRAN
-in early October 2023 will remove dependencies on retiring packages
-completely, and the mechanisms intended to switch between evolution
-status setting will cease to have any effect.</p>
+in late September or early October 2023 (to be agreed with
+<code>sp</code>’s maintainer and CRAN team, subject to adequate
+reduction in the failing reverse dependency count) will remove
+dependencies on retiring packages completely, and the mechanisms
+intended to switch between evolution status setting will cease to have
+any effect.</p>
 </div>
 </div>
 <div id="remaining-tasks" class="section level2">
@@ -2101,7 +2104,9 @@ repos.</p>
 <p>Check the chosen package first untouched in the instrumented setting
 as will be from October 2023. Then iterate editing, building and
 checking until none of the check log output is related to missing
-retiring packages.</p>
+retiring packages. This will be run live after the break on one or more
+chosen packages, please propose candidates for example through the
+mattermost channel for this talk. We’ll start with the “easy” ones.</p>
 <div id="package-sources" class="section level3">
 <h3>Package sources</h3>
 <p>It is possible to start from the source package from your preferred
