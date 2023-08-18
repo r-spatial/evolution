@@ -1,0 +1,12 @@
+Run date: 2023-08-18 
+Input watchlist length: 173 
+Input watchlist name: watchlists/watchlist_2023-08-16.csv 
+Watchlist packages not available now (12): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, zoon
+Previously untracked most reverse dependencies: dartR.spatial, fmesher 
+New versions: hyfo 
+Check results OK: dartR.spatial, hyfo 
+Check results (any not OK):
+  package version error warning note
+2 fmesher   0.1.1     0       0    1
+Output watchlist length: 172 
+Watchlist length change: -1 
