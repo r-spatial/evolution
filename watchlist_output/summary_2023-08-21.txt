@@ -1,0 +1,13 @@
+Run date: 2023-08-21 
+Input watchlist length: 172 
+Input watchlist name: watchlists/watchlist_2023-08-18.csv 
+Watchlist packages not available now (13): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, wux, zoon
+New versions: geogrid, ie2miscdata 
+First order reverse dependencies of new versions: geofacet 
+Check results OK: geogrid 
+Check results (any not OK):
+      package version error warning note
+1    geofacet   0.2.0     0       0    2
+3 ie2miscdata   1.0.4     0       0    1
+Output watchlist length: 169 
+Watchlist length change: -3 
