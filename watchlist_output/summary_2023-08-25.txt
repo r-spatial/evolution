@@ -1,0 +1,13 @@
+Run date: 2023-08-25 
+Input watchlist length: 168 
+Input watchlist name: watchlists/watchlist_2023-08-23.csv 
+Watchlist packages not available now (13): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, letsR, mapmisc, MinBAR, rTLS, SAEforest, shadow, wux, zoon
+Previously untracked most reverse dependencies: CoastlineFD 
+New versions: landsat, sdmpredictors, stppSim 
+Check results OK: landsat, sdmpredictors 
+Check results (any not OK):
+      package version error warning note
+1 CoastlineFD   0.1.4     1       0    0
+4     stppSim   1.3.1     1       0    0
+Output watchlist length: 167 
+Watchlist length change: -1 
