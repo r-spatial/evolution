@@ -1,0 +1,38 @@
+---
+title: "Progress in modernizing and replacing infrastructure packages in R-spatial workflows"
+author: "Roger Bivand"
+date: Tuesday 29 August 2023, 13:30-17:00 CEST
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 2
+bibliography: refs.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, paged.print=FALSE)
+```
+
+Modernizing and replacing infrastructure packages in R-spatial workflows affects routines using `sp` [@sp], `sf` [@sf] and `raster` [@raster] and `terra` [@terra] taken together. Since 2016, `sf` and `terra` have interfaced OSGeo libraries `PROJ`, `GDAL` and `GEOS` directly, using the `Rcpp` [@Rcpp] framework. This means that they no longer need to use `rgdal` [@rgdal] or `rgeos` [@rgeos] as `sp` and `raster` used to do. Using `Rcpp` is more efficient and easier to maintain. Rather than leaving `rgdal` and `rgeos` to decay, they are being archived on CRAN in October 2023, as first announced in Edzer Pebesma's useR! plenary in July 2021. In addition, `maptools` [@maptools] and `rgrass7` [@rgrass7] will be archived at the same time. The actual archiving date will be announced two weeks before it occurs in cooperation with CRAN team. The Evolution project was created by us and partially supported by the R Consortium (from early 2022: https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools) and will conclude at the end of 2023.
+
+## Background
+
+Since the publication of the second edition of ASDAR (https://asdar-book.org/) ten years ago [@asdar], and based on what we had learned about representing spatial data, it became clear that alternatives to `sp` should be sought, leading to `sf`, and most recently to *Spatial Data Science with Applications in R* [@sdsr]. In parallel, Robert Hijmans started moving more of `raster` processing into compiled code, leading to the development of the `terra` package no longer using `rgdal` or `rgeos`. So modernisation has been taking place in infrastructure packages.
+
+However, continuing to maintain both the outdated interfaces to `PROJ`, `GDAL` and `GEOS` as well as developing `sf` and `terra` is arguably a waste of very limited resources, and assumes that I as maintainer will be able to continue to keep the packages working in the future. Since I retired two years ago, I have also determined that work on `spdep` and `spatialreg` are a more sensible use of my available effort, so we should acknowledge that modernisation has happened and that the retiring packages can be satisfactorily replaced by `sf` and `terra` now. 
+
+## Status
+
+Many CRAN and some Bioconductor packages used to depend on retiring packages. Some dropped dependencies early (`raster` in September 2022), some after a notification campaign in December 2022, others again after the next wave in April 2023 and May/June 2023 corresponding to project blogs/reports. Since June a watchlist is running on published updates on CRAN or Bioconductor to vulnerable packages:
+
+```{r, echo=FALSE}
+cl <- read.csv("../watchlist_output/count_series.csv")
+plot(watchlist_length ~ I(as.Date(date)), cl, ylim=c(0, 225), xlim=as.Date(c("2023-06-01", "2023-10-31")), xlab="", ylab="remaining vulnerable packages")
+grid()
+```
+
+Many mitigations are very simple, involving the deletion of stale `roxygen2` markup, or insertion of conditioning on the availability of retiring packages prior to full removal later on. We'll be looking at how dependencies between packages play out (this is general across language environments with contributed extensions), and at this particular case.

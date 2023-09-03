@@ -1534,9 +1534,10 @@ being archived on CRAN in October 2023, as first announced in Edzer
 Pebesma’s useR! plenary in July 2021. In addition, <code>maptools</code>
 <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R.
 Bivand and Lewin-Koh 2023</a>)</span> and <code>rgrass7</code> <span class="citation">(<a href="#ref-rgrass7" role="doc-biblioref">R. Bivand
-2023b</a>)</span> will be archived at the same time. The Evolution
-project was created by us and partially supported by the R Consortium
-(from early 2022: <a href="https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools" class="uri">https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools</a>)
+2023b</a>)</span> will be archived at the same time. The actual
+archiving date will be announced two weeks before it occurs in
+cooperation with CRAN team. The Evolution project was created by us and
+partially supported by the R Consortium (from early 2022: <a href="https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools" class="uri">https://www.r-consortium.org/all-projects/awarded-projects/2021-group-2#Preparing%20CRAN%20for%20the%20Retirement%20of%20rgdal,%20rgeos%20and%20maptools</a>)
 and will conclude at the end of 2023.</p>
 <div id="background" class="section level2">
 <h2>Background</h2>
@@ -1544,12 +1545,13 @@ and will conclude at the end of 2023.</p>
 ten years ago <span class="citation">(<a href="#ref-asdar" role="doc-biblioref">R. S. Bivand, Pebesma, and Gomez-Rubio
 2013</a>)</span>, and based on what we had learned about representing
 spatial data, it became clear that alternatives to <code>sp</code>
-should be sought, leading to <code>sf</code>, and most recently to the
-Spatial Data Science book <span class="citation">(<a href="#ref-sdsr" role="doc-biblioref">Pebesma and Bivand 2023b</a>)</span>. In parallel,
-Robert Hijmans started moving more of <code>raster</code> processing
-into compiled code, leading to the development of the <code>terra</code>
-package no longer using <code>rgdal</code> or <code>rgeos</code>. So
-modernisation has been taking place in infrastructure packages.</p>
+should be sought, leading to <code>sf</code>, and most recently to
+<em>Spatial Data Science with Applications in R</em> <span class="citation">(<a href="#ref-sdsr" role="doc-biblioref">Pebesma and
+Bivand 2023b</a>)</span>. In parallel, Robert Hijmans started moving
+more of <code>raster</code> processing into compiled code, leading to
+the development of the <code>terra</code> package no longer using
+<code>rgdal</code> or <code>rgeos</code>. So modernisation has been
+taking place in infrastructure packages.</p>
 <p>However, continuing to maintain both the outdated interfaces to
 <code>PROJ</code>, <code>GDAL</code> and <code>GEOS</code> as well as
 developing <code>sf</code> and <code>terra</code> is arguably a waste of
@@ -1659,9 +1661,9 @@ in-house packages used for their own purposes. Since they are not
 centrally registered, it is unknown which other packages they may use -
 some are hosted on Github, but finding them is not simple. An exception
 is the use of <code>drat</code> repositories, perhaps to host packages
-that are too large for CRAN (<a href="https://jakubnowosad.com/spData/" class="uri">https://jakubnowosad.com/spData/</a>). Packages held on the
-central repositories - CRAN, Bioconductor - share listing criteria and
-may be analysed readily.</p>
+that are too large for CRAN (<a href="https://jakubnowosad.com/spDataLarge" class="uri">https://jakubnowosad.com/spDataLarge</a>). Packages held on
+the central repositories - CRAN, Bioconductor - share listing criteria
+and may be analysed readily.</p>
 <div id="why-write-packages" class="section level3">
 <h3>Why write packages?</h3>
 <p>Usually, packages are written to encapsulate software and/or data
@@ -1690,7 +1692,7 @@ they update (hosted by <a href="https://www.wu.ac.at/" class="uri">https://www.w
 file extension <code>.tar.gz</code>) and built as binary packages for
 three Windows (R-devel, current R-release (now 4.3.1), and previous R
 release (now R 4.2.3) and (currently) two macOS R versions (current
-R-release (now 4.3.1), and previous R release (now R 4.2.3)) for two
+R-release (now 4.3.1), and previous R release (now 4.2.3) for two
 architectures (arm64 and x86_64). The state of CRAN is recorded in <a href="https://cran.r-project.org/src/contrib/PACKAGES" class="uri">https://cran.r-project.org/src/contrib/PACKAGES</a> files
 and similar, which contain snapshots of the instantaneous state of the
 site.</p>
@@ -1744,10 +1746,11 @@ for on the Windows and macOS build farms. Maintainers with multiple CRAN
 packages can access their summary results by name: <a href="https://cran.r-project.org/web/checks/check_results_roger.bivand_at_nhh.no.html" class="uri">https://cran.r-project.org/web/checks/check_results_roger.bivand_at_nhh.no.html</a>
 shows my current state.</p>
 <p>A side note about package check results is that packages using unit
-testing (most often <code>testthat</code>) not infrequently test as
-though the packages on which they depend never change. This can cause
-spurious test failures when packages are updated or for example emit new
-informative messages.</p>
+testing (most often <code>testthat</code>) not infrequently have tests
+written as though the packages on which they depend never change. This
+can cause spurious test failures when packages are updated or for
+example emit new informative messages but fail on
+<code>testthat::expect_silent</code>.</p>
 </div>
 </div>
 <div id="dependencies-between-r-packages" class="section level2">
@@ -1879,9 +1882,11 @@ from SVN repositories on R-forge, a decision made years ago to signal
 that these packages were not being developed further beyond adaptations
 to upstream external software libraries.</p>
 <p>So far four project reports have been written (<a href="https://r-spatial.github.io/evolution/" class="uri">https://r-spatial.github.io/evolution/</a>), and a
-presentation (with <a href="https://www.youtube.com/watch?v=TlpjIqTPMCA">video</a>) given at
-the Center for Spatial Data Science at the University of Chicago in
-January 2023.</p>
+presentation (, <a href="https://rsbivand.github.io/csds_jan23/bivand_csds_ssg_230117.pdf" class="uri">https://rsbivand.github.io/csds_jan23/bivand_csds_ssg_230117.pdf</a>,
+with <a href="https://www.youtube.com/watch?v=TlpjIqTPMCA">video</a>)
+given at the Center for Spatial Data Science at the University of
+Chicago in January 2023. This talk and the accompanying video recording
+will supplement/replace those from January this year.</p>
 <div id="project-so-far" class="section level2">
 <h2>Project so far</h2>
 <p>From earlier descriptions of package dependencies, it should be clear
@@ -1928,11 +1933,16 @@ packages in their own code <a href="https://github.com/r-spatial/evolution/blob/
 Naturally, these <code>pkgapi</code> runs do not detect conditional use
 in code where only weak dependency is involved, or vignettes, examples
 or tests.</p>
-<p>If we use package page-rank scores (which are not strictly comparable
-over time as the graph is dynamic (graph of dependencies from
+<p>We can use package page-rank scores to see how often packages are
+names as dependencies of other packages (like hyperlinks between web
+pages), with the sum of all packages at the studied point in time being
+unity. It corresponds to the principal eigenvector of the normalized
+link matrix of included packages (<a href="http://infolab.stanford.edu/~backrub/google.html" class="uri">http://infolab.stanford.edu/~backrub/google.html</a>). The
+scores are not strictly comparable over time as the graph of package
+dependencies is dynamic (graph of dependencies from
 <code>miniCRAN::makeDepGraph</code>, page-ranks from
-<code>igraph::page_rank</code>), we see interesting changes during the
-evolution project period:</p>
+<code>igraph::page_rank</code>). We can see interesting changes during
+the evolution project period:</p>
 <pre><code>##             Nov. 2021    Dec. 2022     Aug 2023
 ## sf       0.0011256993 0.0013337891 0.0015364458
 ## sp       0.0018401226 0.0015939873 0.0014051568
