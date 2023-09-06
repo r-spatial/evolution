@@ -1,0 +1,10 @@
+Run date: 2023-09-06 
+Input watchlist length: 160 
+Input watchlist name: watchlists/watchlist_2023-09-04.csv 
+Watchlist packages not available now (17): binaryTimeSeries, biosurvey, FORTLS, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapmisc, mapping, MinBAR, rTLS, SAEforest, shadow, wallace, wux, zoon
+New versions: FLightR 
+Check results (any not OK):
+  package version error warning note
+1 FLightR   0.5.3     1       0    0
+Output watchlist length: 160 
+Watchlist length change: 0 
