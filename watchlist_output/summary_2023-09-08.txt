@@ -1,0 +1,11 @@
+Run date: 2023-09-08 
+Input watchlist length: 160 
+Input watchlist name: watchlists/watchlist_2023-09-06.csv 
+Watchlist packages not available now (17): binaryTimeSeries, biosurvey, FORTLS, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapmisc, mapping, MinBAR, rTLS, SAEforest, shadow, wallace, wux, zoon
+New versions: disaggregation, spatsoc 
+Check results OK: spatsoc 
+Check results (any not OK):
+         package version error warning note
+1 disaggregation   0.2.1     0       0    1
+Output watchlist length: 158 
+Watchlist length change: -2 
