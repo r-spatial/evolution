@@ -1,0 +1,8 @@
+Run date: 2023-09-11 
+Input watchlist length: 158 
+Input watchlist name: watchlists/watchlist_2023-09-08.csv 
+Watchlist packages not available now (18): binaryTimeSeries, biosurvey, CoastlineFD, FORTLS, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapmisc, mapping, MinBAR, rTLS, SAEforest, shadow, wallace, wux, zoon
+New versions: red 
+Check results OK: red 
+Output watchlist length: 157 
+Watchlist length change: -1 
