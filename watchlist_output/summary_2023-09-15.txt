@@ -1,0 +1,13 @@
+Run date: 2023-09-15 
+Input watchlist length: 154 
+Input watchlist name: watchlists/watchlist_2023-09-13.csv 
+Watchlist packages not available now (15): binaryTimeSeries, biosurvey, CoastlineFD, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, rTLS, SAEforest, shadow, wux, zoon
+New versions: mapmisc, wallace 
+First order reverse dependencies of new versions: changeRangeR 
+Check results (any not OK):
+       package version error warning note
+1 changeRangeR   1.0.2     1       0    0
+2      mapmisc   2.0.0     0       0    1
+3      wallace   2.0.6     1       0    0
+Output watchlist length: 152 
+Watchlist length change: -2 
