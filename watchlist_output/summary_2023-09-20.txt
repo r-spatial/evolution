@@ -1,12 +1,15 @@
 Run date: 2023-09-20 
-Input watchlist length: 147 
-Input watchlist name: watchlists/watchlist_2023-09-18.csv 
+Input watchlist length: 152 
+Input watchlist name: watchlists/watchlist_2023-09-15.csv 
 Watchlist packages not available now (16): binaryTimeSeries, biosurvey, CoastlineFD, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, OCNet, rTLS, SAEforest, shadow, wux, zoon
 Previously untracked most reverse dependencies: stUPscales 
-New versions: GPSeqClus 
+New versions: cmsaf, GeoAdjust, GPSeqClus, lakemorpho, SiMRiv 
+First order reverse dependencies of new versions: stppSim 
+Check results OK: GPSeqClus, lakemorpho, SiMRiv, stppSim 
 Check results (any not OK):
      package version error warning note
-1  GPSeqClus   1.4.0     1       1    0
-2 stUPscales 1.0.3.5     1       0    0
-Output watchlist length: 148 
-Watchlist length change: 1 
+1      cmsaf   3.5.0     0       0    1
+2  GeoAdjust   2.0.0     0       0    1
+7 stUPscales 1.0.3.5     1       0    0
+Output watchlist length: 147 
+Watchlist length change: -5 
