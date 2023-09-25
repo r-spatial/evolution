@@ -1,0 +1,12 @@
+Run date: 2023-09-25 
+Input watchlist length: 147 
+Input watchlist name: watchlists/watchlist_2023-09-22.csv 
+Watchlist packages not available now (15): binaryTimeSeries, biosurvey, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, OCNet, rTLS, SAEforest, shadow, wux, zoon
+New versions: CoastlineFD, ctmm, dtwSat, malariaAtlas, RchivalTag, waver 
+Check results OK: ctmm, dtwSat, malariaAtlas, waver 
+Check results (any not OK):
+      package version error warning note
+1 CoastlineFD   0.1.6     1       0    0
+5  RchivalTag   0.1.7     1       0    0
+Output watchlist length: 143 
+Watchlist length change: -4 
