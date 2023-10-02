@@ -24,6 +24,8 @@ theme: united
 
 - [OpenGeoHub Summer School session, 29 August 2023](https://r-spatial.github.io/evolution/ogh23_bivand.html)
 
+- [Video recording of OpenGeoHub Summer School session: Progress in modernizing and replacing infrastructure packages in R-spatial workflows](https://av.tib.eu/media/63141)
+
 - [OpenGeoHub Summer School intro session, 28 August 2023](https://r-spatial.github.io/evolution/ogh23_intro_bivand.html)
 
 - [Former `rgdal` vignette: Why have CRS, projections and transformations changed?](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
