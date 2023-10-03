@@ -30,6 +30,8 @@ theme: united
 
 - [Former `rgdal` vignette: Why have CRS, projections and transformations changed?](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
 
+- [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)
+
 
 ## ASDAR diffs by chapter (made using `diff2html`): 
 

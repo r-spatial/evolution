@@ -6,14 +6,22 @@ The functionality of `rgdal`, `rgeos` and `maptools` has been largely superseded
 
 For more details, please see 
 
-* [the first blog post](https://r-spatial.org/r/2022/04/12/evolution.html).
-* [the second blog post](https://r-spatial.org/r/2022/12/14/evolution2.html).
-* [the third blog post](https://r-spatial.org/r/2023/04/10/evolution3.html).
-* [the fourth blog post](https://r-spatial.org/r/2023/05/15/evolution4.html).
+* [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)
 * [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
+* [the fourth blog post](https://r-spatial.org/r/2023/05/15/evolution4.html).
+* [the third blog post](https://r-spatial.org/r/2023/04/10/evolution3.html).
+* [the second blog post](https://r-spatial.org/r/2022/12/14/evolution2.html).
+* [the first blog post](https://r-spatial.org/r/2022/04/12/evolution.html).
 * [Add `rgdal` CRS vignette](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
 
-## Center for Spatial Data Science 2023 workshop and study group materials
+## OpenGeoHub Summer School August 2023
+
+- [OpenGeoHub Summer School session, 29 August 2023](https://r-spatial.github.io/evolution/ogh23_bivand.html)
+
+- [Video recording of OpenGeoHub Summer School session: Progress in modernizing and replacing infrastructure packages in R-spatial workflows](https://av.tib.eu/media/63141)
+
+
+## Center for Spatial Data Science January 2023 workshop and study group materials
 
 Visit: https://spatial.uchicago.edu/directories/full/2022-to-2023
 
