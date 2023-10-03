@@ -1,5 +1,22 @@
 # evolution
 
+## Retiring packages to be archived by CRAN 16 October 2023
+
+The legacy R spatial infrastructure packages maptools, rgdal and rgeos will be archived by CRAN on Monday, October 16, 2023; rgrass7 has  already been replaced by rgrass and will be archived with the retiring packages. 
+
+The choice of date matches the previously announced archiving during October 2023, and the specific date matches the release schedule of Bioconductor 3.18 (some Bioconductor packages depend on retiring packages).
+
+sp_2.1-0 was published October 2, 2023, dropping all dependencies on the retiring packages. sp will continue to be available and maintained, but not developed further. Users of sp classes may continue to make use of them, but will have to use sf or terra to read, write or manipulate objects with coercion (for a guide to coercion, see https://cran.r-project.org/web/packages/rgrass/vignettes/coerce.html).
+
+Information about the evolution project may be found in reports and resources at https://r-spatial.github.io/evolution/; a recent blog by Jakub Nowosad may also be useful as an overview of what has been going on: https://geocompx.org/post/2023/rgdal-retirement/. For more detail, see https://r-spatial.github.io/evolution/ogh23_bivand.html and a video recording of this presentation https://av.tib.eu/media/63141 (August 28).
+
+All directly affected package maintainers have been alerted to the impending changes, some in December 2022, most others in March-April 2023. Many have already updated their packages on CRAN - thank you for your understanding! The remainder received github issue comments and email reminders in the last ten days, and will receive final notices to update by October 9. 
+
+On R-universe, builds of packages archived on CRAN are dropped automatically (https://github.com/r-universe-org/help/issues/286). Read-only github mirrors of archived packages will remain available in principle while github exists (https://github.com/r-hub/rhub/issues/568), for example https://github.com/cran/rgdal. Other binary builds (Debian, Fedora, Ubuntu) have been alerted; support at Anaconda has been alerted.
+
+On CRAN, the retired packages will continue to be available as source packages on https://cran.r-project.org/src/contrib/Archive. maptools, rgdal and rgeos also retain their R-forge repositories, which may be used to retrieve functions for adding to other packages.
+
+
 ## Preparing CRAN for the retirement of rgdal, rgeos and maptools
 
 The functionality of `rgdal`, `rgeos` and `maptools` has been largely superseded by other, more modern packages like `sf`, `stars` and `terra`. Roger Bivand, co-applicant of this proposal, has retired early 2021. Roger currently maintains `rgdal`, `rgdal` and `maptools` but will stop maintaining these packages by October 2023. Simply withdrawing these packages from CRAN will have a strong effect on other CRAN packages, as they have a large number of reverse dependencies. The problem addressed in this ISC proposal is to make it possible for Roger Bivand to retire from maintaining `rgdal`, `rgeos` and `maptools` while minimizing the disruption of CRAN packages and existing R scripts using these packages. This affects a large number of CRAN package maintainers, and a large number of users of all packages depending directly or indirectly on `rgdal`, `rgeos` or `maptools`. It simplifies maintenance of the “R Spatial stack”, and by that makes the CRAN ecosystem more robust.
