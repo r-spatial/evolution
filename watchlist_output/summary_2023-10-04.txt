@@ -1,0 +1,11 @@
+Run date: 2023-10-04 
+Input watchlist length: 135 
+Input watchlist name: watchlists/watchlist_2023-10-03.csv 
+Watchlist packages not available now (17): binaryTimeSeries, biosurvey, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, OCNet, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: CoordinateCleaner, EMbC, lgcp, redlistr 
+Check results OK: EMbC, lgcp, redlistr 
+Check results (any not OK):
+            package version error warning note
+1 CoordinateCleaner     3.0     0       0    1
+Output watchlist length: 131 
+Watchlist length change: -4 
