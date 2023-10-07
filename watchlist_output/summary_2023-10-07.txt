@@ -1,0 +1,8 @@
+Run date: 2023-10-07 
+Input watchlist length: 129 
+Input watchlist name: watchlists/watchlist_2023-10-06.csv 
+Watchlist packages not available now (18): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, OCNet, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: birdscanR 
+Check results OK: birdscanR 
+Output watchlist length: 128 
+Watchlist length change: -1 
