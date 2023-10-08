@@ -1,0 +1,11 @@
+Run date: 2023-10-08 
+Input watchlist length: 128 
+Input watchlist name: watchlists/watchlist_2023-10-07.csv 
+Watchlist packages not available now (18): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, OCNet, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: birdring, RPhosFate, ursa 
+Check results OK: birdring, RPhosFate 
+Check results (any not OK):
+  package version error warning note
+3    ursa  3.10.1     1       0    0
+Output watchlist length: 126 
+Watchlist length change: -2 
