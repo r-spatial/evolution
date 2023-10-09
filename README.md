@@ -23,6 +23,7 @@ The functionality of `rgdal`, `rgeos` and `maptools` has been largely superseded
 
 For more details, please see 
 
+* [Countdown checklist](https://github.com/r-spatial/evolution/issues/19)
 * [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)
 * [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
 * [the fourth blog post](https://r-spatial.org/r/2023/05/15/evolution4.html).

@@ -32,6 +32,8 @@ theme: united
 
 - [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)
 
+- [Countdown checklist](https://github.com/r-spatial/evolution/issues/19)
+
 
 ## ASDAR diffs by chapter (made using `diff2html`): 
 
