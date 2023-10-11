@@ -31,8 +31,10 @@ Many CRAN and some Bioconductor packages used to depend on retiring packages. So
 
 ```{r, echo=FALSE}
 cl <- read.csv("../watchlist_output/count_series.csv")
-plot(watchlist_length ~ I(as.Date(date)), cl, ylim=c(0, 225), xlim=as.Date(c("2023-06-01", "2023-10-31")), xlab="", ylab="remaining vulnerable packages")
+plot(I(watchlist_length-unavailable) ~ I(as.Date(date)), cl, ylim=c(0, 225), xlim=as.Date(c("2023-06-01", "2023-10-31")), xlab="",
+    ylab="remaining available vulnerable packages")
 grid()
+abline(v=as.Date("2023-10-16"), col="red4")
 ```
 
 Many mitigations are very simple, involving the deletion of stale `roxygen2` markup, or insertion of conditioning on the availability of retiring packages prior to full removal later on. We'll be looking at how dependencies between packages play out (this is general across language environments with contributed extensions), and at this particular case.
