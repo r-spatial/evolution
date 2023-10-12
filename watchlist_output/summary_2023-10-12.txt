@@ -1,0 +1,9 @@
+Run date: 2023-10-12 
+Input watchlist length: 120 
+Input watchlist name: watchlists/watchlist_2023-10-11.csv 
+Watchlist packages not available now (19): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, modchart, OCNet, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: gfcanalysis, PopGenReport 
+First order reverse dependencies of new versions: dartR 
+Check results OK: dartR, gfcanalysis, PopGenReport 
+Output watchlist length: 117 
+Watchlist length change: -3 
