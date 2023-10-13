@@ -1,0 +1,14 @@
+Run date: 2023-10-13 
+Input watchlist length: 117 
+Input watchlist name: watchlists/watchlist_2023-10-12.csv 
+Watchlist packages not available now (19): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, mapping, MinBAR, modchart, OCNet, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: CoastlineFD, importinegi, npphen, OpenStreetMap, phenomap, rpostgis 
+First order reverse dependencies of new versions: loa, OSMscale 
+Check results OK: CoastlineFD, npphen, OpenStreetMap, phenomap, rpostgis 
+Check results (any not OK):
+      package  version error warning note
+2 importinegi    1.2.1     0       0    1
+3         loa 0.2.48.1     1       0    0
+6    OSMscale    0.5.1     1       0    0
+Output watchlist length: 109 
+Watchlist length change: -8 
