@@ -1,0 +1,11 @@
+Run date: 2023-10-14 
+Input watchlist length: 109 
+Input watchlist name: watchlists/watchlist_2023-10-13.csv 
+Watchlist packages not available now (19): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, MakeYourPalette, mapping, MinBAR, modchart, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: cropDemand, EcoIndR, OCNet, OSMscale 
+Check results OK: cropDemand, EcoIndR, OSMscale 
+Check results (any not OK):
+  package version error warning note
+3   OCNet   1.2.0     0       0    1
+Output watchlist length: 105 
+Watchlist length change: -4 

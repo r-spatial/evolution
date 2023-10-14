@@ -34,6 +34,9 @@ cl <- read.csv("../watchlist_output/count_series.csv")
 plot(I(watchlist_length-unavailable) ~ I(as.Date(date)), cl, ylim=c(0, 225), xlim=as.Date(c("2023-06-01", "2023-10-31")), xlab="",
     ylab="remaining available vulnerable packages")
 grid()
+abline(v=as.Date("2023-07-12"), col="green4")
+abline(v=as.Date("2023-09-26"), col="green2")
+abline(v=as.Date("2023-10-07"), col="yellow3")
 abline(v=as.Date("2023-10-16"), col="red4")
 ```
 
