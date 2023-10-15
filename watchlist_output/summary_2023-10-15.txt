@@ -1,0 +1,8 @@
+Run date: 2023-10-15 
+Input watchlist length: 105 
+Input watchlist name: watchlists/watchlist_2023-10-14.csv 
+Watchlist packages not available now (19): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, MakeYourPalette, mapping, MinBAR, modchart, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: DivE, MBNMAtime, meteo 
+Check results OK: DivE, MBNMAtime, meteo 
+Output watchlist length: 102 
+Watchlist length change: -3 
