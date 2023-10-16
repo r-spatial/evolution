@@ -1,6 +1,6 @@
 # evolution
 
-## Retiring packages to be archived by CRAN 16 October 2023
+## Retiring packages to be archived by CRAN 16 October 2023: today!
 
 The legacy R spatial infrastructure packages maptools, rgdal and rgeos will be archived by CRAN on Monday, October 16, 2023; rgrass7 has  already been replaced by rgrass and will be archived with the retiring packages. 
 
