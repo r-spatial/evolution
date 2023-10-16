@@ -1,0 +1,8 @@
+Run date: 2023-10-16 
+Input watchlist length: 102 
+Input watchlist name: watchlists/watchlist_2023-10-15.csv 
+Watchlist packages not available now (19): binaryTimeSeries, biosurvey, bnspatial, briskaR, geoviz, hierarchicalDS, hsdar, leaflet.opacity, letsR, MakeYourPalette, mapping, MinBAR, modchart, rcanvec, rTLS, SAEforest, shadow, wux, zoon
+New versions: gamlss.spatial 
+Check results OK: gamlss.spatial 
+Output watchlist length: 101 
+Watchlist length change: -1 
