@@ -1,8 +1,8 @@
 # evolution
 
-## Retiring packages to be archived by CRAN 16 October 2023: today!
+## Retiring packages were archived by CRAN 16 October 2023
 
-The legacy R spatial infrastructure packages maptools, rgdal and rgeos will be archived by CRAN on Monday, October 16, 2023; rgrass7 has  already been replaced by rgrass and will be archived with the retiring packages. 
+The legacy R spatial infrastructure packages maptools, rgdal and rgeos were archived by CRAN on Monday, October 16, 2023; rgrass7 has  already been replaced by rgrass and was archived with the retiring packages. 
 
 The choice of date matches the previously announced archiving during October 2023, and the specific date matches the release schedule of Bioconductor 3.18 (some Bioconductor packages depend on retiring packages).
 

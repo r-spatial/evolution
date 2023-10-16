@@ -6,6 +6,10 @@ output:
 theme: united
 ---
 
+## Retiring packages were archived Monday 16 October
+
+The retiring packages `rgdal`, `rgeos`, ""maptools` and `rgrass7` were archived by CRAN at the request of the maintainer Monday 16 October 2023.
+
 ## Evolution project reports
 
 - [Report 0, April 2022](https://r-spatial.org/r/2022/04/12/evolution.html)
