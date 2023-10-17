@@ -1,0 +1,13 @@
+Run date: 2023-10-17 
+Input watchlist length: 101 
+Input watchlist name: watchlists/watchlist_2023-10-16.csv 
+Watchlist packages not available now (82): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, ecospat, eechidna, EnvExpInd, epcc, epitweetr, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, leaflet.opacity, leafletCN, letsR, loa, MakeYourPalette, mapping, mapReasy, MEDITS, MinBAR, modchart, Momocs, monographaR, muHVT, nightmares, occUncertain, oceanmap, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, RchivalTag, rLiDAR, RSIP, rTLS, SAEforest, sara4r, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, StreamMetabolism, stUPscales, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+New versions: LPDynR, rangeModelMetadata, rworldmap, weed 
+First order reverse dependencies of new versions: jcext 
+Check results OK: jcext, LPDynR, rangeModelMetadata 
+Check results (any not OK):
+    package version error warning note
+4 rworldmap   1.3-8     0       0    1
+5      weed   1.1.2     0       0    1
+Output watchlist length: 96 
+Watchlist length change: -5 
