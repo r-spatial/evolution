@@ -30,14 +30,15 @@ However, continuing to maintain both the outdated interfaces to `PROJ`, `GDAL` a
 Many CRAN and some Bioconductor packages used to depend on retiring packages. Some dropped dependencies early (`raster` in September 2022), some after a notification campaign in December 2022, others again after the next wave in April 2023 and May/June 2023 corresponding to project blogs/reports. Since June a watchlist is running on published updates on CRAN or Bioconductor to vulnerable packages:
 
 ```{r, echo=FALSE}
-cl <- read.csv("../watchlist_output/count_series.csv")
+cl <- read.csv("https://raw.githubusercontent.com/r-spatial/evolution/main/watchlist_output/count_series.csv")
 plot(I(watchlist_length-unavailable) ~ I(as.Date(date)), cl, ylim=c(0, 225), xlim=as.Date(c("2023-06-01", "2023-10-31")), xlab="",
     ylab="remaining available vulnerable packages")
-grid()
+abline(h=c(0, 50, 100, 150, 200), col="grey75")
 abline(v=as.Date("2023-07-12"), col="green4")
 abline(v=as.Date("2023-09-26"), col="green2")
 abline(v=as.Date("2023-10-07"), col="yellow3")
 abline(v=as.Date("2023-10-16"), col="red4")
+legend("bottomleft", lty=1, legend=c("3 month warning", "three week warning", "one week warning", "archived"), col=c("green4", "green2", "yellow3", "red4"))
 ```
 
 Many mitigations are very simple, involving the deletion of stale `roxygen2` markup, or insertion of conditioning on the availability of retiring packages prior to full removal later on. We'll be looking at how dependencies between packages play out (this is general across language environments with contributed extensions), and at this particular case.
