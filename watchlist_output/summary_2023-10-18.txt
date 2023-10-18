@@ -1,0 +1,11 @@
+Run date: 2023-10-18 
+Input watchlist length: 96 
+Input watchlist name: watchlists/watchlist_2023-10-17.csv 
+Watchlist packages not available now (80): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, epitweetr, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, leaflet.opacity, leafletCN, letsR, loa, MakeYourPalette, mapping, mapReasy, MEDITS, MinBAR, modchart, Momocs, monographaR, muHVT, nightmares, occUncertain, oceanmap, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, RchivalTag, rLiDAR, RSIP, rTLS, SAEforest, sara4r, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+New versions: ecospat, StreamMetabolism, ursa 
+Check results OK: ecospat, StreamMetabolism 
+Check results (any not OK):
+  package version error warning note
+3    ursa  3.10.2     1       0    0
+Output watchlist length: 94 
+Watchlist length change: -2 
