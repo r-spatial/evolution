@@ -1,0 +1,11 @@
+Run date: 2023-10-20 
+Input watchlist length: 94 
+Input watchlist name: watchlists/watchlist_2023-10-19.csv 
+Watchlist packages not available now (79): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, epitweetr, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, leaflet.opacity, leafletCN, letsR, loa, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, Momocs, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, RchivalTag, riverplot, rLiDAR, RSIP, rTLS, SAEforest, sara4r, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+New versions: mapping, oceanmap 
+Check results (any not OK):
+   package version error warning note
+1  mapping     1.4     0       0    1
+2 oceanmap   0.1.5     0       0    1
+Output watchlist length: 92 
+Watchlist length change: -2 
