@@ -1,0 +1,14 @@
+Run date: 2023-10-27 
+Input watchlist length: 90 
+Input watchlist name: watchlists/watchlist_2023-10-26.csv 
+Watchlist packages not available now (76): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, epitweetr, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, leaflet.opacity, leafletCN, letsR, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, Momocs, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+New versions: flowDensity, GEOexplorer, mtbls2, sara4r, synergyfinder 
+Check results OK: sara4r 
+Check results (any not OK):
+        package version error warning note
+1   flowDensity  1.35.0     1       0    0
+2   GEOexplorer   1.8.0     0       1    2
+3        mtbls2  1.32.0     0       4    3
+5 synergyfinder  3.10.0     0       1    3
+Output watchlist length: 89 
+Watchlist length change: -1 
