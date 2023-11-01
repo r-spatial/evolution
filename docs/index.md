@@ -32,6 +32,8 @@ The retiring packages `rgdal`, `rgeos`, ""maptools` and `rgrass7` were archived 
 
 - [OpenGeoHub Summer School intro session, 28 August 2023](https://r-spatial.github.io/evolution/ogh23_intro_bivand.html)
 
+- [Spatial Econometrics Software Roundtable, 17 November 2023](https://r-spatial.github.io/evolution/bivand_sandiego_2311.pdf)
+
 - [Former `rgdal` vignette: Why have CRS, projections and transformations changed?](https://r-spatial.github.io/evolution/CRS_projections_transformations.html)
 
 - [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)

@@ -23,6 +23,7 @@ The functionality of `rgdal`, `rgeos` and `maptools` has been largely superseded
 
 For more details, please see 
 
+* [How the R-spatial evolution project affects spatial econometrics workflows, 17 November 2023](https://r-spatial.github.io/evolution/bivand_sandiego_2311.pdf)
 * [Countdown checklist](https://github.com/r-spatial/evolution/issues/19)
 * [Two week warning mailing list posting](https://stat.ethz.ch/pipermail/r-sig-geo/2023-October/029344.html)
 * [Watchlist output thrice weekly from June 14, 2023](https://github.com/r-spatial/evolution/tree/main/watchlist_output)
