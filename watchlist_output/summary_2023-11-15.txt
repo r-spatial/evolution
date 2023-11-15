@@ -1,0 +1,12 @@
+Run date: 2023-11-15 
+Input watchlist length: 77 
+Input watchlist name: watchlists/watchlist_2023-11-13.csv 
+Watchlist packages not available now (76): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, latticeDensity, leaflet.opacity, leafletCN, letsR, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, SubgrPlots, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+Previously untracked most reverse dependencies: geoGAM 
+New versions: epitweetr 
+Check results OK: geoGAM 
+Check results (any not OK):
+    package version error warning note
+1 epitweetr  2.2.16     0       0    2
+Output watchlist length: 76 
+Watchlist length change: -1 
