@@ -1,0 +1,8 @@
+Run date: 2023-11-22 
+Input watchlist length: 76 
+Input watchlist name: watchlists/watchlist_2023-11-20.csv 
+Watchlist packages not available now (76): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, latticeDensity, leaflet.opacity, leafletCN, letsR, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, SubgrPlots, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+Previously untracked most reverse dependencies: dartR.popgen, rSPARCS 
+Check results OK: dartR.popgen, rSPARCS 
+Output watchlist length: 76 
+Watchlist length change: 0 
