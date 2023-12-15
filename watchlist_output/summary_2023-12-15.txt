@@ -1,0 +1,11 @@
+Run date: 2023-12-15 
+Input watchlist length: 75 
+Input watchlist name: watchlists/watchlist_2023-12-13.csv 
+Watchlist packages not available now (75): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, latticeDensity, leaflet.opacity, leafletCN, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, SubgrPlots, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+Previously untracked most reverse dependencies: SpatGRID, WeightedTreemaps 
+Check results OK: SpatGRID 
+Check results (any not OK):
+           package version error warning note
+2 WeightedTreemaps   0.1.1     0       0    1
+Output watchlist length: 75 
+Watchlist length change: 0 
