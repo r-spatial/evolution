@@ -1,0 +1,5 @@
+Run date: 2024-01-03 
+Input watchlist length: 75 
+Input watchlist name: watchlists/watchlist_2024-01-01.csv 
+Watchlist packages not available now (75): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hydroTSM, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, latticeDensity, leaflet.opacity, leafletCN, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, monographaR, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, SubgrPlots, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+No change.
