@@ -1,0 +1,8 @@
+Run date: 2024-02-05 
+Input watchlist length: 73 
+Input watchlist name: watchlists/watchlist_2024-02-02.csv 
+Watchlist packages not available now (73): binaryTimeSeries, biosurvey, bnspatial, bRacatus, briskaR, cffdrs, ConR, downscaledl, DWBmodelUN, eechidna, EnvExpInd, epcc, fastmaRching, gDefrag, GeodesiCL, geodetector, geoviz, ggsn, ggvoronoi, gwer, HCV, hierarchicalDS, hsdar, hydroPSO, hyperbrick, iconr, intensity.analysis, iSDM, kernelPhil, landsat8, latticeDensity, leaflet.opacity, leafletCN, MakeYourPalette, mapReasy, MEDITS, MinBAR, modchart, muHVT, nightmares, occUncertain, openSTARS, ParallelDSM, places, plotKML, psda, PWFSLSmoke, quickmapr, rcanvec, rCAT, riverplot, rLiDAR, RSIP, rTLS, SAEforest, satscanMapper, sdStaf, SeerMapper, shadow, shp2graph, spatialfusion, SSN, STMedianPolish, stUPscales, SubgrPlots, TrajDataMining, treetop, UScensus2010, Watersheds, wux, xROI, zonator, zoon
+Previously untracked most reverse dependencies: georob, rsat, viewscape 
+Check results OK: georob, rsat, viewscape 
+Output watchlist length: 73 
+Watchlist length change: 0 
