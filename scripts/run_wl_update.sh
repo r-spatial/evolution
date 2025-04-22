@@ -2,7 +2,7 @@
 export R_LIBS="/home/rsb/lib/r_libs"
 export R_CMD="/home/rsb/topics/R/R432-share/bin/R"
 export RUN_IN="/home/rsb/topics/packages/retirement_process/watchlists"
-export GITHUB_PAT=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
+export GITHUB_PAT=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 export DISPLAY=:1
 
 cd $RUN_IN
