@@ -151,7 +151,7 @@ file.copy(paste0("count_series.csv"), file.path(evo, paste0("watchlist_output/co
 file.copy(paste0("check_logs/logs_", dstamp, ".zip"), file.path(evo, paste0("watchlist_output/check_logs/logs_", dstamp, ".zip")), overwrite = TRUE)
 # push to github
 setwd(evo)
-Sys.setenv("GITHUB_PAT"="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")
+#Sys.setenv("GITHUB_PAT"="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 system(paste0("git add ", file.path(evo, paste0("watchlist_output/summary_", dstamp, ".txt"))))
 system(paste0("git add ", file.path(evo, paste0("watchlist_output/check_logs/logs_", dstamp, ".zip"))))
 system(paste0("git commit -a -m ", paste0("\"add summary ", dstamp, "\"")))
