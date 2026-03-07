@@ -1,5 +1,9 @@
 # evolution
 
+## `rgdal` cannot be built with GDAL >= 3.12
+
+`rgdal` cannot be built with GDAL >= 3.12, as https://gdal.org/en/stable/api/ogrlayer_cpp.html#_CPPv4NK8OGRLayer13GetSpatialRefEv `OGRSpatialReference *GetSpatialRef()` became `const`. The source code of `rgdal` will not be updated to address this change.
+
 ## Retiring packages were archived by CRAN 16 October 2023
 
 The legacy R spatial infrastructure packages maptools, rgdal and rgeos were archived by CRAN on Monday, October 16, 2023; rgrass7 has  already been replaced by rgrass and was archived with the retiring packages. 
